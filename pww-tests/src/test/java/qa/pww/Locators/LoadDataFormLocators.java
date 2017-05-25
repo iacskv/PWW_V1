@@ -6,7 +6,7 @@ package qa.pww.Locators;
 public abstract class LoadDataFormLocators {
 
     //поля формы
-    public static String PVV_SPAN = "//div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[2]/a[2]/em/span/span";
+
     public static String LOAD_BTN = "//div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[2]/em/button";
     public static String TYPE_DOC = "//div[1]/div/div[2]/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[1]/div[1]/div/input";
     public static String TYPE_AGS = "//div[1]/div/div[2]/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[2]/div[1]/div/input";

@@ -1,6 +1,4 @@
 package qa.pww.appmanager;
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -27,6 +25,7 @@ public class ApplicationManager {
 
   private SessionHelper sessionHelper;
   private LoadDataHelper loadDataHelper;
+  private InputFormHelper inputFormHelper;
 
 
 
@@ -54,6 +53,7 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     loadDataHelper = new LoadDataHelper(wd);
+    inputFormHelper = new InputFormHelper(wd);
   }
 
   public void stop() {
@@ -63,5 +63,10 @@ public class ApplicationManager {
   public LoadDataHelper loadDataHelper(){
     return loadDataHelper;
   }
+
+  public InputFormHelper inputFormHelper(){
+    return inputFormHelper;
+  }
+
 
 }

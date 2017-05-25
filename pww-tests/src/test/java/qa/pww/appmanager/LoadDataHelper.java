@@ -12,6 +12,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static qa.pww.Locators.LoadDataFormLocators.*;
+import static qa.pww.Locators.SpanLocators.*;
 
 /**
  * Created by k.smotrov on 03.05.2017.
