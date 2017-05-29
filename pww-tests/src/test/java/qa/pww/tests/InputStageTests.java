@@ -1,18 +1,13 @@
 package qa.pww.tests;
 
-import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.pww.models.DocForLoad;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.startsWith;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 /**
  * Created by k.smotrov on 25.05.2017.
  */
-public class InputStageTests extends TestBase{
+public class InputStageTests extends TestBase {
 
 
     @BeforeMethod
@@ -33,7 +28,7 @@ public class InputStageTests extends TestBase{
     }
 
     @Test
-    public void fistStageTest() throws InterruptedException {
+    public void checkPresentNewBookOnInputStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (1 этап, 2000-2003)
