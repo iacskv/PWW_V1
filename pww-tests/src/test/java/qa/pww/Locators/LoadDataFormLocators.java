@@ -29,6 +29,4 @@ public abstract class LoadDataFormLocators {
     //маска "Загрузка данных..." при загрузке документов из ЗАГС
     public static String MASK = "//body/div[1]/div/div[2]/div[3]/div";
 
-    //вкладка "Главная"
-    public static String MAIN_SPAN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[1]/a[2]/em/span/span";
 }
