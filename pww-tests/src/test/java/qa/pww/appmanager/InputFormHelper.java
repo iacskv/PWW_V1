@@ -1,6 +1,8 @@
 package qa.pww.appmanager;
 
+import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,6 +12,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static qa.pww.Locators.FirstInputStageFormLocators.*;
 import static qa.pww.Locators.InputFormLocators.*;
 import static qa.pww.Locators.SpanLocators.PVV_SPAN;
 
@@ -22,6 +25,7 @@ public class InputFormHelper extends HelperBase {
     public InputFormHelper(WebDriver wd) {
         super(wd);
     }
+    JavascriptExecutor js = (JavascriptExecutor) wd;
 
     public void gotoInputForm() {
         click(By.xpath(PVV_SPAN));
@@ -29,11 +33,19 @@ public class InputFormHelper extends HelperBase {
 
     }
 
-    public void fillFormFilters() {
+    public void fillFormFiltersFirstStage() {
         click(By.xpath(TYPE_DOC)); //клик по фильтру "Тип"
         click(By.xpath("//div[text()='Книга записей актов (2000-2003)']")); //выбор "Книга 2000-2003"
         click(By.xpath(STAGE)); //клик по фильтру "Этап"
         click(By.xpath("//div[text()='1']")); //клик по "1"
+
+    }
+
+    public void fillFormFiltersSecondStage() {
+        click(By.xpath(TYPE_DOC)); //клик по фильтру "Тип"
+        click(By.xpath("//div[text()='Книга записей актов (2000-2003)']")); //выбор "Книга 2000-2003"
+        click(By.xpath(STAGE)); //клик по фильтру "Этап"
+        click(By.xpath("//div[text()='2']")); //клик по "2"
 
     }
 
@@ -53,7 +65,7 @@ public class InputFormHelper extends HelperBase {
             book_id.add(identifier);
         }
         book_max_id = Collections.max(book_id);
-        System.out.println(book_max_id);
+        System.out.println("номер книги = " + book_max_id);
         return book_max_id;
     }
 
@@ -77,4 +89,22 @@ public class InputFormHelper extends HelperBase {
     public void checkInputedTrue() {
         assertThat(wd.findElement(By.xpath(INPUTED_TD)).getText(), equalTo("нет"));
     }
+
+    public void gotoInputStageForm(){
+        click(By.xpath(LETS_INPUT_BTN));
+    }
+
+    public String textNumDoc(){
+        String a = "";
+        a = js.executeScript("return document.evaluate('" + NUM_DOC + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        return a;
+    }
+
+    public void backInputForm(){
+        click(By.xpath(BACK_TO_INPUT_FORM_BTN));
+    }
+
+
+
+
 }

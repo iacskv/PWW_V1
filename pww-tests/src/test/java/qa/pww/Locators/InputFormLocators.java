@@ -12,4 +12,5 @@ public abstract class InputFormLocators {
     public static String VIEW_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[3]/div/table[2]/tbody/tr[2]/td[2]/em/button";
     public static String NEED_INPUT_TD = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]/div/div[2]/table/tbody/tr/td[2]/div";
     public static String INPUTED_TD = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]/div/div[2]/table/tbody/tr/td[3]/div";
+    public static String LETS_INPUT_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[3]/div/table[1]/tbody/tr[2]/td[2]/em/button";
 }
