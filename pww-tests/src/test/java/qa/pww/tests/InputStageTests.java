@@ -1,7 +1,5 @@
 package qa.pww.tests;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.pww.models.DocForLoad;
@@ -14,22 +12,22 @@ import static org.hamcrest.MatcherAssert.*;
  */
 public class InputStageTests extends TestBase {
 
-    DocForLoad docAttr;
+
+    String typedoc = "Книга записей актов (2000-2003)";
+    String typeags = "Запись акта о рождении";
+    String year = "2003";
+    String typezags = "Кронштадтский (1997-2003)";
+    String fNum = "100";
+    String lNum = "100";
+    DocForLoad docAttr= new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     @BeforeMethod
     public void initLoadDataForm() throws InterruptedException {
         //загрузка АГС
-        String typedoc = "Книга записей актов (2000-2003)";
-        String typeags = "Запись акта о рождении";
-        String year = "2003";
-        String typezags = "Кронштадтский (1997-2003)";
-        String fNum = "100";
-        String lNum = "100";
-        docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
-        /*app.loadDataHelper().gotoLoadDataPage();
+        app.loadDataHelper().gotoLoadDataPage();
         app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
         app.loadDataHelper().submitLoad();
-        app.loadDataHelper().waitingLogText();*/
+        app.loadDataHelper().waitingLogText();
 
     }
 
@@ -52,6 +50,8 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().checkNeedInput();
         //проверка на "Введен"
         app.inputFormHelper().checkInputedTrue();
+        //возврат к списку книг
+        app.inputFormHelper().backFromReviewDocForm();
 
     }
 
@@ -74,6 +74,8 @@ public class InputStageTests extends TestBase {
        app.inputFormHelper().checkNeedInput();
        //проверка на "Введен"
        app.inputFormHelper().checkInputedTrue();
+       //возврат к списку книг
+       app.inputFormHelper().backFromReviewDocForm();
    }
 
     @Test
@@ -97,8 +99,8 @@ public class InputStageTests extends TestBase {
         //проверка на ожидаемый номер документа (из BeforeMethod)
         assertThat(a, equalTo(docAttr.fNum));
 
-        //возврат к списку документов (выход из формы ввода)
-        app.inputFormHelper().backInputForm();
+        //возврат к списку книг (выход из формы ввода)
+        app.inputFormHelper().backFromInputStageForm();
 
     }
 

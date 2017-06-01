@@ -1,6 +1,5 @@
 package qa.pww.appmanager;
 
-import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static qa.pww.Locators.FirstInputStageFormLocators.*;
 import static qa.pww.Locators.InputFormLocators.*;
-import static qa.pww.Locators.SpanLocators.PVV_SPAN;
+import static qa.pww.Locators.ReviewDocForm.*;
+import static qa.pww.Locators.SpanLocators.*;
 
 /**
  * Created by k.smotrov on 25.05.2017.
@@ -100,8 +100,12 @@ public class InputFormHelper extends HelperBase {
         return a;
     }
 
-    public void backInputForm(){
-        click(By.xpath(BACK_TO_INPUT_FORM_BTN));
+    public void backFromInputStageForm(){
+        click(By.xpath(BACK_FROM_INPUT_FORM_BTN));
+    }
+
+    public void backFromReviewDocForm(){
+        click(By.xpath(BACK_FROM_REVIEW_DOC_FORM));
     }
 
 

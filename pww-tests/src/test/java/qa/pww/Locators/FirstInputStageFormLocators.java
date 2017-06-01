@@ -24,6 +24,6 @@ public abstract class FirstInputStageFormLocators {
     public static String CH_IS_A_LIFE = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[12]/div[1]/div/input";
 
     //локаторы кнопок
-    public static String BACK_TO_INPUT_FORM_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button";
+    public static String BACK_FROM_INPUT_FORM_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button";
     public static String END_INPUT_BOOK_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[2]/tbody/tr[2]/td[2]/em/button";
 }
