@@ -1,16 +1,15 @@
 apply plugin: 'java'
 
-
 repositories {
     mavenCentral()
 }
-
 
 dependencies {
     compile 'org.testng:testng:6.11'
     compile 'org.seleniumhq.selenium:selenium-java:2.53.1'
     compile 'org.hamcrest:java-hamcrest:2.0.0.0'
-
+    // сделано так, потому, что не затягивает с maven central !!!
+    runtime fileTree(dir: 'libs', include: '*.jar')
 
 }
 

@@ -10,6 +10,8 @@ import org.openqa.selenium.remote.BrowserType;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -27,6 +29,9 @@ public class ApplicationManager {
   private LoadDataHelper loadDataHelper;
   private InputFormHelper inputFormHelper;
 
+  private Connection pvvDb;
+  private Connection zagsDb;
+
 
 
   public ApplicationManager(String browser) {
@@ -34,8 +39,9 @@ public class ApplicationManager {
     properties = new Properties();
   }
 
-
   public void init() throws IOException {
+
+
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
 
@@ -56,8 +62,17 @@ public class ApplicationManager {
     inputFormHelper = new InputFormHelper(wd);
   }
 
-  public void stop() {
+  public void initDb (){
+      DbHelper dbHelper = new DbHelper();
+
+      pvvDb=dbHelper.getConnection("jdbc:oracle:thin:@db.dev.pvv.zags.adc.vpn:1521:inputarena","inputarena_review", "inputarena_review");
+      zagsDb=dbHelper.getConnection("jdbc:oracle:thin:@dbnode01.etalon.zags.adc.vpn:1521/zagstest","sysuser","spb");
+  }
+
+  public void stop() throws SQLException {
     wd.quit();
+    pvvDb.close();
+    zagsDb.close();
   }
 
   public LoadDataHelper loadDataHelper(){
@@ -68,5 +83,11 @@ public class ApplicationManager {
     return inputFormHelper;
   }
 
+    public Connection getPvvDb() {
+        return pvvDb;
+    }
 
+    public Connection getZagsDb() {
+        return zagsDb;
+    }
 }

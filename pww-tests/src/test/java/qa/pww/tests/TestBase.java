@@ -6,6 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import qa.pww.appmanager.ApplicationManager;
 
+import java.sql.SQLException;
 
 
 /**
@@ -19,10 +20,11 @@ public class TestBase {
   @BeforeSuite
   public void setUp() throws Exception {
     app.init();
+    app.initDb();
   }
 
   @AfterSuite (alwaysRun = true)
-  public void tearDown() {
+  public void tearDown() throws SQLException {
     app.stop();
   }
 
