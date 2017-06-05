@@ -19,8 +19,9 @@ public class TestBase {
 
   @BeforeSuite
   public void setUp() throws Exception {
-    app.init();
     app.initDb();
+    app.init();
+
   }
 
   @AfterSuite (alwaysRun = true)

@@ -24,13 +24,14 @@ public class ApplicationManager {
   private final Properties properties;
   private String browser = "CHROME";
   WebDriver wd;
+  Connection pvvDb;
+  Connection zagsDb;
 
   private SessionHelper sessionHelper;
   private LoadDataHelper loadDataHelper;
   private InputFormHelper inputFormHelper;
 
-  private Connection pvvDb;
-  private Connection zagsDb;
+
 
 
 
@@ -59,14 +60,14 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     loadDataHelper = new LoadDataHelper(wd);
-    inputFormHelper = new InputFormHelper(wd);
+    inputFormHelper = new InputFormHelper(wd, pvvDb, zagsDb);
   }
 
   public void initDb (){
       DbHelper dbHelper = new DbHelper();
 
-      pvvDb=dbHelper.getConnection("jdbc:oracle:thin:@db.dev.pvv.zags.adc.vpn:1521:inputarena","inputarena_review", "inputarena_review");
-      zagsDb=dbHelper.getConnection("jdbc:oracle:thin:@dbnode01.etalon.zags.adc.vpn:1521/zagstest","sysuser","spb");
+      pvvDb = dbHelper.getConnection("jdbc:oracle:thin:@db.dev.pvv.zags.adc.vpn:1521:inputarena","inputarena_review", "inputarena_review");
+      zagsDb = dbHelper.getConnection("jdbc:oracle:thin:@dbnode01.etalon.zags.adc.vpn:1521/zagstest","sysuser","spb");
   }
 
   public void stop() throws SQLException {

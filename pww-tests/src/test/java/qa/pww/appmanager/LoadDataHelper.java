@@ -50,7 +50,7 @@ public class LoadDataHelper extends HelperBase {
 
     public void fillLoadNewDocGroupFofm(DocForLoad docAtt) throws InterruptedException {
         // выбор типа книги
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
 
         click(By.xpath(TYPE_DOC));
         click(By.xpath("//div[8]/div/div[text()='" + docAtt.typeDoc + "']"));//по пункту списка (200-2003)

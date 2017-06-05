@@ -1,8 +1,9 @@
 package qa.pww.tests;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.pww.models.DocForLoad;
-import static qa.pww.Locators.LoadDataFormLocators.*;
+
 
 /**
  * Created by k.smotrov on 12.05.2017.
@@ -23,6 +24,12 @@ public class OutOfLimitRangeNum extends TestBase {
 
         //переход на страницу загрузки
         app.loadDataHelper().gotoLoadDataPage();
+    }
+
+    @AfterMethod
+    public void ShutdownLoadDataForm(){
+        //переход на главную
+        app.inputFormHelper().gotoMainPage();
     }
 
 

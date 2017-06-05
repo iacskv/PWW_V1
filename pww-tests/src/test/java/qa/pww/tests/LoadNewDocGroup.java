@@ -1,6 +1,7 @@
 package qa.pww.tests;
 
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -45,6 +46,12 @@ public class LoadNewDocGroup extends TestBase {
         app.loadDataHelper().gotoLoadDataPage();
     }
 
+    @AfterMethod
+    public void ShutdownLoadDataForm(){
+        //переход на главную
+        app.inputFormHelper().gotoMainPage();
+    }
+
     @Test(dataProvider = "validDoc")
     public void testLoadNewDocGroup(DocForLoad docAtt) throws InterruptedException {
 
@@ -66,6 +73,8 @@ public class LoadNewDocGroup extends TestBase {
         System.out.println(" -------------------------------- ");
         System.out.println(textarea);
         System.out.println();
+
+
     }
 
 }

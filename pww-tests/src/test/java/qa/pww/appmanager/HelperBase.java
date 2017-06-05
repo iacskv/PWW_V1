@@ -6,12 +6,21 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
+import java.sql.Connection;
 
 /**
  * Created by Константин on 19.03.2017.
  */
 public class HelperBase {
   protected WebDriver wd;
+  protected Connection pvvDb;
+  protected Connection zagsDb;
+
+  public HelperBase(WebDriver wd, Connection pvvDb, Connection zagsDb) {
+    this.wd = wd;
+    this.pvvDb = pvvDb;
+    this.zagsDb = zagsDb;
+  }
 
   public HelperBase(WebDriver wd) {
     this.wd = wd;
@@ -51,5 +60,17 @@ public class HelperBase {
     } catch (NoAlertPresentException e) {
       return false;
     }
+  }
+
+  public WebDriver getWd() {
+    return wd;
+  }
+
+  public Connection getPvvDb() {
+    return pvvDb;
+  }
+
+  public Connection getZagsDb() {
+    return zagsDb;
   }
 }
