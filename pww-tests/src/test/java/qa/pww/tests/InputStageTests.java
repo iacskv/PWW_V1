@@ -22,7 +22,7 @@ public class InputStageTests extends TestBase {
     String typezags = "Кронштадтский (1997-2003)";
     String fNum = "100";
     String lNum = "100";
-    DocForLoad docAttr= new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
+    DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     @BeforeMethod
     public void initLoadDataForm() throws InterruptedException {
@@ -35,13 +35,14 @@ public class InputStageTests extends TestBase {
     }
 
     @AfterMethod
-    public void ShutdownLoadDataForm(){
+    public void ShutdownLoadDataForm() {
         //возврат на "главную"
         app.inputFormHelper().gotoMainPage();
     }
 
-    @Test (enabled = true)
+    @Test(enabled = true)
     //проверка максимального номера (последненго загруженного) группы документов в БД и UI на 1 этапе
+    //проверка из UI будет глючить если не делать очистки БД
     public void checkNumNewBookOnFirstInputStage() throws InterruptedException, SQLException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -53,11 +54,11 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().checkNumNewBook();
 
 
-
     }
 
-    @Test (enabled = true)
+    @Test(enabled = true)
     //проверка что загруженная книга отображается в таблице 1 этапа ввода с нужными статусами
+    //проверка из UI будет глючить если не делать очистки БД
     public void checkPresentNewBookOnFirstInputStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -81,8 +82,9 @@ public class InputStageTests extends TestBase {
 
     }
 
-    @Test (enabled = true)
+    @Test(enabled = true)
     //проверка что загруженная книга отображается в таблице 2 этапа ввода с нужными статусами
+    //проверка из UI будет глючить если не делать очистки БД
     public void checkNumNewBookOnSecondInputStage() throws SQLException, InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -96,34 +98,35 @@ public class InputStageTests extends TestBase {
     }
 
 
-
-    @Test (enabled = true)
-   //проверка что загруженная книга отображается в таблице 2 этапа ввода с нужными статусами
+    @Test(enabled = true)
+    //проверка что загруженная книга отображается в таблице 2 этапа ввода с нужными статусами
+    //проверка из UI будет глючить если не делать очистки БД
     public void checkPresentNewBookOnSecondInputStage() throws InterruptedException {
-       //переход на страницу выбора группы док
+        //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
-       //заполнение фильтров (2 этап, 2000-2003)
-       app.inputFormHelper().fillFormFiltersSecondStage();
-       //поиск по фильтрам
-       app.inputFormHelper().submitFormFilters();
-       //выбор книги загруженной последней (в BeforeMethod)
-       app.inputFormHelper().selectBook();
-       //переход на форму просмотра группы
-       app.inputFormHelper().gotoViewBookForm();
-       //выбор агс
-       app.inputFormHelper().selectAgs();
-       //проверка на "Требует ввода"
-       app.inputFormHelper().checkNeedInput();
-       //проверка на "Введен"
-       app.inputFormHelper().checkInputedTrue();
-       //возврат к списку книг
-       app.inputFormHelper().backFromReviewDocForm();
+        //заполнение фильтров (2 этап, 2000-2003)
+        app.inputFormHelper().fillFormFiltersSecondStage();
+        //поиск по фильтрам
+        app.inputFormHelper().submitFormFilters();
+        //выбор книги загруженной последней (в BeforeMethod)
+        app.inputFormHelper().selectBook();
+        //переход на форму просмотра группы
+        app.inputFormHelper().gotoViewBookForm();
+        //выбор агс
+        app.inputFormHelper().selectAgs();
+        //проверка на "Требует ввода"
+        app.inputFormHelper().checkNeedInput();
+        //проверка на "Введен"
+        app.inputFormHelper().checkInputedTrue();
+        //возврат к списку книг
+        app.inputFormHelper().backFromReviewDocForm();
 
-   }
+    }
 
-    @Test (enabled = true)
+    @Test(enabled = true)
     //проверка возможности открытия книги на заполнение в 1 этапе
-    public void fistInputStage () throws InterruptedException {
+    //проверка из UI будет глючить если не делать очистки БД
+    public void fistInputStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (1 этап, 2000-2003)
@@ -137,7 +140,7 @@ public class InputStageTests extends TestBase {
 
         //ожидание загрузки и получение текста № а/з
         Thread.sleep(5000);
-        String a="";
+        String a = "";
         a = app.inputFormHelper().textNumDoc();
         //проверка на ожидаемый номер документа (из BeforeMethod)
         assertThat(a, equalTo(docAttr.fNum));

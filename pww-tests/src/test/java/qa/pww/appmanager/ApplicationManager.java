@@ -8,6 +8,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
@@ -63,11 +64,15 @@ public class ApplicationManager {
     inputFormHelper = new InputFormHelper(wd, pvvDb, zagsDb);
   }
 
-  public void initDb (){
-      DbHelper dbHelper = new DbHelper();
+  public void initDb () throws IOException {
+    String target = System.getProperty("target", "local");
+    properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
 
-      pvvDb = dbHelper.getConnection("jdbc:oracle:thin:@db.dev.pvv.zags.adc.vpn:1521:inputarena","inputarena_review", "inputarena_review");
-      zagsDb = dbHelper.getConnection("jdbc:oracle:thin:@dbnode01.etalon.zags.adc.vpn:1521/zagstest","sysuser","spb");
+    DbHelper dbHelper = new DbHelper();
+
+    pvvDb = dbHelper.getConnection(properties.getProperty("pvv.baseUrl"), (properties.getProperty("pvv.userLogin")), (properties.getProperty("pvv.userPassword")));
+    zagsDb = dbHelper.getConnection(properties.getProperty("zags.baseUrl"), (properties.getProperty("zags.userLogin")), (properties.getProperty("zags.userPassword")));
+
   }
 
   public void stop() throws SQLException {

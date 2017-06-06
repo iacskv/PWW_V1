@@ -33,10 +33,9 @@ public class InputFormHelper extends HelperBase {
     JavascriptExecutor js = (JavascriptExecutor) wd;
 
 
-    public void gotoMainPage(){
+    public void gotoMainPage() {
         click(By.xpath(MAIN_SPAN));
     }
-
 
 
     public void gotoInputForm() throws InterruptedException {
@@ -71,7 +70,7 @@ public class InputFormHelper extends HelperBase {
         List<String> bookId = new ArrayList<>();
         PreparedStatement statement = getPvvDb().prepareStatement("select DOC_GRP_ID from DOCUMENT_GROUP");
         ResultSet resultSet = statement.executeQuery();
-        while( resultSet.next() ){
+        while (resultSet.next()) {
             bookId.add(resultSet.getString("DOC_GRP_ID"));
 
         }
@@ -97,58 +96,61 @@ public class InputFormHelper extends HelperBase {
         return book_max_id;
     }
 
+    //сверка номера в БД и UI
     public void checkNumNewBook() throws SQLException, InterruptedException {
-
-
         String numDb = getFromDbMaxBookId();
         String numUi = getfromUiBookMaxInd();
-
         assertThat(numDb, equalTo(numUi));
     }
 
 
-
+    //выбор последней загруженной книги из UI
     public void selectBook() throws InterruptedException {
-        //Thread.sleep(5000);
         click(By.xpath("//div[contains(text(),'Номер книги: " + getfromUiBookMaxInd() + "')]"));
     }
 
+    //переход на форму просмотра списка документов
     public void gotoViewBookForm() throws InterruptedException {
-        //Thread.sleep(5000);
         click(By.xpath(VIEW_BTN));
     }
 
+    //выбор а/з на форме просмотра списка документов
     public void selectAgs() {
         click(By.xpath("//span[contains(text(),'Запись акта о рождении')]"));
     }
 
+    //проверка на "требуется ввод" на форме просмотра списка документов
     public void checkNeedInput() {
         assertThat(wd.findElement(By.xpath(NEED_INPUT_TD)).getText(), equalTo("да"));
 
     }
 
+    //проверка на "введен" на форме просмотра списка документов
     public void checkInputedTrue() {
         assertThat(wd.findElement(By.xpath(INPUTED_TD)).getText(), equalTo("нет"));
     }
 
-    public void gotoInputStageForm(){
+    //переход на форму ввода документа (1/2 этап)
+    public void gotoInputStageForm() {
         click(By.xpath(LETS_INPUT_BTN));
     }
 
-    public String textNumDoc(){
+    //определение номера документа из UI
+    public String textNumDoc() {
         String a = "";
         a = js.executeScript("return document.evaluate('" + NUM_DOC + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         return a;
     }
 
-    public void backFromInputStageForm(){
+    //выход из формы ввода документа (1/2 этап)
+    public void backFromInputStageForm() {
         click(By.xpath(BACK_FROM_INPUT_FORM_BTN));
     }
 
-    public void backFromReviewDocForm(){
+    //выход на форму списка книг
+    public void backFromReviewDocForm() {
         click(By.xpath(BACK_FROM_REVIEW_DOC_FORM));
     }
-
 
 
     //получение реквизитов 1 документа книги (группы документов) с макс. номером (последней загруженной) из БД
@@ -157,14 +159,12 @@ public class InputFormHelper extends HelperBase {
         List<String> reqValue = new ArrayList<>();
         PreparedStatement statement = getPvvDb().prepareStatement(sqlFieldsRequest);
         ResultSet resultSet = statement.executeQuery();
-        while( resultSet.next() ){
-            reqValue.add(resultSet.getString("VALUE" ));
+        while (resultSet.next()) {
+            reqValue.add(resultSet.getString("VALUE"));
         }
         resultSet.close();
         return reqValue;
     }
-
-
 
 
 }
