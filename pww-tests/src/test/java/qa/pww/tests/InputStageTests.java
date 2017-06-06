@@ -3,6 +3,7 @@ package qa.pww.tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import qa.pww.models.BornDataMainFields;
 import qa.pww.models.DocForLoad;
 
 import java.sql.SQLException;
@@ -31,7 +32,6 @@ public class InputStageTests extends TestBase {
         //app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
         //app.loadDataHelper().submitLoad();
         //app.loadDataHelper().waitingLogText();
-
     }
 
     @AfterMethod
@@ -52,8 +52,6 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().submitFormFilters();
         //проверка совпадения номера последней загруженной книги по UI  и БД
         app.inputFormHelper().checkNumNewBook();
-
-
     }
 
     @Test(enabled = true)
@@ -78,8 +76,6 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().checkInputedTrue();
         //возврат к списку книг
         app.inputFormHelper().backFromReviewDocForm();
-
-
     }
 
     @Test(enabled = true)
@@ -94,7 +90,6 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().submitFormFilters();
         //проверка совпадения номера последней загруженной книги по UI  и БД
         app.inputFormHelper().checkNumNewBook();
-
     }
 
 
@@ -120,7 +115,6 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().checkInputedTrue();
         //возврат к списку книг
         app.inputFormHelper().backFromReviewDocForm();
-
     }
 
     @Test(enabled = true)
@@ -146,6 +140,27 @@ public class InputStageTests extends TestBase {
         assertThat(a, equalTo(docAttr.fNum));
         //возврат к списку книг (выход из формы ввода)
         app.inputFormHelper().backFromInputStageForm();
+    }
+
+
+    @Test (enabled = true)
+    //проверка основных полей (1-21) загруженных из БД ЗАГС
+    public void checkMainFieldOnFirstStage() throws InterruptedException {
+        //переход на страницу выбора группы док
+        app.inputFormHelper().gotoInputForm();
+        //заполнение фильтров (1 этап, 2000-2003)
+        app.inputFormHelper().fillFormFiltersFirstStage();
+        //поиск по фильтрам
+        app.inputFormHelper().submitFormFilters();
+        //выбор книги загруженной последней (в BeforeMethod)
+        app.inputFormHelper().selectBook();
+        //переход на форму ввода
+        app.inputFormHelper().gotoInputStageForm();
+        BornDataMainFields ags = new BornDataMainFields();
+        //ожидание загрузки
+        Thread.sleep(5000);
+        //получение значений полей с формы ввода документа
+        ags = app.inputFormHelper().getMainField();
 
 
     }

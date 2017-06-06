@@ -5,6 +5,8 @@ package qa.pww.Locators;
  */
 public abstract class InputFormLocators {
 
+    //локаторы формы ввода (список групп документов)
+
     public static String INPUT_BTN = "//div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button";
     public static String TYPE_DOC = "//body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div/div[1]/div[1]/div/img";
     public static String STAGE = "//body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div/div[2]/div[1]/div/img";

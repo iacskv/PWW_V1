@@ -5,90 +5,92 @@ package qa.pww.models;
  */
 public class BornDataMainFields {
     //поля данных об а/з
-    String agsNum;
-    String liter;
-    String agsDd;
-    String agsmm;
-    String agsYyyy;
-    String zagsAgsName;
-    String agsCopy;
+    public String agsNum;
+    public String liter;
+    public String agsDd;
+    public String agsmm;
+    public String agsYyyy;
+    public String zagsAgsName;
+    public String agsCopy;
 
     //поля сведения о ребенке (1-8)
-    String childSex;
-    String childLastName;
-    String childFirstName;
-    String childMiddleName;
-    String childDdBorn;
-    String childMmBorn;
-    String childYyyyBorn;
-    String childCountryNoClass;
-    String childRegionNoClass;
-    String childCountry;
-    String childRegion;
-    String childDisnrict;
-    String childPunkt;
-    String childBirthCond;
+    public String childSex;
+    public String childLastName;
+    public String childFirstName;
+    public String childMiddleName;
+    public String childDdBorn;
+    public String childMmBorn;
+    public String childYyyyBorn;
+    public String childCountryNoClass;
+    public String childRegionNoClass;
+    public String childCountry;
+    public String childRegion;
+    public String childDisnrict;
+    public String childPunkt;
+    public String childBirthCond;
 
     //основание восстановления а/з (10)
-    String vosstDd;
-    String vosstMm;
-    String vosstYyyy;
-    String vosstOrg;
+    public String vosstDd;
+    public String vosstMm;
+    public String vosstYyyy;
+    public String vosstOrg;
 
     //сведения об отце (11-17)
-    String fatherLastName;
-    String fatherFirstName;
-    String fatherMiddleName;
-    String fatherDdBorn;
-    String fatherMmBorn;
-    String fatherYyyyBorn;
-    String fatherCountryNoClass;
-    String fatherRegionNoClass;
-    String fatherCountry;
-    String fatherRegion;
-    String fatherDistrict;
-    String fatherPunkt;
-    String fatherCitizenshipNoClass;
-    String fatherCitizenship;
-    String fatherNationalNoClass;
-    String fatherNational;
+    public String fatherLastName;
+    public String fatherFirstName;
+    public String fatherMiddleName;
+    public String fatherDdBorn;
+    public String fatherMmBorn;
+    public String fatherYyyyBorn;
+    public String fatherCountryNoClass;
+    public String fatherRegionNoClass;
+    public String fatherCountry;
+    public String fatherRegion;
+    public String fatherDistrict;
+    public String fatherPunkt;
+    public String fatherCitizenshipNoClass;
+    public String fatherCitizenship;
+    public String fatherNationalNoClass;
+    public String fatherNational;
 
     //сведения о матери (11-17)
-    String matherLastName;
-    String matherFirstName;
-    String matherMiddleName;
-    String matherDdBorn;
-    String matherMmBorn;
-    String matherYyyyBorn;
-    String matherCountryNoClass;
-    String matherRegionNoClass;
-    String matherCountry;
-    String matherRegion;
-    String matherDistrict;
-    String matherPunkt;
-    String matherCitizenshipNoClass;
-    String matherCitizenship;
-    String matherNationalNoClass;
-    String matherNational;
+    public String matherLastName;
+    public String matherFirstName;
+    public String matherMiddleName;
+    public String matherDdBorn;
+    public String matherMmBorn;
+    public String matherYyyyBorn;
+    public String matherCountryNoClass;
+    public String matherRegionNoClass;
+    public String matherCountry;
+    public String matherRegion;
+    public String matherDistrict;
+    public String matherPunkt;
+    public String matherCitizenshipNoClass;
+    public String matherCitizenship;
+    public String matherNationalNoClass;
+    public String matherNational;
+
 
     //основание сведений об отце (19)
 
-    String baseTypeDoc;
-    String baseNumDoc;
-    String baseDdDoc;
-    String baseMmDoc;
-    String baseYyyyDoc;
+    public String baseTypeDoc;
+    public String baseNumDoc;
+    public String baseDdDoc;
+    public String baseMmDoc;
+    public String baseYyyyDoc;
+    public String baseOrgDoc;
 
     //выдано свидетельство (21)
 
-    String certSeria;
-    String certNum;
-    String certDd;
-    String certMm;
-    String certYyyy;
+    public String certSeria;
+    public String certNum;
+    public String certDd;
+    public String certMm;
+    public String certYyyy;
 
     //есть Изменения?
-    String moreStage;
+    public String moreStage;
 
 
     public BornDataMainFields(String agsNum, String liter, String agsDd, String agsmm, String agsYyyy, String zagsAgsName, String agsCopy,
@@ -99,7 +101,7 @@ public class BornDataMainFields {
                               String fatherCountryNoClass, String fatherRegionNoClass, String fatherCountry, String fatherRegion, String fatherDistrict, String fatherPunkt, String fatherCitizenshipNoClass, String fatherCitizenship, String fatherNationalNoClass, String fatherNational,
                               String matherLastName, String matherFirstName, String matherMiddleName, String matherDdBorn, String matherMmBorn, String matherYyyyBorn,
                               String matherCountryNoClass, String matherRegionNoClass, String matherCountry, String matherRegion, String matherDistrict, String matherPunkt, String matherCitizenshipNoClass, String matherCitizenship, String matherNationalNoClass, String matherNational,
-                              String baseTypeDoc, String baseNumDoc, String baseDdDoc, String baseMmDoc, String baseYyyyDoc,
+                              String baseTypeDoc, String baseNumDoc, String baseDdDoc, String baseMmDoc, String baseYyyyDoc,String baseOrgDoc,
                               String certSeria, String certNum, String certDd, String certMm, String certYyyy, String moreStage) {
         this.agsNum = agsNum;
         this.liter = liter;
@@ -149,9 +151,11 @@ public class BornDataMainFields {
         this.matherLastName = matherLastName;
         this.matherFirstName = matherFirstName;
         this.matherMiddleName = matherMiddleName;
+
         this.matherDdBorn = matherDdBorn;
         this.matherMmBorn = matherMmBorn;
         this.matherYyyyBorn = matherYyyyBorn;
+
         this.matherCountryNoClass = matherCountryNoClass;
         this.matherRegionNoClass = matherRegionNoClass;
         this.matherCountry = matherCountry;
@@ -168,6 +172,7 @@ public class BornDataMainFields {
         this.baseDdDoc = baseDdDoc;
         this.baseMmDoc = baseMmDoc;
         this.baseYyyyDoc = baseYyyyDoc;
+        this.baseOrgDoc = baseOrgDoc;
 
         this.certSeria = certSeria;
         this.certNum = certNum;
@@ -175,5 +180,9 @@ public class BornDataMainFields {
         this.certMm = certMm;
         this.certYyyy = certYyyy;
         this.moreStage = moreStage;
+    }
+
+    public BornDataMainFields() {
+
     }
 }
