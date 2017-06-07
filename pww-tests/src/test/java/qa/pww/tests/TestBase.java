@@ -21,6 +21,7 @@ public class TestBase {
   public void setUp() throws Exception {
     app.initDb();
     app.init();
+    //app.clearPvvDb();
 
   }
 

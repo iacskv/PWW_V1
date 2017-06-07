@@ -12,6 +12,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -31,9 +33,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private LoadDataHelper loadDataHelper;
   private InputFormHelper inputFormHelper;
-
-
-
+  private int rs;
 
 
   public ApplicationManager(String browser) {
@@ -72,6 +72,33 @@ public class ApplicationManager {
 
     pvvDb = dbHelper.getConnection(properties.getProperty("pvv.baseUrl"), (properties.getProperty("pvv.userLogin")), (properties.getProperty("pvv.userPassword")));
     zagsDb = dbHelper.getConnection(properties.getProperty("zags.baseUrl"), (properties.getProperty("zags.userLogin")), (properties.getProperty("zags.userPassword")));
+
+  }
+
+  public void clearPvvDb() throws SQLException {
+    PreparedStatement st1 = getPvvDb().prepareStatement("DELETE FROM EXPORT_ERROR_LOG");
+     rs = st1.executeUpdate();
+    st1.close();
+    PreparedStatement st2 = getPvvDb().prepareStatement("DELETE FROM EXPORT_DOCUMENT_GROUP");
+     rs = st2.executeUpdate();
+    st2.close();
+    PreparedStatement st3 = getPvvDb().prepareStatement("DELETE FROM EXPORT_SESSION");
+     rs = st3.executeUpdate();
+    st3.close();
+    PreparedStatement st4 = getPvvDb().prepareStatement("DELETE FROM document_stage");
+     rs = st4.executeUpdate();
+    st4.close();
+    PreparedStatement st5 = getPvvDb().prepareStatement("DELETE FROM document");
+     rs = st5.executeUpdate();
+    st5.close();
+    PreparedStatement st6 = getPvvDb().prepareStatement("DELETE FROM document_group_stage");
+     rs = st6.executeUpdate();
+    st6.close();
+    PreparedStatement st7 = getPvvDb().prepareStatement("DELETE FROM document_group");
+     rs = st7.executeUpdate();
+    st7.close();
+
+
 
   }
 
