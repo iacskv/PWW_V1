@@ -25,8 +25,8 @@ public class InputStageTests extends TestBase {
     String typeags = "Запись акта о рождении";
     String year = "2003";
     String typezags = "Кронштадтский (1997-2003)";
-    String fNum = "278";
-    String lNum = "278";
+    String fNum = "100";
+    String lNum = "100";
     DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     @BeforeMethod
@@ -43,6 +43,8 @@ public class InputStageTests extends TestBase {
         //возврат на "главную"
         app.inputFormHelper().gotoMainPage();
     }
+
+
 
 
 
@@ -170,10 +172,10 @@ public class InputStageTests extends TestBase {
         Thread.sleep(5000);
         //получение значений полей а/з с формы ввода документа
         agsPvvUi = app.inputFormHelper().getMainFieldFromPvv();
-        //System.out.println(agsPvvUi.toString());
+        System.out.println(agsPvvUi.toString());
         //получение значений полей а/з из БД
         agsPvvDb = app.inputFormHelper().getMainFieldFromPvvDb();
-        //System.out.println(agsPvvDb.toString());
+        System.out.println(agsPvvDb.toString());
 
         assertThat(agsPvvUi.agsNum, equalTo(agsPvvDb.agsNum));
         assertThat(agsPvvUi.liter, equalTo(agsPvvDb.liter));
@@ -188,7 +190,7 @@ public class InputStageTests extends TestBase {
         assertThat(agsPvvUi.childDateBorn, equalTo(agsPvvDb.childDateBorn));
         assertThat(agsPvvUi.childCountryNoClass, equalTo(agsPvvDb.childCountryNoClass));
         assertThat(agsPvvUi.childRegionNoClass, equalTo(agsPvvDb.childRegionNoClass));
-        assertThat(agsPvvUi.childCountry, equalTo(agsPvvDb.childCountry));
+        assertThat(agsPvvUi.childCountry, equalTo(agsPvvDb.childCountry)); ///!!!!!
         assertThat(agsPvvUi.childRegion, equalTo(agsPvvDb.childRegion));
         assertThat(agsPvvUi.childDisnrict, equalTo(agsPvvDb.childDisnrict));
         assertThat(agsPvvUi.childPunkt, equalTo(agsPvvDb.childPunkt));

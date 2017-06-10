@@ -170,12 +170,13 @@ public class InputFormHelper extends HelperBase {
 
             value = resultSet.getString("VALUE");
             if ((value == null) || value.equals("")) {
-                value = "";
+                value = "//";
             }
             if (value.equals("[empty_string]")) {
                 value = "//";
             }
             reqValue.add(value);
+            System.out.println(value);
 
         }
 
@@ -447,7 +448,7 @@ public class InputFormHelper extends HelperBase {
 
 
         //вывод на консоль для отладки
-        /*System.out.println(ags.agsNum);
+        System.out.println(ags.agsNum);
         System.out.println(ags.liter);
         System.out.println(ags.agsDd);
         System.out.println(ags.agsMm);
@@ -529,7 +530,7 @@ public class InputFormHelper extends HelperBase {
         System.out.println(ags.certYyyy);
         System.out.println(ags.certDate);
 
-        System.out.println(ags.moreStage);*/
+        System.out.println(ags.moreStage);
 
         return ags;
     }
@@ -544,11 +545,18 @@ public class InputFormHelper extends HelperBase {
 
     public String checkFields(String dataField) {
 
-        if (dataField.length() == 1) {
-            return "";
+        if (dataField.length() == 1 ) {
+            return "//";
         }
 
         return dataField;
+    }
+
+    public String getNumAgsFromAxeLocator(){
+        String value;
+        value = wd.findElement(By.xpath("//label[contains(text(),'Литера:')]/following-sibling::*//input")).getText();
+
+        return value;
     }
 
     @Override

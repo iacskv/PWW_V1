@@ -16,7 +16,7 @@ public class DbTest extends TestBase {
 
     public  String sqlFieldsRequest = "WITH DOCUMENT_VALUES AS (SELECT DOC_STAGE_PROP_ID PROPERTY_ID, REQ_ID, VALUE, LEVEL PROPERTY_LEVEL, ROWNUM PROPERTY_ORDER, PROP_ORDER MULTIPLICITY FROM DOCUMENT_STAGE_PROPERTY START WITH PARENT_ID IS NULL AND DOC_STAGE_ID = (SELECT MIN (doc_stage_id) FROM document_stage WHERE doc_id IN (SELECT MIN (doc_id) FROM document WHERE doc_grp_id IN (SELECT MAX (doc_grp_id) FROM document_group))) CONNECT BY PRIOR DOC_STAGE_PROP_ID = PARENT_ID) SELECT PROPERTY_ORDER, LPAD(' ', (PROPERTY_LEVEL - 1) * 6, ' ') || REQ_NAME PROPERTY_NAME, VALUE, MULTIPLICITY, DOCUMENT_VALUES.REQ_ID, REQ_CODE PROPERTY_CODE, PROPERTY_ID FROM DOCUMENT_VALUES, DOCUMENT_TYPE_REQUISITE WHERE DOCUMENT_VALUES.REQ_ID = DOCUMENT_TYPE_REQUISITE.REQ_ID ORDER BY PROPERTY_ORDER";
 
-    //поиск максимального ID книги (последняя загруженная)
+   //поиск максимального ID книги (последняя загруженная)
     @Test
     public void getFromDbMaxBookId() throws SQLException {
         List<String> bookId = new ArrayList<>();
