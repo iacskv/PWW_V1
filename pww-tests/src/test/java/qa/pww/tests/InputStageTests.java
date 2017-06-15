@@ -25,17 +25,17 @@ public class InputStageTests extends TestBase {
     String typeags = "Запись акта о рождении";
     String year = "2003";
     String typezags = "Кронштадтский (1997-2003)";
-    String fNum = "100";
-    String lNum = "100";
+    String fNum = "287";
+    String lNum = "287";
     DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     @BeforeMethod
     public void initLoadDataForm() throws InterruptedException {
         //загрузка АГС
-        //app.loadDataHelper().gotoLoadDataPage();
-        //app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
-        //app.loadDataHelper().submitLoad();
-        //app.loadDataHelper().waitingLogText();
+        app.loadDataHelper().gotoLoadDataPage();
+        app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
+        app.loadDataHelper().submitLoad();
+        app.loadDataHelper().waitingLogText();
     }
 
     @AfterMethod
