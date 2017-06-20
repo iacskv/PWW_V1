@@ -44,10 +44,6 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().gotoMainPage();
     }
 
-
-
-
-
     @Test(enabled = true)
     //проверка максимального номера (последненго загруженного) группы документов в БД и UI на 1 этапе
     //проверка из UI будет глючить если не делать очистки БД
@@ -167,22 +163,19 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().selectBook();
         //переход на форму ввода
         app.inputFormHelper().gotoInputStageForm();
-
         //ожидание загрузки
         Thread.sleep(5000);
         //получение значений полей а/з с формы ввода документа
         agsPvvUi = app.inputFormHelper().getMainFieldFromPvv();
-        System.out.println(agsPvvUi.toString());
         //получение значений полей а/з из БД
         agsPvvDb = app.inputFormHelper().getMainFieldFromPvvDb();
-        System.out.println(agsPvvDb.toString());
-
+        //сравнение полей из БД с UI
         assertThat(agsPvvUi.agsNum, equalTo(agsPvvDb.agsNum));
         assertThat(agsPvvUi.liter, equalTo(agsPvvDb.liter));
         assertThat(agsPvvUi.agsDate, equalTo(agsPvvDb.agsDate));
         assertThat(agsPvvUi.zagsAgsName, equalTo(agsPvvDb.zagsAgsName));
         assertThat(agsPvvUi.agsCopy, equalTo(agsPvvDb.agsCopy));
-
+        System.out.println("реквизиты АГС - ок");
         assertThat(agsPvvUi.childSex, equalTo(agsPvvDb.childSex));
         assertThat(agsPvvUi.childLastName, equalTo(agsPvvDb.childLastName));
         assertThat(agsPvvUi.childFirstName, equalTo(agsPvvDb.childFirstName));
@@ -193,12 +186,13 @@ public class InputStageTests extends TestBase {
         assertThat(agsPvvUi.childCountry, equalTo(agsPvvDb.childCountry)); ///!!!!!
         assertThat(agsPvvUi.childRegion, equalTo(agsPvvDb.childRegion));
         assertThat(agsPvvUi.childDisnrict, equalTo(agsPvvDb.childDisnrict));
+        assertThat(agsPvvUi.childTown, equalTo(agsPvvDb.childTown));
         assertThat(agsPvvUi.childPunkt, equalTo(agsPvvDb.childPunkt));
         assertThat(agsPvvUi.childBirthCond, equalTo(agsPvvDb.childBirthCond));
-
+        System.out.println("РЕБЕНОК - ок");
         assertThat(agsPvvUi.vosstDate, equalTo(agsPvvDb.vosstDate));
         assertThat(agsPvvUi.vosstOrg, equalTo(agsPvvDb.vosstOrg));
-
+        System.out.println("ВОССТАНОВЛЕНО - ок");
         assertThat(agsPvvUi.fatherLastName, equalTo(agsPvvDb.fatherLastName));
         assertThat(agsPvvUi.fatherFirstName, equalTo(agsPvvDb.fatherFirstName));
         assertThat(agsPvvUi.fatherMiddleName, equalTo(agsPvvDb.fatherMiddleName));
@@ -208,12 +202,13 @@ public class InputStageTests extends TestBase {
         assertThat(agsPvvUi.fatherCountry, equalTo(agsPvvDb.fatherCountry));
         assertThat(agsPvvUi.fatherRegion, equalTo(agsPvvDb.fatherRegion));
         assertThat(agsPvvUi.fatherDistrict, equalTo(agsPvvDb.fatherDistrict));
+        assertThat(agsPvvUi.fatherTown, equalTo(agsPvvDb.fatherTown));
         assertThat(agsPvvUi.fatherPunkt, equalTo(agsPvvDb.fatherPunkt));
         assertThat(agsPvvUi.fatherCitizenshipNoClass, equalTo(agsPvvDb.fatherCitizenshipNoClass));
         assertThat(agsPvvUi.fatherCitizenship, equalTo(agsPvvDb.fatherCitizenship));
         assertThat(agsPvvUi.fatherNationalNoClass, equalTo(agsPvvDb.fatherNationalNoClass));
         assertThat(agsPvvUi.fatherNational, equalTo(agsPvvDb.fatherNational));
-
+        System.out.println("ОТЕЦ - ок");
         assertThat(agsPvvUi.matherLastName, equalTo(agsPvvDb.matherLastName));
         assertThat(agsPvvUi.matherFirstName, equalTo(agsPvvDb.matherFirstName));
         assertThat(agsPvvUi.matherMiddleName, equalTo(agsPvvDb.matherMiddleName));
@@ -223,22 +218,22 @@ public class InputStageTests extends TestBase {
         assertThat(agsPvvUi.matherCountry, equalTo(agsPvvDb.matherCountry));
         assertThat(agsPvvUi.matherRegion, equalTo(agsPvvDb.matherRegion));
         assertThat(agsPvvUi.matherDistrict, equalTo(agsPvvDb.matherDistrict));
+        assertThat(agsPvvUi.matherTown, equalTo(agsPvvDb.matherTown));
         assertThat(agsPvvUi.matherPunkt, equalTo(agsPvvDb.matherPunkt));
         assertThat(agsPvvUi.matherCitizenshipNoClass, equalTo(agsPvvDb.matherCitizenshipNoClass));
         assertThat(agsPvvUi.matherCitizenship, equalTo(agsPvvDb.matherCitizenship));
         assertThat(agsPvvUi.matherNationalNoClass, equalTo(agsPvvDb.matherNationalNoClass));
         assertThat(agsPvvUi.matherNational, equalTo(agsPvvDb.matherNational));
-
+        System.out.println("МАТЬ - ок");
         assertThat(agsPvvUi.baseTypeDoc, equalTo(agsPvvDb.baseTypeDoc));
         assertThat(agsPvvUi.baseNumDoc, equalTo(agsPvvDb.baseNumDoc));
         assertThat(agsPvvUi.baseDateDoc, equalTo(agsPvvDb.baseDateDoc));
         assertThat(agsPvvUi.baseOrgDoc, equalTo(agsPvvDb.baseOrgDoc));
-
+        System.out.println("ОСНОВАНИЕ ОТЦА - ок");
         assertThat(agsPvvUi.certSeria, equalTo(agsPvvDb.certSeria));
         assertThat(agsPvvUi.certNum, equalTo(agsPvvDb.certNum));
         assertThat(agsPvvUi.certDate, equalTo(agsPvvDb.certDate));
-
-
+        System.out.println("СВИДЕТЕЛЬСВО - ок");
     }
 
 }

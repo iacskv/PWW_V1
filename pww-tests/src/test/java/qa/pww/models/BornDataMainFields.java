@@ -28,6 +28,7 @@ public class BornDataMainFields {
     public String childCountry;
     public String childRegion;
     public String childDisnrict;
+    public String childTown;
     public String childPunkt;
     public String childBirthCond;
 
@@ -51,6 +52,7 @@ public class BornDataMainFields {
     public String fatherCountry;
     public String fatherRegion;
     public String fatherDistrict;
+    public String fatherTown;
     public String fatherPunkt;
     public String fatherCitizenshipNoClass;
     public String fatherCitizenship;
@@ -70,6 +72,7 @@ public class BornDataMainFields {
     public String matherCountry;
     public String matherRegion;
     public String matherDistrict;
+    public String matherTown;
     public String matherPunkt;
     public String matherCitizenshipNoClass;
     public String matherCitizenship;

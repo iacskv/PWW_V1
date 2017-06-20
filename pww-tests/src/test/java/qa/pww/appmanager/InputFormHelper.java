@@ -162,13 +162,15 @@ public class InputFormHelper extends HelperBase {
        public BornDataMainFields getMainFieldFromPvvDb() throws SQLException {
         String value;
 
-        String sqlFieldsRequest = "WITH DOCUMENT_VALUES AS (SELECT DOC_STAGE_PROP_ID PROPERTY_ID, REQ_ID, VALUE, LEVEL PROPERTY_LEVEL, ROWNUM PROPERTY_ORDER, PROP_ORDER MULTIPLICITY FROM DOCUMENT_STAGE_PROPERTY START WITH PARENT_ID IS NULL AND DOC_STAGE_ID = (SELECT MIN (doc_stage_id) FROM document_stage WHERE doc_id IN (SELECT MIN (doc_id) FROM document WHERE doc_grp_id IN (SELECT MAX (doc_grp_id) FROM document_group))) CONNECT BY PRIOR DOC_STAGE_PROP_ID = PARENT_ID) SELECT PROPERTY_ORDER, LPAD(' ', (PROPERTY_LEVEL - 1) * 6, ' ') || REQ_NAME PROPERTY_NAME, VALUE, MULTIPLICITY, DOCUMENT_VALUES.REQ_ID, REQ_CODE PROPERTY_CODE, PROPERTY_ID FROM DOCUMENT_VALUES, DOCUMENT_TYPE_REQUISITE WHERE DOCUMENT_VALUES.REQ_ID = DOCUMENT_TYPE_REQUISITE.REQ_ID ORDER BY PROPERTY_ORDER";
+
+        String sqlFieldsRequest = "WITH DOCUMENT_VALUES AS (SELECT DOC_STAGE_PROP_ID PROPERTY_ID, REQ_ID,  VALUE, LEVEL PROPERTY_LEVEL, ROWNUM PROPERTY_ORDER, PROP_ORDER MULTIPLICITY FROM DOCUMENT_STAGE_PROPERTY START WITH PARENT_ID IS NULL AND DOC_STAGE_ID = (SELECT MIN (doc_stage_id) FROM document_stage WHERE doc_id IN (SELECT MIN (doc_id) FROM document WHERE doc_grp_id IN (SELECT MAX (doc_grp_id) FROM document_group))) CONNECT BY PRIOR DOC_STAGE_PROP_ID = PARENT_ID) SELECT PROPERTY_ORDER, LPAD(' ', (PROPERTY_LEVEL - 1) * 6, ' ') || REQ_NAME PROPERTY_NAME, VALUE, MULTIPLICITY, DOCUMENT_VALUES.REQ_ID, REQ_CODE PROPERTY_CODE, PROPERTY_ID FROM DOCUMENT_VALUES, DOCUMENT_TYPE_REQUISITE WHERE DOCUMENT_VALUES.REQ_ID = DOCUMENT_TYPE_REQUISITE.REQ_ID ORDER BY PROPERTY_ORDER";
         List<String> reqValue = new ArrayList<>();
         PreparedStatement statement = getPvvDb().prepareStatement(sqlFieldsRequest);
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
 
             value = resultSet.getString("VALUE");
+
             if ((value == null) || value.equals("")) {
                 value = "//";
             }
@@ -176,8 +178,6 @@ public class InputFormHelper extends HelperBase {
                 value = "//";
             }
             reqValue.add(value);
-            System.out.println(value);
-
         }
 
         resultSet.close();
@@ -199,50 +199,53 @@ public class InputFormHelper extends HelperBase {
         ags.childCountry = reqValue.get(15);
         ags.childRegion = reqValue.get(16);
         ags.childDisnrict = reqValue.get(17);
-        ags.childPunkt = reqValue.get(18);
-        ags.childBirthCond = reqValue.get(19);
+        ags.childTown = reqValue.get(18);
+        ags.childPunkt = reqValue.get(19);
+        ags.childBirthCond = reqValue.get(20);
 
-        ags.vosstDate = reqValue.get(21);
-        ags.vosstOrg = reqValue.get(23);
+        ags.vosstDate = reqValue.get(22);
+        ags.vosstOrg = reqValue.get(24);
 
-        ags.fatherLastName = reqValue.get(24);
-        ags.fatherFirstName = reqValue.get(25);
-        ags.fatherMiddleName = reqValue.get(26);
-        ags.fatherDateBorn = reqValue.get(27);
-        ags.fatherCountryNoClass = reqValue.get(28);
-        ags.fatherRegionNoClass = reqValue.get(29);
-        ags.fatherCountry = reqValue.get(30);
-        ags.fatherRegion = reqValue.get(31);
-        ags.fatherDistrict = reqValue.get(32);
-        ags.fatherPunkt = reqValue.get(33);
-        ags.fatherCitizenshipNoClass = reqValue.get(34);
-        ags.fatherCitizenship = reqValue.get(35);
-        ags.fatherNationalNoClass = reqValue.get(36);
-        ags.fatherNational = reqValue.get(37);
+        ags.fatherLastName = reqValue.get(25);
+        ags.fatherFirstName = reqValue.get(26);
+        ags.fatherMiddleName = reqValue.get(27);
+        ags.fatherDateBorn = reqValue.get(28);
+        ags.fatherCountryNoClass = reqValue.get(29);
+        ags.fatherRegionNoClass = reqValue.get(30);
+        ags.fatherCountry = reqValue.get(31);
+        ags.fatherRegion = reqValue.get(32);
+        ags.fatherDistrict = reqValue.get(33);
+        ags.fatherTown = reqValue.get(34);
+        ags.fatherPunkt = reqValue.get(35);
+        ags.fatherCitizenshipNoClass = reqValue.get(36);
+        ags.fatherCitizenship = reqValue.get(37);
+        ags.fatherNationalNoClass = reqValue.get(38);
+        ags.fatherNational = reqValue.get(39);
 
-        ags.matherLastName = reqValue.get(39);
-        ags.matherFirstName = reqValue.get(40);
-        ags.matherMiddleName = reqValue.get(41);
-        ags.matherDateBorn = reqValue.get(42);
-        ags.matherCountryNoClass = reqValue.get(43);
-        ags.matherRegionNoClass = reqValue.get(44);
-        ags.matherCountry = reqValue.get(45);
-        ags.matherRegion = reqValue.get(46);
-        ags.matherDistrict = reqValue.get(47);
-        ags.matherPunkt = reqValue.get(48);
-        ags.matherCitizenshipNoClass = reqValue.get(49);
-        ags.matherCitizenship = reqValue.get(50);
-        ags.matherNationalNoClass = reqValue.get(51);
-        ags.matherNational = reqValue.get(52);
+        ags.matherLastName = reqValue.get(41);
+        ags.matherFirstName = reqValue.get(42);
+        ags.matherMiddleName = reqValue.get(43);
+        ags.matherDateBorn = reqValue.get(44);
+        ags.matherCountryNoClass = reqValue.get(45);
+        ags.matherRegionNoClass = reqValue.get(46);
+        ags.matherCountry = reqValue.get(47);
+        ags.matherRegion = reqValue.get(48);
+        ags.matherDistrict = reqValue.get(49);
+        ags.matherTown = reqValue.get(50);
+        ags.matherPunkt = reqValue.get(51);
+        ags.matherCitizenshipNoClass = reqValue.get(52);
+        ags.matherCitizenship = reqValue.get(53);
+        ags.matherNationalNoClass = reqValue.get(54);
+        ags.matherNational = reqValue.get(55);
 
-        ags.baseTypeDoc = reqValue.get(54);
-        ags.baseNumDoc = reqValue.get(55);
-        ags.baseDateDoc = reqValue.get(56);
-        ags.baseOrgDoc = reqValue.get(57);
+        ags.baseTypeDoc = reqValue.get(57);
+        ags.baseNumDoc = reqValue.get(58);
+        ags.baseDateDoc = reqValue.get(59);
+        ags.baseOrgDoc = reqValue.get(60);
 
-        ags.certSeria = reqValue.get(59);
-        ags.certNum = reqValue.get(60);
-        ags.certDate = reqValue.get(61);
+        ags.certSeria = reqValue.get(62);
+        ags.certNum = reqValue.get(63);
+        ags.certDate = reqValue.get(64);
 
         return ags;
     }
@@ -307,6 +310,8 @@ public class InputFormHelper extends HelperBase {
         ags.childRegion = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + CH_DISTRICT + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.childDisnrict = checkFields(dataField);
+        dataField = js.executeScript("return document.evaluate('" + CH_TOWN + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        ags.childTown = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + CH_PUNKT + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.childPunkt = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + CH_IS_A_LIFE + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
@@ -355,6 +360,8 @@ public class InputFormHelper extends HelperBase {
         ags.fatherRegion = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + FATHER_DISNRICT + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.fatherDistrict = checkFields(dataField);
+        dataField = js.executeScript("return document.evaluate('" + FATHER_TOWN + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        ags.fatherTown = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + FATHER_PUNKT + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.fatherPunkt = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + FATHER_CITIZENSHIP_NO_CLASS + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
@@ -395,6 +402,8 @@ public class InputFormHelper extends HelperBase {
         ags.matherRegion = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + MATHER_DISNRICT + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.matherDistrict = checkFields(dataField);
+        dataField = js.executeScript("return document.evaluate('" + MATHER_TOWN + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        ags.matherTown = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + MATHER_PUNKT + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.matherPunkt = checkFields(dataField);
         dataField = js.executeScript("return document.evaluate('" + MATHER_CITIZENSHIP_NO_CLASS + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
@@ -448,7 +457,7 @@ public class InputFormHelper extends HelperBase {
 
 
         //вывод на консоль для отладки
-        System.out.println(ags.agsNum);
+        /*System.out.println(ags.agsNum);
         System.out.println(ags.liter);
         System.out.println(ags.agsDd);
         System.out.println(ags.agsMm);
@@ -531,7 +540,7 @@ public class InputFormHelper extends HelperBase {
         System.out.println(ags.certDate);
 
         System.out.println(ags.moreStage);
-
+*/
         return ags;
     }
 
