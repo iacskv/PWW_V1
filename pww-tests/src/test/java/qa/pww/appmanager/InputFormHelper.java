@@ -153,8 +153,6 @@ public class InputFormHelper extends HelperBase {
     //получение реквизитов 1 документа книги (группы документов) с макс. номером (последней загруженной) из БД
        public BornDataMainFields getMainFieldFromPvvDb() throws SQLException {
         String value;
-
-
         String sqlFieldsRequest = "WITH document_values\n" +
                 "     AS (    SELECT doc_stage_prop_id property_id,\n" +
                 "                    req_id,\n" +
@@ -188,9 +186,7 @@ public class InputFormHelper extends HelperBase {
         PreparedStatement statement = getPvvDb().prepareStatement(sqlFieldsRequest);
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
-
             value = resultSet.getString("VALUE");
-
             if ((value == null) || value.equals("")) {
                 value = "//";
             }
@@ -472,7 +468,7 @@ public class InputFormHelper extends HelperBase {
         ags.certDate = ags.certDd + "/" + ags.certMm + "/" + ags.certYyyy;
 
         //признак наличия изменений
-        dataField = js.executeScript("return document.evaluate('" + MORE_STAFE + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        dataField = js.executeScript("return document.evaluate('" + MORE_HISTORY + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.moreStage = dataField;
 
 
@@ -587,6 +583,25 @@ public class InputFormHelper extends HelperBase {
 
         return value;
     }
+
+    //выбор в поле "Актовая запись с изменениями?"
+    public void changesFieldSetup (String status){
+        type(By.xpath(MORE_HISTORY), status);
+    }
+
+    //сохранение документа
+    public void submitSaveDoc(){
+        click(By.xpath(SAVE_BTN));
+    }
+
+    //завершение ввода
+    public void submitEndInputGroup(){
+        click(By.xpath(END_INPUT_BOOK_BTN));
+    }
+
+
+
+
 
     @Override
     public boolean equals(Object o) {

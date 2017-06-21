@@ -175,13 +175,12 @@ public abstract class FirstInputStageFormLocators {
 
 
     //признак наличия изменений
-    //public static String MORE_STAFE = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[9]/div[1]/div/input";
-    public static String MORE_STAFE = "//body//label[contains(text(),\"№ (номер):\")]/following-sibling::*[1]/*//input";
+    public static String MORE_HISTORY = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[9]/div[1]/div/input";
 
     //локаторы кнопок
     public static String SAVE_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";
     public static String NEXT_WITH_NO_SAVE = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
 
-    public static String BACK_FROM_INPUT_FORM_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button";
-    public static String END_INPUT_BOOK_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[2]/tbody/tr[2]/td[2]/em/button";
+    public static String BACK_FROM_INPUT_FORM_BTN = "//button[contains(text(),\"Вернуться к списку документов\")]";
+    public static String END_INPUT_BOOK_BTN = "//button[contains(text(),\"Завершить ввод\")]";
 }

@@ -246,6 +246,61 @@ public class InputStageTests extends TestBase {
         System.out.println("СВИДЕТЕЛЬСВО - ок");
         System.out.println("проверка основных полей (1-21) (1 этап ввода) загруженных из  UI и БД ПВВ - ok");
         System.out.println("--------------------------");
+        //возврат к списку книг (выход из формы ввода)
+        app.inputFormHelper().backFromInputStageForm();
+    }
+
+    @Test (enabled = true, priority = 7)
+    //проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения
+    public void finishInputDocOnFistStage() throws InterruptedException {
+        //переход на страницу выбора группы док
+        app.inputFormHelper().gotoInputForm();
+        //заполнение фильтров (1 этап, 2000-2003)
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
+        //поиск по фильтрам
+        app.inputFormHelper().submitFormFilters();
+        //выбор книги загруженной последней (в BeforeMethod)
+        app.inputFormHelper().selectBook();
+        //переход на форму ввода
+        app.inputFormHelper().gotoInputStageForm();
+        //ожидание загрузки
+        Thread.sleep(5000);
+        //установка "Актовая запись с изменениями?" = да
+        app.inputFormHelper().changesFieldSetup ("Да");
+        //сохранение документа
+        app.inputFormHelper().submitSaveDoc();
+        //ожидание загрузки
+        Thread.sleep(1000);
+        //завершение ввода группы (книги)
+        app.inputFormHelper().submitEndInputGroup();
+        System.out.println("проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения - ok");
+
+    }
+
+    @Test (enabled = true, priority = 8)
+    //проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения
+    public void finishInputDocOnSecondStage() throws InterruptedException {
+        //переход на страницу выбора группы док
+        app.inputFormHelper().gotoInputForm();
+        //заполнение фильтров (1 этап, 2000-2003)
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "2");
+        //поиск по фильтрам
+        app.inputFormHelper().submitFormFilters();
+        //выбор книги загруженной последней (в BeforeMethod)
+        app.inputFormHelper().selectBook();
+        //переход на форму ввода
+        app.inputFormHelper().gotoInputStageForm();
+        //ожидание загрузки
+        Thread.sleep(5000);
+        //установка "Актовая запись с изменениями?" = да
+        app.inputFormHelper().changesFieldSetup ("Да");
+        //сохранение документа
+        app.inputFormHelper().submitSaveDoc();
+        //ожидание загрузки
+        Thread.sleep(1000);
+        //завершение ввода группы (книги)
+        app.inputFormHelper().submitEndInputGroup();
+        System.out.println("проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения - ok");
     }
 
 }
