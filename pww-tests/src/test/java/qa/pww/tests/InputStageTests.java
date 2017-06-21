@@ -32,10 +32,10 @@ public class InputStageTests extends TestBase {
     @BeforeMethod
     public void initLoadDataForm() throws InterruptedException {
         //загрузка АГС
-        app.loadDataHelper().gotoLoadDataPage();
-        app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
-        app.loadDataHelper().submitLoad();
-        app.loadDataHelper().waitingLogText();
+        //app.loadDataHelper().gotoLoadDataPage();
+        //app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
+        //app.loadDataHelper().submitLoad();
+        //app.loadDataHelper().waitingLogText();
     }
 
     @AfterMethod
