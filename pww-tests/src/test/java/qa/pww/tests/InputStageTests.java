@@ -3,6 +3,7 @@ package qa.pww.tests;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.pww.models.BornDataMainFields;
@@ -29,13 +30,13 @@ public class InputStageTests extends TestBase {
     String lNum = "287";
     DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
-    @BeforeMethod
+    @BeforeClass
     public void initLoadDataForm() throws InterruptedException {
         //загрузка АГС
-        //app.loadDataHelper().gotoLoadDataPage();
-        //app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
-        //app.loadDataHelper().submitLoad();
-        //app.loadDataHelper().waitingLogText();
+        app.loadDataHelper().gotoLoadDataPage();
+        app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
+        app.loadDataHelper().submitLoad();
+        app.loadDataHelper().waitingLogText();
     }
 
     @AfterMethod
@@ -44,28 +45,30 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().gotoMainPage();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true, priority = 1)
     //проверка максимального номера (последненго загруженного) группы документов в БД и UI на 1 этапе
     //проверка из UI будет глючить если не делать очистки БД
     public void checkNumNewBookOnFirstInputStage() throws InterruptedException, SQLException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (1 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersFirstStage();
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
         //поиск по фильтрам
         app.inputFormHelper().submitFormFilters();
         //проверка совпадения номера последней загруженной книги по UI  и БД
         app.inputFormHelper().checkNumNewBook();
+        System.out.println("проверка максимального номера (последненго загруженного) группы документов в БД и UI на 1 этапе = ok");
+        System.out.println("--------------------------");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true, priority = 2)
     //проверка что загруженная книга отображается в таблице 1 этапа ввода с нужными статусами
     //проверка из UI будет глючить если не делать очистки БД
     public void checkPresentNewBookOnFirstInputStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (1 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersFirstStage();
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
         //поиск по фильтрам
         app.inputFormHelper().submitFormFilters();
         //выбор книги загруженной последней (в BeforeMethod)
@@ -80,31 +83,35 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().checkInputedTrue();
         //возврат к списку книг
         app.inputFormHelper().backFromReviewDocForm();
+        System.out.println("проверка что загруженная книга отображается в таблице 1 этапа ввода с нужными статусами - ok");
+        System.out.println("--------------------------");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true, priority = 3)
     //проверка максимального номера (последненго загруженного) группы документов в БД и UI на 2 этапе
     //проверка из UI будет глючить если не делать очистки БД
     public void checkNumNewBookOnSecondInputStage() throws SQLException, InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (2 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersSecondStage();
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "2");
         //поиск по фильтрам
         app.inputFormHelper().submitFormFilters();
         //проверка совпадения номера последней загруженной книги по UI  и БД
         app.inputFormHelper().checkNumNewBook();
+        System.out.println("проверка максимального номера (последненго загруженного) группы документов в БД и UI на 2 этапе - ok");
+        System.out.println("--------------------------");
     }
 
 
-    @Test(enabled = true)
+    @Test(enabled = true, priority = 4)
     //проверка что загруженная книга отображается в таблице 2 этапа ввода с нужными статусами
     //проверка из UI будет глючить если не делать очистки БД
     public void checkPresentNewBookOnSecondInputStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (2 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersSecondStage();
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "2");
         //поиск по фильтрам
         app.inputFormHelper().submitFormFilters();
         //выбор книги загруженной последней (в BeforeMethod)
@@ -119,23 +126,24 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().checkInputedTrue();
         //возврат к списку книг
         app.inputFormHelper().backFromReviewDocForm();
+        System.out.println("проверка что загруженная книга отображается в таблице 2 этапа ввода с нужными статусами - ok");
+        System.out.println("--------------------------");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true, priority = 5)
     //проверка возможности открытия книги на заполнение в 1 этапе
     //проверка из UI будет глючить если не делать очистки БД
     public void fistInputStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (1 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersFirstStage();
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
         //поиск по фильтрам
         app.inputFormHelper().submitFormFilters();
         //выбор книги загруженной последней (в BeforeMethod)
         app.inputFormHelper().selectBook();
         //переход на форму ввода
         app.inputFormHelper().gotoInputStageForm();
-
         //ожидание загрузки и получение текста № а/з
         Thread.sleep(5000);
         String a = "";
@@ -144,11 +152,13 @@ public class InputStageTests extends TestBase {
         assertThat(a, equalTo(docAttr.fNum));
         //возврат к списку книг (выход из формы ввода)
         app.inputFormHelper().backFromInputStageForm();
+        System.out.println("проверка возможности открытия книги на заполнение в 1 этапе - ok");
+        System.out.println("--------------------------");
     }
 
 
-    @Test (enabled = true)
-    //проверка основных полей (1-21) загруженных из  UI и БД ПВВ
+    @Test (enabled = true, priority = 6)
+    //проверка основных полей (1-21) (1 этап ввода) загруженных из  UI и БД ПВВ
     public void checkMainFieldOnFirstStage() throws InterruptedException, SQLException {
         BornDataMainFields agsPvvUi;
         BornDataMainFields agsPvvDb;
@@ -156,7 +166,7 @@ public class InputStageTests extends TestBase {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
         //заполнение фильтров (1 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersFirstStage();
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
         //поиск по фильтрам
         app.inputFormHelper().submitFormFilters();
         //выбор книги загруженной последней (в BeforeMethod)
@@ -234,6 +244,8 @@ public class InputStageTests extends TestBase {
         assertThat(agsPvvUi.certNum, equalTo(agsPvvDb.certNum));
         assertThat(agsPvvUi.certDate, equalTo(agsPvvDb.certDate));
         System.out.println("СВИДЕТЕЛЬСВО - ок");
+        System.out.println("проверка основных полей (1-21) (1 этап ввода) загруженных из  UI и БД ПВВ - ok");
+        System.out.println("--------------------------");
     }
 
 }

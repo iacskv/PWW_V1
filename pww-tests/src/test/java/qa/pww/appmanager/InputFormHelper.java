@@ -50,19 +50,11 @@ public class InputFormHelper extends HelperBase {
 
     }
 
-    public void fillFormFiltersFirstStage() {
+        public void fillFormFiltersStage(String typeAgs, String stage) {
         click(By.xpath(TYPE_DOC)); //клик по фильтру "Тип"
-        click(By.xpath("//div[text()='Книга записей актов (2000-2003)']")); //выбор "Книга 2000-2003"
+        click(By.xpath("//div[text()='" + typeAgs + "']")); //выбор "Книга 2000-2003"
         click(By.xpath(STAGE)); //клик по фильтру "Этап"
-        click(By.xpath("//div[text()='1']")); //клик по "1"
-
-    }
-
-    public void fillFormFiltersSecondStage() {
-        click(By.xpath(TYPE_DOC)); //клик по фильтру "Тип"
-        click(By.xpath("//div[text()='Книга записей актов (2000-2003)']")); //выбор "Книга 2000-2003"
-        click(By.xpath(STAGE)); //клик по фильтру "Этап"
-        click(By.xpath("//div[text()='2']")); //клик по "2"
+        click(By.xpath("//div[text()='" + stage+ "']")); //клик по "2"
 
     }
 
@@ -73,7 +65,7 @@ public class InputFormHelper extends HelperBase {
     //получение максимального номера книги (группы документов) из БД
     public String getFromDbMaxBookId() throws SQLException {
         List<String> bookId = new ArrayList<>();
-        PreparedStatement statement = getPvvDb().prepareStatement("select DOC_GRP_ID from DOCUMENT_GROUP");
+        PreparedStatement statement = getPvvDb().prepareStatement("select DOC_GRP_ID from DOCUMENT_GROUP where doc_grp_phase = 'input'");
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
             bookId.add(resultSet.getString("DOC_GRP_ID"));
@@ -163,7 +155,35 @@ public class InputFormHelper extends HelperBase {
         String value;
 
 
-        String sqlFieldsRequest = "WITH DOCUMENT_VALUES AS (SELECT DOC_STAGE_PROP_ID PROPERTY_ID, REQ_ID,  VALUE, LEVEL PROPERTY_LEVEL, ROWNUM PROPERTY_ORDER, PROP_ORDER MULTIPLICITY FROM DOCUMENT_STAGE_PROPERTY START WITH PARENT_ID IS NULL AND DOC_STAGE_ID = (SELECT MIN (doc_stage_id) FROM document_stage WHERE doc_id IN (SELECT MIN (doc_id) FROM document WHERE doc_grp_id IN (SELECT MAX (doc_grp_id) FROM document_group))) CONNECT BY PRIOR DOC_STAGE_PROP_ID = PARENT_ID) SELECT PROPERTY_ORDER, LPAD(' ', (PROPERTY_LEVEL - 1) * 6, ' ') || REQ_NAME PROPERTY_NAME, VALUE, MULTIPLICITY, DOCUMENT_VALUES.REQ_ID, REQ_CODE PROPERTY_CODE, PROPERTY_ID FROM DOCUMENT_VALUES, DOCUMENT_TYPE_REQUISITE WHERE DOCUMENT_VALUES.REQ_ID = DOCUMENT_TYPE_REQUISITE.REQ_ID ORDER BY PROPERTY_ORDER";
+        String sqlFieldsRequest = "WITH document_values\n" +
+                "     AS (    SELECT doc_stage_prop_id property_id,\n" +
+                "                    req_id,\n" +
+                "                    VALUE,\n" +
+                "                    LEVEL property_level,\n" +
+                "                    ROWNUM property_order,\n" +
+                "                    prop_order multiplicity\n" +
+                "               FROM document_stage_property\n" +
+                "         START WITH     parent_id IS NULL\n" +
+                "                    AND doc_stage_id =\n" +
+                "                           (SELECT MIN (doc_stage_id)\n" +
+                "                              FROM document_stage\n" +
+                "                             WHERE doc_id IN\n" +
+                "                                      (SELECT MIN (doc_id)\n" +
+                "                                         FROM document\n" +
+                "                                        WHERE doc_grp_id IN\n" +
+                "                                                 (SELECT MAX (doc_grp_id)\n" +
+                "                                                    FROM document_group where doc_grp_phase = 'input')))\n" +
+                "         CONNECT BY PRIOR doc_stage_prop_id = parent_id)\n" +
+                "  SELECT property_order,\n" +
+                "         LPAD (' ', (property_level - 1) * 6, ' ') || req_name property_name,\n" +
+                "         VALUE,\n" +
+                "         multiplicity,\n" +
+                "         document_values.req_id,\n" +
+                "         req_code property_code,\n" +
+                "         property_id\n" +
+                "    FROM document_values, document_type_requisite\n" +
+                "   WHERE document_values.req_id = document_type_requisite.req_id\n" +
+                "ORDER BY property_order";
         List<String> reqValue = new ArrayList<>();
         PreparedStatement statement = getPvvDb().prepareStatement(sqlFieldsRequest);
         ResultSet resultSet = statement.executeQuery();
