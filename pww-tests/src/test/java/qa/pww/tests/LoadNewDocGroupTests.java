@@ -22,7 +22,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * Created by k.smotrov on 03.05.2017.
  */
-public class LoadNewDocGroup extends TestBase {
+public class LoadNewDocGroupTests extends TestBase {
 
 
 

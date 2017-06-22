@@ -8,7 +8,7 @@ import qa.pww.models.DocForLoad;
 /**
  * Created by k.smotrov on 12.05.2017.
  */
-public class OutOfLimitRangeNum extends TestBase {
+public class OutOfLimitRangeNumTests extends TestBase {
     DocForLoad docAttr;
     @BeforeMethod
     public void initLoadDataForm(){

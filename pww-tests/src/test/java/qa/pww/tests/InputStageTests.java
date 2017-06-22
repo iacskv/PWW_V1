@@ -302,5 +302,4 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения - ok");
     }
-
 }
