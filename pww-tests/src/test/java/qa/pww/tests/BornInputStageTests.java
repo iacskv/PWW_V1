@@ -1,25 +1,20 @@
 package qa.pww.tests;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.pww.models.BornDataMainFields;
 import qa.pww.models.DocForLoad;
 
 import java.sql.SQLException;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * Created by k.smotrov on 25.05.2017.
  */
-public class InputStageTests extends TestBase {
+public class BornInputStageTests extends TestBase {
 
 
     String typedoc = "Книга записей актов (2000-2003)";
@@ -251,7 +246,7 @@ public class InputStageTests extends TestBase {
     }
 
     @Test (enabled = true, priority = 7)
-    //проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения
+    //проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения без изменения полей с направлением на корректировку
     public void finishInputDocOnFistStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -266,9 +261,9 @@ public class InputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //установка "Актовая запись с изменениями?" = да
-        app.inputFormHelper().changesFieldSetup ("Да");
+        app.inputFormHelper().changesFieldBornSetup("Да");
         //сохранение документа
-        app.inputFormHelper().submitSaveDoc();
+        app.inputFormHelper().submitSaveBornDoc();
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
@@ -278,7 +273,7 @@ public class InputStageTests extends TestBase {
     }
 
     @Test (enabled = true, priority = 8)
-    //проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения
+    //проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения без изменения полей с направлением на корректировку
     public void finishInputDocOnSecondStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -292,10 +287,10 @@ public class InputStageTests extends TestBase {
         app.inputFormHelper().gotoInputStageForm();
         //ожидание загрузки
         Thread.sleep(5000);
-        //установка "Актовая запись с изменениями?" = да
-        app.inputFormHelper().changesFieldSetup ("Да");
-        //сохранение документа
-        app.inputFormHelper().submitSaveDoc();
+        //установка "Актовая запись с изменениями?" (Рождение) = да
+        app.inputFormHelper().changesFieldBornSetup("Да");
+        //сохранение документа (Рождение)
+        app.inputFormHelper().submitSaveBornDoc();
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)

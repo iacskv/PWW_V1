@@ -16,7 +16,8 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static qa.pww.Locators.FirstInputStageFormLocators.*;
+import static qa.pww.Locators.FirstInputStageBornFormLocators.*;
+import static qa.pww.Locators.FirstInputStageMarriageFormLocators.*;
 import static qa.pww.Locators.InputFormLocators.*;
 import static qa.pww.Locators.ReviewDocForm.*;
 import static qa.pww.Locators.SpanLocators.*;
@@ -468,7 +469,7 @@ public class InputFormHelper extends HelperBase {
         ags.certDate = ags.certDd + "/" + ags.certMm + "/" + ags.certYyyy;
 
         //признак наличия изменений
-        dataField = js.executeScript("return document.evaluate('" + MORE_HISTORY + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        dataField = js.executeScript("return document.evaluate('" + MORE_HISTORY_BORN + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
         ags.moreStage = dataField;
 
 
@@ -584,15 +585,26 @@ public class InputFormHelper extends HelperBase {
         return value;
     }
 
-    //выбор в поле "Актовая запись с изменениями?"
-    public void changesFieldSetup (String status){
-        type(By.xpath(MORE_HISTORY), status);
+    //выбор в поле "Актовая запись с изменениями?" (Рождение)
+    public void changesFieldBornSetup(String status){
+        type(By.xpath(MORE_HISTORY_BORN), status);
     }
 
-    //сохранение документа
-    public void submitSaveDoc(){
-        click(By.xpath(SAVE_BTN));
+    //сохранение документа (Рождение)
+    public void submitSaveBornDoc(){
+        click(By.xpath(SAVE_BORN_BTN));
     }
+
+    //выбор в поле "Актовая запись с изменениями?" (Брак)
+    public void changesFieldMarriageSetup(String status){
+        type(By.xpath(MORE_HISTORY_MARRIAGE), status);
+    }
+
+    //сохранение документа (Брак)
+    public void submitSaveMarriageDoc(){
+        click(By.xpath(SAVE_MARRIAGE_BTN));
+    }
+
 
     //завершение ввода
     public void submitEndInputGroup(){

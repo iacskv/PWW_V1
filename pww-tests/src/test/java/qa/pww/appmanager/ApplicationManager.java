@@ -33,6 +33,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private LoadDataHelper loadDataHelper;
   private InputFormHelper inputFormHelper;
+  private ControlFormHelper controlFormHelper;
   private int rs;
 
 
@@ -62,6 +63,8 @@ public class ApplicationManager {
     sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     loadDataHelper = new LoadDataHelper(wd);
     inputFormHelper = new InputFormHelper(wd, pvvDb, zagsDb);
+    controlFormHelper = new ControlFormHelper(wd, pvvDb, zagsDb);
+
   }
 
   public void initDb () throws IOException {
@@ -116,11 +119,15 @@ public class ApplicationManager {
     return inputFormHelper;
   }
 
-    public Connection getPvvDb() {
+  public ControlFormHelper controlFormHelper() {
+    return controlFormHelper;
+  }
+
+  public Connection getPvvDb() {
         return pvvDb;
     }
 
-    public Connection getZagsDb() {
+  public Connection getZagsDb() {
         return zagsDb;
     }
 }

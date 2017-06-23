@@ -3,7 +3,7 @@ package qa.pww.Locators;
 /**
  * Created by k.smotrov on 01.06.2017.
  */
-public abstract class FirstInputStageFormLocators {
+public abstract class FirstInputStageBornFormLocators {
 
     //локаторы полей реквизитов акта
 
@@ -175,11 +175,11 @@ public abstract class FirstInputStageFormLocators {
 
 
     //признак наличия изменений
-    public static String MORE_HISTORY = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[9]/div[1]/div/input";
+    public static String MORE_HISTORY_BORN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[9]/div[1]/div/input";
 
     //локаторы кнопок
-    public static String SAVE_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";
-    public static String NEXT_WITH_NO_SAVE = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
+    public static String SAVE_BORN_BTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";
+    public static String NEXT_BORN_WITH_NO_SAVE = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
 
     public static String BACK_FROM_INPUT_FORM_BTN = "//button[contains(text(),\"Вернуться к списку документов\")]";
     public static String END_INPUT_BOOK_BTN = "//button[contains(text(),\"Завершить ввод\")]";
