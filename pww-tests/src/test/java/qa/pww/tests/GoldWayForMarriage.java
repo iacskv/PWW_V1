@@ -1,8 +1,5 @@
 package qa.pww.tests;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import qa.pww.models.DocForLoad;
@@ -21,8 +18,8 @@ public class GoldWayForMarriage extends TestBase{
     String typeags = "Запись акта о браке";
     String year = "2003";
     String typezags = "Кронштадтский (1997-2003)";
-    String fNum = "171";
-    String lNum = "171";
+    String fNum = "172";
+    String lNum = "172";
     DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     String book_max_id="";
@@ -63,7 +60,7 @@ public class GoldWayForMarriage extends TestBase{
         Thread.sleep(1000);
         //завершение ввода группы (книги)
         app.inputFormHelper().submitEndInputGroup();
-        System.out.println("проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения - ok");
+        System.out.println("проверка завершения ввода документа  на 1 этапе ввода без изменения - ok");
 
         //возврат на "главную"
         app.inputFormHelper().gotoMainPage();
@@ -87,7 +84,7 @@ public class GoldWayForMarriage extends TestBase{
         Thread.sleep(1000);
         //завершение ввода группы (книги)
         app.inputFormHelper().submitEndInputGroup();
-        System.out.println("проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения - ok");
+        System.out.println("проверка завершения ввода документа на 2 этапе ввода без изменения - ok");
     }
 
     @Test (enabled = true, priority = 3)
@@ -102,18 +99,19 @@ public class GoldWayForMarriage extends TestBase{
         app.controlFormHelper().selectBook(book_max_id);
 
         //проверка что статус книги "Ввод"
-        status_book = app.controlFormHelper().getKorrectionStatus(book_max_id);
+        status_book = app.controlFormHelper().getBookStatus(book_max_id);
         assertThat(status_book, equalTo("ввод"));
         System.out.println("статус книги " + book_max_id + " - ввод");
 
         //открытие окна "Редактирование"
+        app.controlFormHelper().selectBook(book_max_id);
         app.controlFormHelper().gotoEditForm();
         //изменение фазы с "Ввода" на "Верификация"
         app.controlFormHelper().moveBookToVerificationPhase();
 
         //проверка статуса книги
         Thread.sleep(70000);
-        status_book = app.controlFormHelper().getKorrectionStatus(book_max_id);
+        status_book = app.controlFormHelper().getBookStatus(book_max_id);
         assertThat(status_book, equalTo("корректировка"));
         System.out.println("статус книги " + book_max_id + " - корректировка");
     }

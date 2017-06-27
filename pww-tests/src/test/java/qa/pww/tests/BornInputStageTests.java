@@ -246,7 +246,7 @@ public class BornInputStageTests extends TestBase {
     }
 
     @Test (enabled = true, priority = 7)
-    //проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения без изменения полей с направлением на корректировку
+    //проверка завершения ввода документа на 1 этапе ввода без изменения без изменения полей с направлением на корректировку
     public void finishInputDocOnFistStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -273,7 +273,7 @@ public class BornInputStageTests extends TestBase {
     }
 
     @Test (enabled = true, priority = 8)
-    //проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения без изменения полей с направлением на корректировку
+    //проверка завершения ввода документа  на 2 этапе ввода без изменения без изменения полей с направлением на корректировку
     public void finishInputDocOnSecondStage() throws InterruptedException {
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -297,4 +297,6 @@ public class BornInputStageTests extends TestBase {
         app.inputFormHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения - ok");
     }
+
+
 }

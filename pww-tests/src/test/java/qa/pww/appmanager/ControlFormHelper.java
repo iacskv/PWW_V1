@@ -35,23 +35,25 @@ public class ControlFormHelper extends HelperBase{
     }
 
     //изменение фазы с "Ввода" на "Верификация"
-    public void moveBookToVerificationPhase(){
+    public void moveBookToVerificationPhase() throws InterruptedException {
 
-        click(By.xpath(PHASE_VER));
+        Thread.sleep(1000);
         click(By.xpath(PHASE));
+        Thread.sleep(1000);
+        click(By.xpath(PHASE_VER));
         click(By.xpath(SAVE_AND_EXIT_BTN));
 
     }
 
     //ожидание и проверка изменения статуса на "Корректировка"
 
-    public String getKorrectionStatus(String book) throws InterruptedException {
+    public String getBookStatus(String book) throws InterruptedException {
         String status;
 
         click(By.xpath(FIND_OK_BTN));
         Thread.sleep(1000);
         status = wd.findElement(By.xpath("//div[contains(text(),'Номер книги " + book + "')]/../../td[2]/div")).getText();
-        System.out.println(status);
+        //System.out.println(status);
         return status;
     }
 

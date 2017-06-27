@@ -90,7 +90,7 @@ public class InputFormHelper extends HelperBase {
             book_id.add(identifier);
         }
         book_max_id = Collections.max(book_id);
-        System.out.println("номер книги в UI= " + book_max_id);
+        System.out.println("последняя загруженная книга в UI= " + book_max_id);
         return book_max_id;
     }
 
