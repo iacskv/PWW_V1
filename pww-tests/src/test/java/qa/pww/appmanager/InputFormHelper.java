@@ -79,9 +79,9 @@ public class InputFormHelper extends HelperBase {
     }
 
     //поиск строки в таблице с макс номером книги из UI
-    public String getfromUiBookMaxInd() {
+    public String getfromInputFormBookMaxInd() {
 
-        String book_max_id;
+        String book_max_id = "";
         List<WebElement> elements = wd.findElements(By.xpath("//div[contains(text(),'Номер книги:')]"));
         ArrayList<String> book_id = new ArrayList<>();
         for (WebElement element : elements) {
@@ -97,14 +97,14 @@ public class InputFormHelper extends HelperBase {
     //сверка номера в БД и UI
     public void checkNumNewBook() throws SQLException, InterruptedException {
         String numDb = getFromDbMaxBookId();
-        String numUi = getfromUiBookMaxInd();
+        String numUi = getfromInputFormBookMaxInd();
         assertThat(numDb, equalTo(numUi));
     }
 
 
     //выбор последней загруженной книги из UI
     public void selectBook() throws InterruptedException {
-        click(By.xpath("//div[contains(text(),'Номер книги: " + getfromUiBookMaxInd() + "')]"));
+        click(By.xpath("//div[contains(text(),'Номер книги: " + getfromInputFormBookMaxInd() + "')]"));
     }
 
     //переход на форму просмотра списка документов

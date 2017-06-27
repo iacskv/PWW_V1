@@ -2,9 +2,18 @@ package qa.pww.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import qa.pww.models.DocForLoad;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import static qa.pww.Locators.ControlFormLocator.*;
 import static qa.pww.Locators.SpanLocators.*;
@@ -17,6 +26,21 @@ public class ControlFormHelper extends HelperBase{
 
     public ControlFormHelper(WebDriver wd, Connection pvvDb, Connection zagsDb) {
         super(wd, pvvDb, zagsDb);
+    }
+
+    public void loadNewBook(String filePath) throws IOException, InterruptedException {
+        //загрузка, ввод, завершение ввода а/з без истории
+        BufferedReader reader = new BufferedReader(new FileReader(new File(filePath)));
+        String line = reader.readLine();
+        while (line != null) {
+            String[] split = line.split(";");
+            DocForLoad book = new DocForLoad(split[0], split[1], split[2], split[3], split[4], split[5]);
+            app.loadDataHelper().gotoLoadDataPage();
+            app.loadDataHelper().fillLoadNewDocGroupFofm(book);
+            app.loadDataHelper().submitLoad();
+            app.loadDataHelper().waitingLogText();
+            line = reader.readLine();
+        }
     }
 
     public void finishInputDocStage(String needChange1, String needChange2) throws InterruptedException {
@@ -71,6 +95,33 @@ public class ControlFormHelper extends HelperBase{
         System.out.println("проверка завершения ввода документа на 2 этапе ввода без изменения - ok");
     }
 
+    public String getfromControlDocFormBookMaxInd() {
+
+        String book_max_id = "";
+        List<WebElement> elements = wd.findElements(By.xpath("//div[contains(text(),'Номер книги')]"));
+        if (elements.size()== 0){return book_max_id;}
+        ArrayList<String> book_id = new ArrayList<>();
+        for (WebElement element : elements) {
+            String identifier = element.getText();
+            identifier = identifier.replaceAll("Наименование.*", "").replaceAll("Номер книги ", "").replace(",", "").replace(" ", "");
+            book_id.add(identifier);
+        }
+        book_max_id = Collections.max(book_id);
+        //System.out.println("последняя загруженная книга в UI= " + book_max_id);
+        return book_max_id;
+    }
+
+    //статус книги
+
+    public String getBookStatus(String book) throws InterruptedException {
+        String status;
+
+        click(By.xpath(FIND_OK_BTN));
+        Thread.sleep(1000);
+        status = wd.findElement(By.xpath("//tbody//div[contains(text(),'Номер книги " + book + "')]/../../td[2]/div")).getText();
+        //System.out.println(status);
+        return status;
+    }
 
     //переход на вкладку "Управление документами"
     public void gotoControlSpan(){
@@ -81,7 +132,18 @@ public class ControlFormHelper extends HelperBase{
 
     //выбор книги проведенной по вводу ранее
     public void selectBook(String book){
-        click(By.xpath("//div[contains(text(),'Номер книги " + book + "')]"));
+        click(By.xpath("//tbody//div[contains(text(),'Номер книги " + book + "')]"));
+    }
+
+    public String selectBookReadyPhase(){
+        String book = "";
+        List<WebElement> elements = wd.findElements(By.xpath("//tbody//div[contains(text(),'готов к выгрузке')]"));
+        if (elements.size()== 0){return book;}
+        click(By.xpath("//tbody//div[contains(text(),'готов к выгрузке')]"));
+        book = wd.findElement(By.xpath("//tbody//div[contains(text(),'Номер книги " + book + "')]/../../td[4]/div")).getText();
+        book = book.replaceAll("Наименование.*", "").replaceAll("Номер книги ", "").replace(",", "").replace(" ", "");
+        System.out.println(book);
+        return book;
     }
 
     //открытие форму "Редактирование"
@@ -89,7 +151,7 @@ public class ControlFormHelper extends HelperBase{
         click(By.xpath(EDIT_BTN));
     }
 
-    //изменение фазы с "Ввода" на "Верификация"
+    //изменение фазы с "ввод" на "Верификация"
     public void moveBookToVerificationPhase() throws InterruptedException {
 
         Thread.sleep(1000);
@@ -100,17 +162,18 @@ public class ControlFormHelper extends HelperBase{
 
     }
 
-    //ожидание и проверка изменения статуса на "Корректировка"
+    //изменение фазы с "готов к выгрузке" на "верификация"
+    public void moveBookToCorrPhase() throws InterruptedException {
 
-    public String getBookStatus(String book) throws InterruptedException {
-        String status;
-
-        click(By.xpath(FIND_OK_BTN));
         Thread.sleep(1000);
-        status = wd.findElement(By.xpath("//div[contains(text(),'Номер книги " + book + "')]/../../td[2]/div")).getText();
-        //System.out.println(status);
-        return status;
+        click(By.xpath(PHASE));
+        Thread.sleep(1000);
+        click(By.xpath(PHASE_COR));
+        click(By.xpath(SAVE_AND_EXIT_BTN));
+
     }
+
+
 
 
 

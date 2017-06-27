@@ -32,7 +32,7 @@ public class GoldWayForMarriage extends TestBase{
         app.loadDataHelper().submitLoad();
         app.loadDataHelper().waitingLogText();
         app.controlFormHelper().finishInputDocStage("Да","Да");
-        book_max_id = app.inputFormHelper().getfromUiBookMaxInd();
+        book_max_id = app.inputFormHelper().getfromInputFormBookMaxInd();
     }
 
 
