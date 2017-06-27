@@ -14,14 +14,14 @@ import java.sql.SQLException;
  */
 public class TestBase {
 
-  protected static final ApplicationManager app
+  public static final ApplicationManager app
           = new ApplicationManager(System.getProperty("browser", BrowserType.FIREFOX));
 
   @BeforeSuite
   public void setUp() throws Exception {
     app.initDb();
     app.init();
-    //app.clearPvvDb();
+    app.clearPvvDb();
 
   }
 

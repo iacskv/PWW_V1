@@ -30,25 +30,28 @@ public class ControlDocumentTests extends TestBase{
 
 
 
-    @Test (enabled = false, priority = 1)
+    @Test (enabled = true, priority = 1)
     //перевод группы из "Ввода" в "Верификацию" и ожидание "Готов к выгрузке" (группа без ошибок и без истории)
     public void moveGroupToVerification() throws InterruptedException, IOException {
 
+        String  book_max_id = "";
 
-        //загрузка а/з без истории
+        //загрузка, ввод, завершение ввода а/з без истории
         BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/AGS_WITHOUT_HISTORY.txt")));
         String line = reader.readLine();
         while (line != null) {
             String[] split = line.split(";");
             DocForLoad book = new DocForLoad(split[0], split[1], split[2], split[3], split[4], split[5]);
-            app.inputFormHelper().gotoMainPage();
+            app.loadDataHelper().gotoLoadDataPage();
             app.loadDataHelper().fillLoadNewDocGroupFofm(book);
             app.loadDataHelper().submitLoad();
             app.loadDataHelper().waitingLogText();
+            app.controlFormHelper().finishInputDocStage("Нет", "Нет");
+            book_max_id = app.inputFormHelper().getfromUiBookMaxInd();
             line = reader.readLine();
         }
 
-        String status_book="";
+       String status_book="";
 
         //переход на вкладку "Управление документами"
         app.controlFormHelper().gotoControlSpan();
@@ -69,10 +72,10 @@ public class ControlDocumentTests extends TestBase{
         //проверка статуса книги
         Thread.sleep(70000);
         status_book = app.controlFormHelper().getBookStatus(book_max_id);
-        assertThat(status_book, equalTo("корректировка"));
-        System.out.println("статус книги " + book_max_id + " - корректировка");
+        assertThat(status_book, equalTo("готов к выгрузке"));
+        System.out.println("статус книги " + book_max_id + " - готов к выгрузке");
     }
-    }
+
 
     @Test (enabled = false, priority = 2)
     //перевод группы из "Ввода" в "Верификацию" и ожидание "Корректировки" (группа c ошибоками, без истории)

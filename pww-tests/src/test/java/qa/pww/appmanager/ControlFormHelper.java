@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import static qa.pww.Locators.ControlFormLocator.*;
 import static qa.pww.Locators.SpanLocators.*;
+import static qa.pww.tests.TestBase.app;
 
 /**
  * Created by k.smotrov on 23.06.2017.
@@ -16,6 +18,59 @@ public class ControlFormHelper extends HelperBase{
     public ControlFormHelper(WebDriver wd, Connection pvvDb, Connection zagsDb) {
         super(wd, pvvDb, zagsDb);
     }
+
+    public void finishInputDocStage(String needChange1, String needChange2) throws InterruptedException {
+
+
+        //возврат на "главную"
+        app.inputFormHelper().gotoMainPage();
+        //переход на страницу выбора группы док
+        app.inputFormHelper().gotoInputForm();
+        //заполнение фильтров (1 этап, 2000-2003)
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
+        //поиск по фильтрам
+        app.inputFormHelper().submitFormFilters();
+        //выбор книги загруженной последней (в BeforeMethod)
+        app.inputFormHelper().selectBook();
+        //переход на форму ввода
+        app.inputFormHelper().gotoInputStageForm();
+        //ожидание загрузки
+        Thread.sleep(5000);
+        //установка "Актовая запись с изменениями?"
+        app.inputFormHelper().changesFieldMarriageSetup(needChange1);
+        //сохранение документа
+        app.inputFormHelper().submitSaveMarriageDoc();
+        //ожидание загрузки
+        Thread.sleep(1000);
+        //завершение ввода группы (книги)
+        app.inputFormHelper().submitEndInputGroup();
+        System.out.println("проверка завершения ввода документа  на 1 этапе ввода без изменения - ok");
+
+        //возврат на "главную"
+        app.inputFormHelper().gotoMainPage();
+        //переход на страницу выбора группы док
+        app.inputFormHelper().gotoInputForm();
+        //заполнение фильтров (1 этап, 2000-2003)
+        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "2");
+        //поиск по фильтрам
+        app.inputFormHelper().submitFormFilters();
+        //выбор книги загруженной последней (в BeforeMethod)
+        app.inputFormHelper().selectBook();
+        //переход на форму ввода
+        app.inputFormHelper().gotoInputStageForm();
+        //ожидание загрузки
+        Thread.sleep(5000);
+        //установка "Актовая запись с изменениями?" = да
+        app.inputFormHelper().changesFieldMarriageSetup(needChange2);
+        //сохранение документа
+        app.inputFormHelper().submitSaveMarriageDoc();
+        //ожидание загрузки
+        Thread.sleep(1000);
+        //завершение ввода группы (книги)
+        app.inputFormHelper().submitEndInputGroup();
+        System.out.println("проверка завершения ввода документа на 2 этапе ввода без изменения - ok");
+    }
+
 
     //переход на вкладку "Управление документами"
     public void gotoControlSpan(){

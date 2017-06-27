@@ -18,78 +18,27 @@ public class GoldWayForMarriage extends TestBase{
     String typeags = "Запись акта о браке";
     String year = "2003";
     String typezags = "Кронштадтский (1997-2003)";
-    String fNum = "172";
-    String lNum = "172";
+    String fNum = "101";
+    String lNum = "101";
     DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     String book_max_id="";
 
     @BeforeClass
-    public void initLoadDataForm() throws InterruptedException {
-        //загрузка АГС
+    public void initLoadDataForm() throws InterruptedException, SQLException {
+        //загрузка/ввод АГС, получение номера книги
         app.loadDataHelper().gotoLoadDataPage();
         app.loadDataHelper().fillLoadNewDocGroupFofm(docAttr);
         app.loadDataHelper().submitLoad();
         app.loadDataHelper().waitingLogText();
+        app.controlFormHelper().finishInputDocStage("Да","Да");
+        book_max_id = app.inputFormHelper().getfromUiBookMaxInd();
     }
 
-    @Test(enabled = true, priority = 1)
-    //проверка завершения ввода документа (без истории) без изменения полей с направлением на корректировку
-    public void finishInputDocOnFistStage() throws InterruptedException, SQLException {
 
-        //возврат на "главную"
-        app.inputFormHelper().gotoMainPage();
-        //переход на страницу выбора группы док
-        app.inputFormHelper().gotoInputForm();
-        //заполнение фильтров (1 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "1");
-        //поиск по фильтрам
-        app.inputFormHelper().submitFormFilters();
-        //выбор книги загруженной последней (в BeforeMethod)
-        book_max_id = app.inputFormHelper().getfromUiBookMaxInd(); //сохранение номера книги для корректировки
-        app.inputFormHelper().selectBook();
-        //переход на форму ввода
-        app.inputFormHelper().gotoInputStageForm();
-        //ожидание загрузки
-        Thread.sleep(5000);
-        //установка "Актовая запись с изменениями?" = да
-        app.inputFormHelper().changesFieldMarriageSetup("Да");
-        //сохранение документа
-        app.inputFormHelper().submitSaveMarriageDoc();
-        //ожидание загрузки
-        Thread.sleep(1000);
-        //завершение ввода группы (книги)
-        app.inputFormHelper().submitEndInputGroup();
-        System.out.println("проверка завершения ввода документа  на 1 этапе ввода без изменения - ok");
-
-        //возврат на "главную"
-        app.inputFormHelper().gotoMainPage();
-        //переход на страницу выбора группы док
-        app.inputFormHelper().gotoInputForm();
-        //заполнение фильтров (1 этап, 2000-2003)
-        app.inputFormHelper().fillFormFiltersStage("Книга записей актов (2000-2003)", "2");
-        //поиск по фильтрам
-        app.inputFormHelper().submitFormFilters();
-        //выбор книги загруженной последней (в BeforeMethod)
-        app.inputFormHelper().selectBook();
-        //переход на форму ввода
-        app.inputFormHelper().gotoInputStageForm();
-        //ожидание загрузки
-        Thread.sleep(5000);
-        //установка "Актовая запись с изменениями?" = да
-        app.inputFormHelper().changesFieldMarriageSetup("Да");
-        //сохранение документа
-        app.inputFormHelper().submitSaveMarriageDoc();
-        //ожидание загрузки
-        Thread.sleep(1000);
-        //завершение ввода группы (книги)
-        app.inputFormHelper().submitEndInputGroup();
-        System.out.println("проверка завершения ввода документа на 2 этапе ввода без изменения - ok");
-    }
-
-    @Test (enabled = true, priority = 3)
+    @Test (enabled = true, priority = 1)
     //перевод книги на корректировку на форме "Управление Документами"
-    public void controlDoc() throws InterruptedException {
+    public void controlDoc() throws InterruptedException, SQLException {
 
         String status_book="";
 
