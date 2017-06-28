@@ -26,6 +26,35 @@ public class FirstInputStageBornHelper extends HelperBase{
 
 
     BornDataMainFields ags = new BornDataMainFields();
+    JavascriptExecutor js = (JavascriptExecutor) wd;
+
+    //выход из формы ввода документа (1/2 этап)
+    public void backFromInputStageForm() {
+        click(By.xpath(BACK_FROM_INPUT_FORM_BTN_BORN));
+    }
+
+    //выбор в поле "Актовая запись с изменениями?" (Рождение)
+    public void changesFieldBornSetup(String status){
+        type(By.xpath(MORE_HISTORY_BORN), status);
+    }
+
+    //сохранение документа (Рождение)
+    public void submitSaveBornDoc(){
+        click(By.xpath(SAVE_BORN_BTN_BORN));
+    }
+
+    //завершение ввода
+    public void submitEndInputGroup(){
+        click(By.xpath(END_INPUT_BOOK_BTN_BORN));
+    }
+
+
+    //определение номера документа из формы ввода
+    public String textNumDoc() {
+        String a = "";
+        a = js.executeScript("return document.evaluate('" + NUM_BORN + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+        return a;
+    }
 
     //получение реквизитов 1 документа книги (группы документов) с макс. номером (последней загруженной) из БД
     public BornDataMainFields getMainFieldFromPvvDb() throws SQLException {
@@ -453,29 +482,6 @@ public class FirstInputStageBornHelper extends HelperBase{
 
         return dataField;
     }
-
-    //выход из формы ввода документа (1/2 этап)
-    public void backFromInputStageForm() {
-        click(By.xpath(BACK_FROM_INPUT_FORM_BTN_BORN));
-    }
-
-    //выбор в поле "Актовая запись с изменениями?" (Рождение)
-    public void changesFieldBornSetup(String status){
-        type(By.xpath(MORE_HISTORY_BORN), status);
-    }
-
-    //сохранение документа (Рождение)
-    public void submitSaveBornDoc(){
-        click(By.xpath(SAVE_BORN_BTN_BORN));
-    }
-
-    //завершение ввода
-    public void submitEndInputGroup(){
-        click(By.xpath(END_INPUT_BOOK_BTN_BORN));
-    }
-
-
-
 
 
 }

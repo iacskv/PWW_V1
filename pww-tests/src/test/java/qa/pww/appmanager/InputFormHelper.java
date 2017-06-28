@@ -145,12 +145,9 @@ public class InputFormHelper extends HelperBase {
         click(By.xpath(BACK_FROM_REVIEW_DOC_FORM));
     }
 
-    //определение номера документа из UI
-    public String textNumDoc() {
-        String a = "";
-        a = js.executeScript("return document.evaluate('" + NUM_BORN + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
-        return a;
-    }
+
+
+
 
 
 

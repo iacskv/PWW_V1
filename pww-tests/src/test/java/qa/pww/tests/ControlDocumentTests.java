@@ -83,27 +83,25 @@ public class ControlDocumentTests extends TestBase{
     @Test (enabled = false, priority = 5)
     //перевод группы из "Корректировки" в "Готов к выгрузке"
     public void moveGroupToSaveFromCorrection(){
-
+        //пусто
     }
-
-
 
     @Test (enabled = false, priority = 2)
     //перевод группы из "Ввода" в "Верификацию" и ожидание "Корректировки" (группа c ошибоками, без истории)
     public void moveGroupWithErrorsToCorrection(){
-
+        //пусто
     }
 
     @Test (enabled = false, priority = 3)
     //перевод группы из "Ввода" в "Верификацию" и ожидание "Корректировки" (группа без ошибок, с историей)
     public void moveGroupWithHistoryToCorrection(){
-
+        //пусто
     }
 
     @Test (enabled = false, priority = 4)
     //перевод группы из "Ввода" в "Верификацию" и ожидание "Корректировки" (группа c ошибоками, с историей)
     public void moveGroupWithErrorsAndHistoryToCorrection(){
-
+        //пусто
     }
 
 

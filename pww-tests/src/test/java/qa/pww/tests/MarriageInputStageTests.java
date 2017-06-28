@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import qa.pww.models.BornDataMainFields;
 import qa.pww.models.DocForLoad;
+import qa.pww.models.MarriageDataMainFields;
 
 import java.sql.SQLException;
 
@@ -14,15 +15,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * Created by k.smotrov on 25.05.2017.
  */
-public class BornInputStageTests extends TestBase {
+public class MarriageInputStageTests extends TestBase {
 
 
     String typedoc = "Книга записей актов (2000-2003)";
-    String typeags = "Запись акта о рождении";
+    String typeags = "Запись акта о браке";
     String year = "2003";
     String typezags = "Кронштадтский (1997-2003)";
-    String fNum = "287";
-    String lNum = "287";
+    String fNum = "171";
+    String lNum = "171";
     DocForLoad docAttr = new DocForLoad(typezags, typeags, year, typedoc, fNum, lNum);
 
     @BeforeClass
@@ -71,7 +72,7 @@ public class BornInputStageTests extends TestBase {
         //переход на форму просмотра группы
         app.inputFormHelper().gotoViewBookForm();
         //выбор агс
-        app.inputFormHelper().selectAgsBorn();
+        app.inputFormHelper().selectAgsMarriage();
         //проверка на "Требует ввода"
         app.inputFormHelper().checkNeedInput();
         //проверка на "Введен"
@@ -114,7 +115,7 @@ public class BornInputStageTests extends TestBase {
         //переход на форму просмотра группы
         app.inputFormHelper().gotoViewBookForm();
         //выбор агс
-        app.inputFormHelper().selectAgsBorn();
+        app.inputFormHelper().selectAgsMarriage();
         //проверка на "Требует ввода"
         app.inputFormHelper().checkNeedInput();
         //проверка на "Введен"
@@ -142,21 +143,21 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки и получение текста № а/з
         Thread.sleep(5000);
         String a = "";
-        a = app.firstInputStageBornHelper().textNumDoc();
+        a = app.firstInputStageMarriageHelper().textNumDoc();
         //проверка на ожидаемый номер документа (из BeforeMethod)
         assertThat(a, equalTo(docAttr.fNum));
         //возврат к списку книг (выход из формы ввода)
-        app.firstInputStageBornHelper().backFromInputStageForm();
+        app.firstInputStageMarriageHelper().backFromInputStageForm();
         System.out.println("проверка возможности открытия книги на заполнение в 1 этапе - ok");
         System.out.println("--------------------------");
     }
 
 
-    @Test (enabled = true, priority = 6)
+    @Test (enabled = false, priority = 6)
     //проверка основных полей (1-21) (1 этап ввода) загруженных из  UI и БД ПВВ
     public void checkMainFieldOnFirstStage() throws InterruptedException, SQLException {
-        BornDataMainFields agsPvvUi;
-        BornDataMainFields agsPvvDb;
+        MarriageDataMainFields agsPvvUi;
+        MarriageDataMainFields agsPvvDb;
 
         //переход на страницу выбора группы док
         app.inputFormHelper().gotoInputForm();
@@ -171,9 +172,9 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //получение значений полей а/з с формы ввода документа
-        agsPvvUi = app.firstInputStageBornHelper().getMainFieldFromPvv();
+        agsPvvUi = app.firstInputStageMarriageHelper().getMainFieldFromPvv();
         //получение значений полей а/з из БД
-        agsPvvDb = app.firstInputStageBornHelper().getMainFieldFromPvvDb();
+        agsPvvDb = app.firstInputStageMarriageHelper().getMainFieldFromPvvDb();
         //сравнение полей из БД с UI
         assertThat(agsPvvUi.agsNum, equalTo(agsPvvDb.agsNum));
         assertThat(agsPvvUi.liter, equalTo(agsPvvDb.liter));
@@ -181,68 +182,62 @@ public class BornInputStageTests extends TestBase {
         assertThat(agsPvvUi.zagsAgsName, equalTo(agsPvvDb.zagsAgsName));
         assertThat(agsPvvUi.agsCopy, equalTo(agsPvvDb.agsCopy));
         System.out.println("реквизиты АГС - ок");
-        assertThat(agsPvvUi.childSex, equalTo(agsPvvDb.childSex));
-        assertThat(agsPvvUi.childLastName, equalTo(agsPvvDb.childLastName));
-        assertThat(agsPvvUi.childFirstName, equalTo(agsPvvDb.childFirstName));
-        assertThat(agsPvvUi.childMiddleName, equalTo(agsPvvDb.childMiddleName));
-        assertThat(agsPvvUi.childDateBorn, equalTo(agsPvvDb.childDateBorn));
-        assertThat(agsPvvUi.childCountryNoClass, equalTo(agsPvvDb.childCountryNoClass));
-        assertThat(agsPvvUi.childRegionNoClass, equalTo(agsPvvDb.childRegionNoClass));
-        assertThat(agsPvvUi.childCountry, equalTo(agsPvvDb.childCountry)); ///!!!!!
-        assertThat(agsPvvUi.childRegion, equalTo(agsPvvDb.childRegion));
-        assertThat(agsPvvUi.childDisnrict, equalTo(agsPvvDb.childDisnrict));
-        assertThat(agsPvvUi.childTown, equalTo(agsPvvDb.childTown));
-        assertThat(agsPvvUi.childPunkt, equalTo(agsPvvDb.childPunkt));
-        assertThat(agsPvvUi.childBirthCond, equalTo(agsPvvDb.childBirthCond));
-        System.out.println("РЕБЕНОК - ок");
-        assertThat(agsPvvUi.vosstDate, equalTo(agsPvvDb.vosstDate));
-        assertThat(agsPvvUi.vosstOrg, equalTo(agsPvvDb.vosstOrg));
-        System.out.println("ВОССТАНОВЛЕНО - ок");
-        assertThat(agsPvvUi.fatherLastName, equalTo(agsPvvDb.fatherLastName));
-        assertThat(agsPvvUi.fatherFirstName, equalTo(agsPvvDb.fatherFirstName));
-        assertThat(agsPvvUi.fatherMiddleName, equalTo(agsPvvDb.fatherMiddleName));
-        assertThat(agsPvvUi.fatherDateBorn, equalTo(agsPvvDb.fatherDateBorn));
-        assertThat(agsPvvUi.fatherCountryNoClass, equalTo(agsPvvDb.fatherCountryNoClass));
-        assertThat(agsPvvUi.fatherRegionNoClass, equalTo(agsPvvDb.fatherRegionNoClass));
-        assertThat(agsPvvUi.fatherCountry, equalTo(agsPvvDb.fatherCountry));
-        assertThat(agsPvvUi.fatherRegion, equalTo(agsPvvDb.fatherRegion));
-        assertThat(agsPvvUi.fatherDistrict, equalTo(agsPvvDb.fatherDistrict));
-        assertThat(agsPvvUi.fatherTown, equalTo(agsPvvDb.fatherTown));
-        assertThat(agsPvvUi.fatherPunkt, equalTo(agsPvvDb.fatherPunkt));
-        assertThat(agsPvvUi.fatherCitizenshipNoClass, equalTo(agsPvvDb.fatherCitizenshipNoClass));
-        assertThat(agsPvvUi.fatherCitizenship, equalTo(agsPvvDb.fatherCitizenship));
-        assertThat(agsPvvUi.fatherNationalNoClass, equalTo(agsPvvDb.fatherNationalNoClass));
-        assertThat(agsPvvUi.fatherNational, equalTo(agsPvvDb.fatherNational));
-        System.out.println("ОТЕЦ - ок");
-        assertThat(agsPvvUi.matherLastName, equalTo(agsPvvDb.matherLastName));
-        assertThat(agsPvvUi.matherFirstName, equalTo(agsPvvDb.matherFirstName));
-        assertThat(agsPvvUi.matherMiddleName, equalTo(agsPvvDb.matherMiddleName));
-        assertThat(agsPvvUi.matherDateBorn, equalTo(agsPvvDb.matherDateBorn));
-        assertThat(agsPvvUi.matherCountryNoClass, equalTo(agsPvvDb.matherCountryNoClass));
-        assertThat(agsPvvUi.matherRegionNoClass, equalTo(agsPvvDb.matherRegionNoClass));
-        assertThat(agsPvvUi.matherCountry, equalTo(agsPvvDb.matherCountry));
-        assertThat(agsPvvUi.matherRegion, equalTo(agsPvvDb.matherRegion));
-        assertThat(agsPvvUi.matherDistrict, equalTo(agsPvvDb.matherDistrict));
-        assertThat(agsPvvUi.matherTown, equalTo(agsPvvDb.matherTown));
-        assertThat(agsPvvUi.matherPunkt, equalTo(agsPvvDb.matherPunkt));
-        assertThat(agsPvvUi.matherCitizenshipNoClass, equalTo(agsPvvDb.matherCitizenshipNoClass));
-        assertThat(agsPvvUi.matherCitizenship, equalTo(agsPvvDb.matherCitizenship));
-        assertThat(agsPvvUi.matherNationalNoClass, equalTo(agsPvvDb.matherNationalNoClass));
-        assertThat(agsPvvUi.matherNational, equalTo(agsPvvDb.matherNational));
-        System.out.println("МАТЬ - ок");
-        assertThat(agsPvvUi.baseTypeDoc, equalTo(agsPvvDb.baseTypeDoc));
-        assertThat(agsPvvUi.baseNumDoc, equalTo(agsPvvDb.baseNumDoc));
-        assertThat(agsPvvUi.baseDateDoc, equalTo(agsPvvDb.baseDateDoc));
-        assertThat(agsPvvUi.baseOrgDoc, equalTo(agsPvvDb.baseOrgDoc));
-        System.out.println("ОСНОВАНИЕ ОТЦА - ок");
-        assertThat(agsPvvUi.certSeria, equalTo(agsPvvDb.certSeria));
-        assertThat(agsPvvUi.certNum, equalTo(agsPvvDb.certNum));
-        assertThat(agsPvvUi.certDate, equalTo(agsPvvDb.certDate));
-        System.out.println("СВИДЕТЕЛЬСВО - ок");
-        System.out.println("проверка основных полей (1-21) (1 этап ввода) загруженных из  UI и БД ПВВ - ok");
+        assertThat(agsPvvUi.hiLastNameBefore, equalTo(agsPvvDb.hiLastNameBefore));
+        assertThat(agsPvvUi.hiLastNameAfter, equalTo(agsPvvDb.hiLastNameBefore));
+        assertThat(agsPvvUi.hiFirstName, equalTo(agsPvvDb.hiFirstName));
+        assertThat(agsPvvUi.hiMiddleName, equalTo(agsPvvDb.hiMiddleName));
+        assertThat(agsPvvUi.hiDateBorn, equalTo(agsPvvDb.hiDateBorn));
+        assertThat(agsPvvUi.hiAge, equalTo(agsPvvDb.hiAge));
+        assertThat(agsPvvUi.hiCountryNoClass, equalTo(agsPvvDb.hiCountryNoClass));
+        assertThat(agsPvvUi.hiRegionNoClass, equalTo(agsPvvDb.hiRegionNoClass)); ///!!!!!
+        assertThat(agsPvvUi.hiCountry, equalTo(agsPvvDb.hiCountry));
+        assertThat(agsPvvUi.hiRegion, equalTo(agsPvvDb.hiRegion));
+        assertThat(agsPvvUi.hiDistrict, equalTo(agsPvvDb.hiDistrict));
+        assertThat(agsPvvUi.hiTown, equalTo(agsPvvDb.hiTown));
+        assertThat(agsPvvUi.hiPunkt, equalTo(agsPvvDb.hiPunkt));
+        assertThat(agsPvvUi.hiCitizenshipNoClass, equalTo(agsPvvDb.hiCitizenshipNoClass));
+        assertThat(agsPvvUi.hiCitizenship, equalTo(agsPvvDb.hiCitizenship));
+        assertThat(agsPvvUi.hiNationalNoClass, equalTo(agsPvvDb.hiNationalNoClass));
+        assertThat(agsPvvUi.hiNational, equalTo(agsPvvDb.hiNational));
+        assertThat(agsPvvUi.hiDivorceDoc, equalTo(agsPvvDb.hiDivorceDoc));
+        assertThat(agsPvvUi.hiDivorceDocDate, equalTo(agsPvvDb.hiDivorceDocDate));
+        assertThat(agsPvvUi.hiDivorceDocOrg, equalTo(agsPvvDb.hiDivorceDocOrg));
+        assertThat(agsPvvUi.hiDoc, equalTo(agsPvvDb.hiDoc));
+        assertThat(agsPvvUi.hiDocSer, equalTo(agsPvvDb.hiDocSer));
+        assertThat(agsPvvUi.hiDocNum, equalTo(agsPvvDb.hiDocNum));
+        assertThat(agsPvvUi.hiDocDate, equalTo(agsPvvDb.hiDocDate));
+        assertThat(agsPvvUi.hiDocOrg, equalTo(agsPvvDb.hiDocOrg));
+        System.out.println("ЖЕНИХ - ок");
+        assertThat(agsPvvUi.sheLastNameBefore, equalTo(agsPvvDb.sheLastNameBefore));
+        assertThat(agsPvvUi.sheLastNameAfter, equalTo(agsPvvDb.sheLastNameBefore));
+        assertThat(agsPvvUi.sheFirstName, equalTo(agsPvvDb.sheFirstName));
+        assertThat(agsPvvUi.sheMiddleName, equalTo(agsPvvDb.sheMiddleName));
+        assertThat(agsPvvUi.sheDateBorn, equalTo(agsPvvDb.sheDateBorn));
+        assertThat(agsPvvUi.sheAge, equalTo(agsPvvDb.sheAge));
+        assertThat(agsPvvUi.sheCountryNoClass, equalTo(agsPvvDb.sheCountryNoClass));
+        assertThat(agsPvvUi.sheRegionNoClass, equalTo(agsPvvDb.sheRegionNoClass)); ///!!!!!
+        assertThat(agsPvvUi.sheCountry, equalTo(agsPvvDb.sheCountry));
+        assertThat(agsPvvUi.sheRegion, equalTo(agsPvvDb.sheRegion));
+        assertThat(agsPvvUi.sheDistrict, equalTo(agsPvvDb.sheDistrict));
+        assertThat(agsPvvUi.sheTown, equalTo(agsPvvDb.sheTown));
+        assertThat(agsPvvUi.shePunkt, equalTo(agsPvvDb.shePunkt));
+        assertThat(agsPvvUi.sheCitizensshipNoClass, equalTo(agsPvvDb.sheCitizensshipNoClass));
+        assertThat(agsPvvUi.sheCitizensship, equalTo(agsPvvDb.sheCitizensship));
+        assertThat(agsPvvUi.sheNationalNoClass, equalTo(agsPvvDb.sheNationalNoClass));
+        assertThat(agsPvvUi.sheNational, equalTo(agsPvvDb.sheNational));
+        assertThat(agsPvvUi.sheDivorceDoc, equalTo(agsPvvDb.sheDivorceDoc));
+        assertThat(agsPvvUi.sheDivorceDocDate, equalTo(agsPvvDb.sheDivorceDocDate));
+        assertThat(agsPvvUi.sheDivorceDocOrg, equalTo(agsPvvDb.sheDivorceDocOrg));
+        assertThat(agsPvvUi.sheDoc, equalTo(agsPvvDb.sheDoc));
+        assertThat(agsPvvUi.sheDocSer, equalTo(agsPvvDb.sheDocSer));
+        assertThat(agsPvvUi.sheDocNum, equalTo(agsPvvDb.sheDocNum));
+        assertThat(agsPvvUi.sheDocDate, equalTo(agsPvvDb.sheDocDate));
+        assertThat(agsPvvUi.sheDocOrg, equalTo(agsPvvDb.sheDocOrg));
+        System.out.println("НЕВЕСТА - ок");
+        System.out.println("проверка основных полей (1-11) (1 этап ввода) загруженных из  UI и БД ПВВ - ok");
         System.out.println("--------------------------");
         //возврат к списку книг (выход из формы ввода)
-        app.firstInputStageBornHelper().backFromInputStageForm();
+        app.firstInputStageMarriageHelper().backFromInputStageForm();
     }
 
     @Test (enabled = false, priority = 7)
@@ -261,13 +256,13 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //установка "Актовая запись с изменениями?" = да
-        app.firstInputStageBornHelper().changesFieldBornSetup("Да");
+        app.firstInputStageMarriageHelper().changesFieldBornSetup("Да");
         //сохранение документа
-        app.firstInputStageBornHelper().submitSaveBornDoc();
+        app.firstInputStageMarriageHelper().submitSaveBornDoc();
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
-        app.firstInputStageBornHelper().submitEndInputGroup();
+        app.firstInputStageMarriageHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения - ok");
 
     }
@@ -288,13 +283,13 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //установка "Актовая запись с изменениями?" (Рождение) = да
-        app.firstInputStageBornHelper().changesFieldBornSetup("Да");
+        app.firstInputStageMarriageHelper().changesFieldBornSetup("Да");
         //сохранение документа (Рождение)
-        app.firstInputStageBornHelper().submitSaveBornDoc();
+        app.firstInputStageMarriageHelper().submitSaveBornDoc();
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
-        app.firstInputStageBornHelper().submitEndInputGroup();
+        app.firstInputStageMarriageHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения - ok");
     }
 
