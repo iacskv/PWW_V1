@@ -71,7 +71,7 @@ public class BornInputStageTests extends TestBase {
         //переход на форму просмотра группы
         app.inputFormHelper().gotoViewBookForm();
         //выбор агс
-        app.inputFormHelper().selectAgs();
+        app.inputFormHelper().selectAgsBorn();
         //проверка на "Требует ввода"
         app.inputFormHelper().checkNeedInput();
         //проверка на "Введен"
@@ -114,7 +114,7 @@ public class BornInputStageTests extends TestBase {
         //переход на форму просмотра группы
         app.inputFormHelper().gotoViewBookForm();
         //выбор агс
-        app.inputFormHelper().selectAgs();
+        app.inputFormHelper().selectAgsBorn();
         //проверка на "Требует ввода"
         app.inputFormHelper().checkNeedInput();
         //проверка на "Введен"
@@ -146,7 +146,7 @@ public class BornInputStageTests extends TestBase {
         //проверка на ожидаемый номер документа (из BeforeMethod)
         assertThat(a, equalTo(docAttr.fNum));
         //возврат к списку книг (выход из формы ввода)
-        app.inputFormHelper().backFromInputStageForm();
+        app.firstInputStageBornHelper().backFromInputStageForm();
         System.out.println("проверка возможности открытия книги на заполнение в 1 этапе - ok");
         System.out.println("--------------------------");
     }
@@ -171,9 +171,9 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //получение значений полей а/з с формы ввода документа
-        agsPvvUi = app.inputFormHelper().getMainFieldFromPvv();
+        agsPvvUi = app.firstInputStageBornHelper().getMainFieldFromPvv();
         //получение значений полей а/з из БД
-        agsPvvDb = app.inputFormHelper().getMainFieldFromPvvDb();
+        agsPvvDb = app.firstInputStageBornHelper().getMainFieldFromPvvDb();
         //сравнение полей из БД с UI
         assertThat(agsPvvUi.agsNum, equalTo(agsPvvDb.agsNum));
         assertThat(agsPvvUi.liter, equalTo(agsPvvDb.liter));
@@ -242,10 +242,10 @@ public class BornInputStageTests extends TestBase {
         System.out.println("проверка основных полей (1-21) (1 этап ввода) загруженных из  UI и БД ПВВ - ok");
         System.out.println("--------------------------");
         //возврат к списку книг (выход из формы ввода)
-        app.inputFormHelper().backFromInputStageForm();
+        app.firstInputStageBornHelper().backFromInputStageForm();
     }
 
-    @Test (enabled = true, priority = 7)
+    @Test (enabled = false, priority = 7)
     //проверка завершения ввода документа на 1 этапе ввода без изменения без изменения полей с направлением на корректировку
     public void finishInputDocOnFistStage() throws InterruptedException {
         //переход на страницу выбора группы док
@@ -261,18 +261,18 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //установка "Актовая запись с изменениями?" = да
-        app.inputFormHelper().changesFieldBornSetup("Да");
+        app.firstInputStageBornHelper().changesFieldBornSetup("Да");
         //сохранение документа
-        app.inputFormHelper().submitSaveBornDoc();
+        app.firstInputStageBornHelper().submitSaveBornDoc();
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
-        app.inputFormHelper().submitEndInputGroup();
+        app.firstInputStageBornHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа (без истории) на 1 этапе ввода без изменения - ok");
 
     }
 
-    @Test (enabled = true, priority = 8)
+    @Test (enabled = false, priority = 8)
     //проверка завершения ввода документа  на 2 этапе ввода без изменения без изменения полей с направлением на корректировку
     public void finishInputDocOnSecondStage() throws InterruptedException {
         //переход на страницу выбора группы док
@@ -288,13 +288,13 @@ public class BornInputStageTests extends TestBase {
         //ожидание загрузки
         Thread.sleep(5000);
         //установка "Актовая запись с изменениями?" (Рождение) = да
-        app.inputFormHelper().changesFieldBornSetup("Да");
+        app.firstInputStageBornHelper().changesFieldBornSetup("Да");
         //сохранение документа (Рождение)
-        app.inputFormHelper().submitSaveBornDoc();
+        app.firstInputStageBornHelper().submitSaveBornDoc();
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
-        app.inputFormHelper().submitEndInputGroup();
+        app.firstInputStageBornHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа (без истории) на 2 этапе ввода без изменения - ok");
     }
 

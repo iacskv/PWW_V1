@@ -33,6 +33,8 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private LoadDataHelper loadDataHelper;
   private InputFormHelper inputFormHelper;
+  private FirstInputStageBornHelper firstInputStageBornHelper;
+  private FirstInputStageMarriageHelper firstInputStageMarriageHelper;
   private ControlFormHelper controlFormHelper;
   private int rs;
 
@@ -63,6 +65,8 @@ public class ApplicationManager {
     sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     loadDataHelper = new LoadDataHelper(wd);
     inputFormHelper = new InputFormHelper(wd, pvvDb, zagsDb);
+    firstInputStageBornHelper = new FirstInputStageBornHelper(wd,pvvDb,zagsDb);
+    firstInputStageMarriageHelper = new FirstInputStageMarriageHelper(wd,pvvDb,zagsDb);
     controlFormHelper = new ControlFormHelper(wd, pvvDb, zagsDb);
 
   }
@@ -118,6 +122,14 @@ public class ApplicationManager {
   public InputFormHelper inputFormHelper(){
     return inputFormHelper;
   }
+  public FirstInputStageBornHelper firstInputStageBornHelper() {
+    return firstInputStageBornHelper;
+  }
+
+  public FirstInputStageMarriageHelper firstInputStageMarriageHelper() {
+    return firstInputStageMarriageHelper;
+  }
+
 
   public ControlFormHelper controlFormHelper() {
     return controlFormHelper;
@@ -130,4 +142,6 @@ public class ApplicationManager {
   public Connection getZagsDb() {
         return zagsDb;
     }
+
+
 }

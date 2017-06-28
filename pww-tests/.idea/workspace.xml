@@ -98,62 +98,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InputFormHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java">
+      <file leaf-file-name="BornInputStageTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7657">
-              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="2125">
+              <caret line="148" column="39" lean-forward="false" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
               <folding>
-                <element signature="e#35452#35453#0" expanded="true" />
-                <element signature="e#35513#35514#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="e#694#695#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlFormLocator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/ControlFormLocator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlFormHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ControlFormHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#736#737#0" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
-                <element signature="e#5993#5994#0" expanded="true" />
-                <element signature="e#6034#6035#0" expanded="true" />
+                <element signature="method#ShutdownLoadDataForm#0;class#BornInputStageTests#0" expanded="false" />
+                <element signature="method#checkNumNewBookOnFirstInputStage#0;class#BornInputStageTests#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -162,10 +114,105 @@
       <file leaf-file-name="ControlDocumentTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/ControlDocumentTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+            <state relative-caret-position="1088">
+              <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlFormHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ControlFormHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-544">
+              <caret line="93" column="43" lean-forward="false" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstInputStageBornHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageBornHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7677">
+              <caret line="459" column="5" lean-forward="false" selection-start-line="459" selection-start-column="5" selection-end-line="459" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#30720#30721#0" expanded="true" />
+                <element signature="e#30782#30783#0" expanded="true" />
+                <element signature="e#30899#30900#0" expanded="true" />
+                <element signature="e#30956#30957#0" expanded="true" />
+                <element signature="e#31032#31033#0" expanded="true" />
+                <element signature="e#31083#31084#0" expanded="true" />
+                <element signature="e#31146#31147#0" expanded="true" />
+                <element signature="e#31202#31203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstInputStageMarriageHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageMarriageHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="458" column="52" lean-forward="false" selection-start-line="458" selection-start-column="48" selection-end-line="458" selection-end-column="52" />
+              <folding>
+                <element signature="method#getMainFieldFromPvvDb#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+                <element signature="method#getMainFieldFromPvv#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+                <element signature="method#checkDateFields#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+                <element signature="method#checkFields#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initDb#0;class#ApplicationManager#0" expanded="false" />
+                <element signature="method#clearPvvDb#0;class#ApplicationManager#0" expanded="false" />
+                <element signature="method#stop#0;class#ApplicationManager#0" expanded="false" />
+                <element signature="e#4354#4355#0" expanded="true" />
+                <element signature="e#4385#4386#0" expanded="true" />
+                <element signature="e#4430#4431#0" expanded="true" />
+                <element signature="e#4462#4463#0" expanded="true" />
+                <element signature="e#4527#4528#0" expanded="true" />
+                <element signature="e#4569#4570#0" expanded="true" />
+                <element signature="e#4643#4644#0" expanded="true" />
+                <element signature="e#4689#4690#0" expanded="true" />
+                <element signature="e#4740#4741#0" expanded="true" />
+                <element signature="e#4774#4775#0" expanded="true" />
+                <element signature="e#4808#4809#0" expanded="true" />
+                <element signature="e#4836#4837#0" expanded="true" />
+                <element signature="e#4871#4872#0" expanded="true" />
+                <element signature="e#4900#4901#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputFormHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding>
+                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#5654#5655#0" expanded="true" />
+                <element signature="e#5715#5716#0" expanded="true" />
+                <element signature="e#5791#5792#0" expanded="true" />
+                <element signature="e#5841#5842#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -183,9 +230,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ancestor</find>
+      <find>mather</find>
+      <find>hi</find>
+      <find>She</find>
+      <find>= ;</find>
+      <find>HI</find>
     </findStrings>
     <replaceStrings>
       <replace>parent</replace>
+      <replace>she</replace>
+      <replace>SHE</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -555,24 +609,27 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/InputFormLocators.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/DbTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/local.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/models/BornDataMainFields.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/LoadNewDocGroup.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/LoadNewDocGroupTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/OutOfLimitRangeNum.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/OutOfLimitRangeNumTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/InputStageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageFormLocators.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageBornFormLocators.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageMarriageFormLocators.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java" />
         <option value="$PROJECT_DIR$/src/test/resources/AGS_WITHOUT_HISTORY.txt" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/GoldWayForMarriage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/AGS_WITH_HISTORY.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/ControlFormLocator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/models/BornDataMainFields.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/models/MarriageDataMainFields.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageBornFormLocators.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageMarriageFormLocators.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageBornHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ControlFormHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageMarriageHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/ControlDocumentTests.java" />
       </list>
     </option>
@@ -719,10 +776,6 @@
               <option name="myItemId" value="pww" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Locators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -801,6 +854,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="qa.pww.appmanager" />
+      <recent name="qa.pww.models" />
       <recent name="qa.pww.Locators" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -808,7 +863,7 @@
       <recent name="D:\iacskv\PWW_V1\pww-tests\libs" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ControlDocumentTests.moveGroupToCorrectionFromSave">
+  <component name="RunManager" selected="TestNG.ControlDocumentTests">
     <configuration default="false" name="GoldWayForMarriage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -825,72 +880,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="GoldWayForMarriage.controlDoc" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="qa.pww.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="pww-tests_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="qa.pww.tests" />
-      <option name="MAIN_CLASS_NAME" value="qa.pww.tests.GoldWayForMarriage" />
-      <option name="METHOD_NAME" value="controlDoc" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="ControlDocumentTests.moveGroupToVerification" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="qa.pww.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="pww-tests_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="qa.pww.tests" />
-      <option name="MAIN_CLASS_NAME" value="qa.pww.tests.ControlDocumentTests" />
-      <option name="METHOD_NAME" value="moveGroupToVerification" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -955,6 +944,72 @@
       <option name="PACKAGE_NAME" value="qa.pww.tests" />
       <option name="MAIN_CLASS_NAME" value="qa.pww.tests.ControlDocumentTests" />
       <option name="METHOD_NAME" value="moveGroupToCorrectionFromSave" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="BornInputStageTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="qa.pww.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="pww-tests_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="qa.pww.tests" />
+      <option name="MAIN_CLASS_NAME" value="qa.pww.tests.BornInputStageTests" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="BornInputStageTests.checkMainFieldOnFirstStage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="qa.pww.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="pww-tests_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="qa.pww.tests" />
+      <option name="MAIN_CLASS_NAME" value="qa.pww.tests.BornInputStageTests" />
+      <option name="METHOD_NAME" value="checkMainFieldOnFirstStage" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1180,18 +1235,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.GoldWayForMarriage" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.GoldWayForMarriage.controlDoc" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests.moveGroupToVerification" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests.moveGroupToCorrectionFromSave" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests.moveGroupToCorrectionFromSave" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.BornInputStageTests" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.BornInputStageTests.checkMainFieldOnFirstStage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests.moveGroupToCorrectionFromSave" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.GoldWayForMarriage" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.GoldWayForMarriage.controlDoc" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests.moveGroupToVerification" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.BornInputStageTests" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.BornInputStageTests.checkMainFieldOnFirstStage" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ControlDocumentTests.moveGroupToCorrectionFromSave" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.GoldWayForMarriage" />
       </list>
     </recent_temporary>
   </component>
@@ -1209,23 +1264,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ControlDocumentTests - 2017.06.27 at 15h 52m 31s.xml">
+    <history-entry file="BornInputStageTests - 2017.06.28 at 10h 50m 50s.xml">
+      <configuration name="BornInputStageTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BornInputStageTests - 2017.06.28 at 11h 25m 49s.xml">
+      <configuration name="BornInputStageTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BornInputStageTests_checkMainFieldOnFirstStage - 2017.06.28 at 10h 54m 28s.xml">
+      <configuration name="BornInputStageTests.checkMainFieldOnFirstStage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BornInputStageTests_checkMainFieldOnFirstStage - 2017.06.28 at 10h 59m 39s.xml">
+      <configuration name="BornInputStageTests.checkMainFieldOnFirstStage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BornInputStageTests_checkMainFieldOnFirstStage - 2017.06.28 at 11h 02m 18s.xml">
+      <configuration name="BornInputStageTests.checkMainFieldOnFirstStage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ControlDocumentTests - 2017.06.28 at 11h 28m 02s.xml">
       <configuration name="ControlDocumentTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ControlDocumentTests_moveGroupToCorrectionFromSave - 2017.06.27 at 16h 17m 38s.xml">
-      <configuration name="ControlDocumentTests.moveGroupToCorrectionFromSave" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ControlDocumentTests_moveGroupToCorrectionFromSave - 2017.06.27 at 16h 20m 56s.xml">
-      <configuration name="ControlDocumentTests.moveGroupToCorrectionFromSave" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ControlDocumentTests_moveGroupToCorrectionFromSave - 2017.06.27 at 16h 46m 51s.xml">
-      <configuration name="ControlDocumentTests.moveGroupToCorrectionFromSave" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ControlDocumentTests_moveGroupToCorrectionFromSave - 2017.06.27 at 16h 48m 39s.xml">
-      <configuration name="ControlDocumentTests.moveGroupToCorrectionFromSave" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ControlDocumentTests_moveGroupToCorrectionFromSave - 2017.06.27 at 16h 49m 28s.xml">
-      <configuration name="ControlDocumentTests.moveGroupToCorrectionFromSave" configurationId="TestNG" />
     </history-entry>
     <history-entry file="ControlDocumentTests_moveGroupToCorrectionFromSave - 2017.06.27 at 16h 51m 10s.xml">
       <configuration name="ControlDocumentTests.moveGroupToCorrectionFromSave" configurationId="TestNG" />
@@ -1256,14 +1311,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269663" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33932585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33932585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1276,7 +1331,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33146068" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33146068" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1454,7 +1509,7 @@
           <option name="timeStamp" value="407" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="418" />
+      <option name="time" value="423" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1463,40 +1518,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/LoadNewDocGroupTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <element signature="e#4052#4053#0" expanded="false" />
-            <element signature="e#4083#4084#0" expanded="false" />
-            <element signature="e#4128#4129#0" expanded="true" />
-            <element signature="e#4160#4161#0" expanded="true" />
-            <element signature="e#4210#4211#0" expanded="false" />
-            <element signature="e#4244#4245#0" expanded="false" />
+            <element signature="e#4354#4355#0" expanded="true" />
+            <element signature="e#4385#4386#0" expanded="true" />
+            <element signature="e#4430#4431#0" expanded="true" />
+            <element signature="e#4462#4463#0" expanded="true" />
+            <element signature="e#4740#4741#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1664,38 +1696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/InputFormLocators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/models/BornDataMainFields.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageMarriageFormLocators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageBornFormLocators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="184" column="94" lean-forward="false" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/LoadDataHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -1752,30 +1752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="33" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#checkPresentNewBookOnFirstInputStage#0;class#BornInputStageTests#0" expanded="false" />
-            <element signature="method#checkNumNewBookOnSecondInputStage#0;class#BornInputStageTests#0" expanded="false" />
-            <element signature="method#checkPresentNewBookOnSecondInputStage#0;class#BornInputStageTests#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="117" column="39" lean-forward="false" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
-          <folding>
-            <element signature="e#4128#4129#0" expanded="true" />
-            <element signature="e#4160#4161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -1807,17 +1783,6 @@
         <state relative-caret-position="391">
           <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7657">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#35452#35453#0" expanded="true" />
-            <element signature="e#35513#35514#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1873,24 +1838,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ControlFormHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/InputFormLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/models/BornDataMainFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/models/MarriageDataMainFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-347">
+          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageMarriageFormLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="175" lean-forward="false" selection-start-line="11" selection-start-column="175" selection-end-line="11" selection-end-column="175" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding>
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#5654#5655#0" expanded="true" />
+            <element signature="e#5715#5716#0" expanded="true" />
+            <element signature="e#5791#5792#0" expanded="true" />
+            <element signature="e#5841#5842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/Locators/FirstInputStageBornFormLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="108" column="23" lean-forward="false" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageBornHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7677">
+          <caret line="459" column="5" lean-forward="false" selection-start-line="459" selection-start-column="5" selection-end-line="459" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#5993#5994#0" expanded="true" />
-            <element signature="e#6034#6035#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#30720#30721#0" expanded="true" />
+            <element signature="e#30782#30783#0" expanded="true" />
+            <element signature="e#30899#30900#0" expanded="true" />
+            <element signature="e#30956#30957#0" expanded="true" />
+            <element signature="e#31032#31033#0" expanded="true" />
+            <element signature="e#31083#31084#0" expanded="true" />
+            <element signature="e#31146#31147#0" expanded="true" />
+            <element signature="e#31202#31203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initDb#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="method#clearPvvDb#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="method#stop#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="e#4354#4355#0" expanded="true" />
+            <element signature="e#4385#4386#0" expanded="true" />
+            <element signature="e#4430#4431#0" expanded="true" />
+            <element signature="e#4462#4463#0" expanded="true" />
+            <element signature="e#4527#4528#0" expanded="true" />
+            <element signature="e#4569#4570#0" expanded="true" />
+            <element signature="e#4643#4644#0" expanded="true" />
+            <element signature="e#4689#4690#0" expanded="true" />
+            <element signature="e#4740#4741#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+            <element signature="e#4808#4809#0" expanded="true" />
+            <element signature="e#4836#4837#0" expanded="true" />
+            <element signature="e#4871#4872#0" expanded="true" />
+            <element signature="e#4900#4901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ControlFormHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="93" column="43" lean-forward="false" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageMarriageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="458" column="52" lean-forward="false" selection-start-line="458" selection-start-column="48" selection-end-line="458" selection-end-column="52" />
+          <folding>
+            <element signature="method#getMainFieldFromPvvDb#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+            <element signature="method#getMainFieldFromPvv#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+            <element signature="method#checkDateFields#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+            <element signature="method#checkFields#0;class#FirstInputStageMarriageHelper#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="148" column="39" lean-forward="false" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+          <folding>
+            <element signature="method#ShutdownLoadDataForm#0;class#BornInputStageTests#0" expanded="false" />
+            <element signature="method#checkNumNewBookOnFirstInputStage#0;class#BornInputStageTests#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/ControlDocumentTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+        <state relative-caret-position="1088">
+          <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

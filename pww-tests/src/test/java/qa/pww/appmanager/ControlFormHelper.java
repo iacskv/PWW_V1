@@ -67,7 +67,7 @@ public class ControlFormHelper extends HelperBase{
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
-        app.inputFormHelper().submitEndInputGroup();
+        app.firstInputStageMarriageHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа  на 1 этапе ввода без изменения - ok");
 
         //возврат на "главную"
@@ -91,7 +91,7 @@ public class ControlFormHelper extends HelperBase{
         //ожидание загрузки
         Thread.sleep(1000);
         //завершение ввода группы (книги)
-        app.inputFormHelper().submitEndInputGroup();
+        app.firstInputStageMarriageHelper().submitEndInputGroup();
         System.out.println("проверка завершения ввода документа на 2 этапе ввода без изменения - ok");
     }
 
