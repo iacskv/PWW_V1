@@ -55,26 +55,18 @@ public class LoadNewDocGroupTests extends TestBase {
     @Test(dataProvider = "validDoc")
     public void testLoadNewDocGroup(DocForLoad docAtt) throws InterruptedException {
 
-
-
         //заполнение полей формы
         app.loadDataHelper().fillLoadNewDocGroupFofm(docAtt);
-
         //запуск загрузки
         app.loadDataHelper().submitLoad();
-
         //ожидание конца загрузки группы документов
         app.loadDataHelper().waitingLogText();
-
         //проверка текста в поле Лог загрузки
         String textarea = app.loadDataHelper().waitingLogText();
-
         assertThat(textarea, startsWith("Загрузка запущена"));
         System.out.println(" -------------------------------- ");
         System.out.println(textarea);
         System.out.println();
-
-
     }
 
 }

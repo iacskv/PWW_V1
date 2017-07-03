@@ -25,15 +25,16 @@ public class LoadDataHelper extends HelperBase {
         super(wd);
     }
 
-    public String waitingLogText() {
+    public String waitingLogText() throws InterruptedException {
         int i = 0;
         String a = "";
         JavascriptExecutor js = (JavascriptExecutor) wd;
         while (a.equals("")) {
 
             a = js.executeScript("return document.getElementById('x-auto-38-input').getAttributeNode('class').ownerElement.value;").toString();
+            Thread.sleep(1000);
             i++;
-            if (i > 100000) {
+            if (i > 180) {
                 return "Не дождались";
             }
         }
@@ -50,7 +51,7 @@ public class LoadDataHelper extends HelperBase {
 
     public void fillLoadNewDocGroupFofm(DocForLoad docAtt) throws InterruptedException {
         // выбор типа книги
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
 
         click(By.xpath(TYPE_DOC));
         click(By.xpath("//div[8]/div/div[text()='" + docAtt.typeDoc + "']"));//по пункту списка (200-2003)
