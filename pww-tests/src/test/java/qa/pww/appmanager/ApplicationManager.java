@@ -36,6 +36,7 @@ public class ApplicationManager {
   private FirstInputStageBornHelper firstInputStageBornHelper;
   private FirstInputStageMarriageHelper firstInputStageMarriageHelper;
   private ControlFormHelper controlFormHelper;
+  private PmiHelper pmiHelper;
   private int rs;
 
 
@@ -68,6 +69,7 @@ public class ApplicationManager {
     firstInputStageBornHelper = new FirstInputStageBornHelper(wd,pvvDb,zagsDb);
     firstInputStageMarriageHelper = new FirstInputStageMarriageHelper(wd,pvvDb,zagsDb);
     controlFormHelper = new ControlFormHelper(wd, pvvDb, zagsDb);
+    pmiHelper = new PmiHelper(wd);
 
   }
 
@@ -122,6 +124,7 @@ public class ApplicationManager {
   public InputFormHelper inputFormHelper(){
     return inputFormHelper;
   }
+
   public FirstInputStageBornHelper firstInputStageBornHelper() {
     return firstInputStageBornHelper;
   }
@@ -130,18 +133,19 @@ public class ApplicationManager {
     return firstInputStageMarriageHelper;
   }
 
-
   public ControlFormHelper controlFormHelper() {
     return controlFormHelper;
+  }
+
+  public PmiHelper pmiHelper () {
+    return pmiHelper;
   }
 
   public Connection getPvvDb() {
         return pvvDb;
     }
-
   public Connection getZagsDb() {
         return zagsDb;
     }
-
 
 }
