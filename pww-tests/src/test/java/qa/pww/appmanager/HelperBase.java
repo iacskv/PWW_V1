@@ -43,6 +43,10 @@ public class HelperBase {
     }
   }
 
+  public void sleep(int sec) throws InterruptedException {
+    Thread.sleep(sec*1000);
+  }
+
 
   public boolean isElementPresent(By locator) {
     try {
