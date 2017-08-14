@@ -31,6 +31,9 @@ public class PmiTest extends TestBase{
     String lgtves = "100";
     String distpath = "D:\\GIT_REP\\zags-inputarena\\db\\group document types and dictionaties\\dictionaries\\male.iad";
 
+    String mainbook = "1СМ";
+    String newbookname = "11СМ";
+
 
     @Test (enabled = true, priority = 1)
     public void createUser() throws InterruptedException {
@@ -113,10 +116,27 @@ public class PmiTest extends TestBase{
     }
 
     @Test (enabled = true, priority = 11)
-    public void loadNewBook (){
+    //загрузка книг
+    public void loadNewBook () throws InterruptedException {
         app.pmiHelper().gotoInput();
         app.pmiHelper().loadBookBtn();
+        app.pmiHelper().loadBook("2003", "Рождение", "Кронштадтский (1997-2003)", "1РО", "1", "1");
+        app.pmiHelper().loadBook("2003", "Регистрация брака", "Кронштадтский (1997-2003)", "1РБ", "1", "1");
         app.pmiHelper().loadBook("2003", "Смерть", "Кронштадтский (1997-2003)", "1СМ", "1", "1");
+    }
+
+    @Test (enabled = true, priority = 12)
+    public void filterListBook(){
+        app.pmiHelper().gotoInput();
+        app.pmiHelper().gotoControlBookBtn();
+        app.pmiHelper().findControlBook("Смерть");
+    }
+
+    @Test (enabled = true, priority = 13)
+    public void changeBookInfo(){
+        app.pmiHelper().selectBook(mainbook);
+        app.pmiHelper().ediBookBtn();
+        app.pmiHelper().editBook(newbookname);
 
     }
 

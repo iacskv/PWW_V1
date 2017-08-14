@@ -216,6 +216,28 @@ public class PmiHelper extends HelperBase{
         type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[7]/div[1]/div/input"),lNum);
         sleep(1);
         click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
+        sleep(10);
+    }
 
+    public void gotoControlBookBtn(){
+        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void findControlBook(String name){
+        type(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[11]/div/input"),name);
+        click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[12]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void selectBook(String mainbook){
+        click(By.xpath("//div[text()='" + mainbook + "']"));
+    }
+
+    public void ediBookBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void editBook(String newbookname){
+        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div/fieldset[2]/div/div[1]/div[1]/div/input"),newbookname);
+        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
     }
 }
