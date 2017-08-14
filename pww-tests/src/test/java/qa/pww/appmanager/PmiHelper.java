@@ -176,12 +176,13 @@ public class PmiHelper extends HelperBase{
         click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button"));
     }
 
-    public void fillDistonary(String lgtname, String lgtkat, String lgtves){
+    public void fillDistonary(String lgtname, String lgtkat, String lgtves) throws InterruptedException {
         click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
         type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/form/div[1]/div[1]/div/input"),lgtname);
         type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/form/div[2]/div[1]/div/input"),lgtkat);
         type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/form/div[3]/div[1]/div/input"), lgtves);
         click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
+        sleep(1);
         click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[1]/div[1]/ul/li[2]/a[1]"));
     }
 
@@ -193,5 +194,28 @@ public class PmiHelper extends HelperBase{
         File file = new File(distpath);
         attach(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/div[1]/div/input[2]"),file);
         click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void gotoInput(){
+        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[2]/a[2]/em/span/span"));
+    }
+
+    public void loadBookBtn(){
+        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void loadBook(String year, String typeBook, String nameZags, String numbook, String sNum, String lNum) throws InterruptedException {
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[1]/div[1]/div/img"));
+        click(By.xpath("//div[text()='" + year + "']"));
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[3]/div[1]/div/img"));
+        click(By.xpath("//div[text()='" + typeBook + "']"));
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[4]/div[1]/div/img"));
+        click(By.xpath("//div[text()='" + nameZags + "']"));
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[5]/div[1]/div/input"),numbook);
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[6]/div[1]/div/input"),sNum);
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[7]/div[1]/div/input"),lNum);
+        sleep(1);
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
+
     }
 }

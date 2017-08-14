@@ -61,9 +61,10 @@ public class PmiTest extends TestBase{
 
     @Test (enabled = true, priority = 4)
     public void createRole(){
-       app.pmiHelper().gotoRole();
-       app.pmiHelper().createNewRoleBtn();
-       app.pmiHelper().createNewRole();
+        //пустой тест
+        app.pmiHelper().gotoRole();
+        app.pmiHelper().createNewRoleBtn();
+        app.pmiHelper().createNewRole();
 
     }
 
@@ -108,6 +109,14 @@ public class PmiTest extends TestBase{
     public void loadDistinaryFromFile(){
         app.pmiHelper().importDistBtn();
         app.pmiHelper().importDist(distpath);
+
+    }
+
+    @Test (enabled = true, priority = 11)
+    public void loadNewBook (){
+        app.pmiHelper().gotoInput();
+        app.pmiHelper().loadBookBtn();
+        app.pmiHelper().loadBook("2003", "Смерть", "Кронштадтский (1997-2003)", "1СМ", "1", "1");
 
     }
 
