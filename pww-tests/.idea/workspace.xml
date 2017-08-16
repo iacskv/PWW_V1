@@ -104,8 +104,8 @@
       <file leaf-file-name="PmiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1411">
-              <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="375">
+              <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,15 +114,19 @@
       <file leaf-file-name="PmiHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="240" column="149" lean-forward="false" selection-start-line="240" selection-start-column="149" selection-end-line="240" selection-end-column="149" />
+            <state relative-caret-position="460">
+              <caret line="343" column="174" lean-forward="false" selection-start-line="343" selection-start-column="174" selection-end-line="343" selection-end-column="174" />
               <folding>
                 <element signature="method#gotoMainPage#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#createUserBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="e#5776#5777#0" expanded="true" />
                 <element signature="e#5853#5854#0" expanded="true" />
-                <element signature="e#15551#15552#0" expanded="true" />
-                <element signature="e#15618#15619#0" expanded="true" />
+                <element signature="e#15598#15599#0" expanded="true" />
+                <element signature="e#15665#15666#0" expanded="true" />
+                <element signature="e#18232#18233#0" expanded="true" />
+                <element signature="e#18290#18291#0" expanded="true" />
+                <element signature="e#21866#21867#0" expanded="true" />
+                <element signature="e#21933#21934#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -613,8 +617,8 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/UserInfoPmi.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
       </list>
     </option>
   </component>
@@ -835,7 +839,7 @@
       <recent name="D:\iacskv\PWW_V1\pww-tests\libs" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PmiTest.filterListBook">
+  <component name="RunManager" selected="TestNG.PmiTest">
     <configuration default="false" name="PmiTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1214,9 +1218,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.PmiTest.filterListBook" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.PmiTest.loadNewBook" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.PmiTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.PmiTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.PmiTest.filterListBook" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.PmiTest.loadNewBook" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.PmiTest.loadDistinaryFromFile" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.PmiTest.changeRulesForRole" />
       </list>
@@ -1236,34 +1240,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PmiTest_filterListBook - 2017.08.14 at 09h 57m 26s.xml">
+    <history-entry file="PmiTest - 2017.08.15 at 10h 40m 54s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.08.15 at 10h 51m 46s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.08.15 at 11h 18m 02s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.08.15 at 11h 21m 45s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.08.15 at 11h 24m 48s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.08.15 at 11h 31m 57s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.08.15 at 11h 44m 54s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest_filterListBook - 2017.08.15 at 11h 27m 37s.xml">
       <configuration name="PmiTest.filterListBook" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest_filterListBook - 2017.08.14 at 10h 31m 52s.xml">
+    <history-entry file="PmiTest_filterListBook - 2017.08.15 at 11h 28m 41s.xml">
       <configuration name="PmiTest.filterListBook" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest_filterListBook - 2017.08.14 at 10h 32m 54s.xml">
-      <configuration name="PmiTest.filterListBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_filterListBook - 2017.08.14 at 10h 38m 05s.xml">
-      <configuration name="PmiTest.filterListBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_filterListBook - 2017.08.14 at 10h 41m 02s.xml">
-      <configuration name="PmiTest.filterListBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_loadNewBook - 2017.08.14 at 09h 36m 53s.xml">
-      <configuration name="PmiTest.loadNewBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_loadNewBook - 2017.08.14 at 09h 40m 18s.xml">
-      <configuration name="PmiTest.loadNewBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_loadNewBook - 2017.08.14 at 10h 33m 49s.xml">
-      <configuration name="PmiTest.loadNewBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_loadNewBook - 2017.08.14 at 10h 35m 50s.xml">
-      <configuration name="PmiTest.loadNewBook" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest_loadNewBook - 2017.08.14 at 10h 40m 12s.xml">
+    <history-entry file="PmiTest_loadNewBook - 2017.08.15 at 11h 27m 11s.xml">
       <configuration name="PmiTest.loadNewBook" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1283,7 +1287,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269663" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603687" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1318,18 +1322,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
-          <line>192</line>
-          <properties class="qa.pww.appmanager.PmiHelper" method="importDist" />
-          <option name="timeStamp" value="609" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
-          <line>178</line>
-          <properties class="qa.pww.appmanager.PmiHelper" method="fillDistonary" />
-          <option name="timeStamp" value="610" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
           <line>163</line>
@@ -1372,8 +1364,146 @@
           <properties class="qa.pww.appmanager.PmiHelper" method="findControlBook" />
           <option name="timeStamp" value="617" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>283</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="fillClassFieldsDeathInputForm" />
+          <option name="timeStamp" value="620" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>279</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="startInputBtn" />
+          <option name="timeStamp" value="621" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>275</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="inputBtn" />
+          <option name="timeStamp" value="622" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>268</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="loginUser" />
+          <option name="timeStamp" value="623" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>263</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="exitUser" />
+          <option name="timeStamp" value="624" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>249</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="assignBookToUser" />
+          <option name="timeStamp" value="625" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>245</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="assignBookToUserBtn" />
+          <option name="timeStamp" value="626" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>240</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="editBook" />
+          <option name="timeStamp" value="627" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>235</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="ediBookBtn" />
+          <option name="timeStamp" value="628" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>231</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="selectBook" />
+          <option name="timeStamp" value="629" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>221</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="gotoControlBookBtn" />
+          <option name="timeStamp" value="630" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>293</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="hasChanges" />
+          <option name="timeStamp" value="631" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>302</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="saveDocBtn" />
+          <option name="timeStamp" value="632" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>306</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="endInputBookBtn" />
+          <option name="timeStamp" value="633" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>310</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="insertDateCert" />
+          <option name="timeStamp" value="635" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>314</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="insertErrorInDoc" />
+          <option name="timeStamp" value="636" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>318</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="returnToBookListBtn" />
+          <option name="timeStamp" value="637" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>322</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="reviewDocBtn" />
+          <option name="timeStamp" value="638" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>326</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="selectDocForReview" />
+          <option name="timeStamp" value="639" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>330</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="reviewDocBtn" />
+          <option name="timeStamp" value="640" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>334</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="returnFromReviewDocBtn" />
+          <option name="timeStamp" value="641" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>338</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="editDocBtn" />
+          <option name="timeStamp" value="642" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
+          <line>342</line>
+          <properties class="qa.pww.appmanager.PmiHelper" method="saveAndExitBtn" />
+          <option name="timeStamp" value="643" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="618" />
+      <option name="time" value="644" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1740,23 +1870,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="240" column="149" lean-forward="false" selection-start-line="240" selection-start-column="149" selection-end-line="240" selection-end-column="149" />
+        <state relative-caret-position="460">
+          <caret line="343" column="174" lean-forward="false" selection-start-line="343" selection-start-column="174" selection-end-line="343" selection-end-column="174" />
           <folding>
             <element signature="method#gotoMainPage#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#createUserBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="e#5776#5777#0" expanded="true" />
             <element signature="e#5853#5854#0" expanded="true" />
-            <element signature="e#15551#15552#0" expanded="true" />
-            <element signature="e#15618#15619#0" expanded="true" />
+            <element signature="e#15598#15599#0" expanded="true" />
+            <element signature="e#15665#15666#0" expanded="true" />
+            <element signature="e#18232#18233#0" expanded="true" />
+            <element signature="e#18290#18291#0" expanded="true" />
+            <element signature="e#21866#21867#0" expanded="true" />
+            <element signature="e#21933#21934#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411">
-          <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="375">
+          <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
           <folding />
         </state>
       </provider>

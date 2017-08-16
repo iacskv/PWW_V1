@@ -223,8 +223,9 @@ public class PmiHelper extends HelperBase{
         click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
     }
 
-    public void findControlBook(String name){
-        type(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[11]/div/input"),name);
+    public void findControlBook(String name) throws InterruptedException {
+        sleep(1);
+        type(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[10]/div/input"),name);
         click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[12]/table/tbody/tr[2]/td[2]/em/button"));
     }
 
@@ -234,10 +235,113 @@ public class PmiHelper extends HelperBase{
 
     public void ediBookBtn(){
         click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+
     }
 
     public void editBook(String newbookname){
         type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div/fieldset[2]/div/div[1]/div[1]/div/input"),newbookname);
         click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
     }
+
+    public void assignBookToUserBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void assignBookToUser(int stage, String user) throws InterruptedException {
+        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset[2]/div/div/div[2]/div[1]/div[1]/div[1]/div/img"));
+        if (stage == 1){
+            click(By.xpath("//div[text()='Этап 1']"));
+        } else {
+            click(By.xpath("//div[text()='Этап 2']"));
+        }
+        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/img"));
+        click(By.xpath("//div[text()='" + user + "']"));
+        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset[2]/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
+        sleep(1);
+        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void exitUser(){
+        click(By.xpath("html/body/div[1]/div/div[1]/div[1]/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void loginUser(String login, String pass) throws InterruptedException {
+        type(By.xpath("html/body/div[1]/form/div[1]/div[3]/div[2]/input"),login);
+        type(By.xpath("html/body/div[1]/form/div[1]/div[4]/div[2]/input"), pass);
+        click(By.xpath("html/body/div[1]/form/div[1]/div[4]/div[2]/div/button"));
+        sleep(1);
+    }
+
+    public void inputBtn(){
+        click(By.xpath("//button[text()='Ввод']"));
+    }
+
+    public void startInputBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void fillClassFieldsDeathInputForm(){
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[6]/div[1]/div/input"), "РОССИЯ");
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[8]/div[1]/div/input"),"Ростовская область");
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[14]/div[1]/div/input"),"РОССИЯ");
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[16]/div[1]/div/input"),"Русские");
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[20]/div[1]/div/input"),"РОССИЯ");
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[22]/div[1]/div/input"),"г. Санкт-Петербург");
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[26]/div[1]/div/input"),"Холера");
+    }
+
+    public void hasChanges(int yesno){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[5]/div[1]/div/img"));
+        if (yesno == 0) {
+            click(By.xpath("html/body/div[9]/div/div[2]"));
+        } else {
+            click(By.xpath("html/body/div[9]/div/div[1]"));
+        }
+    }
+
+    public void saveDocBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void endInputBookBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[2]/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void insertDateCert(String year){
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[3]/div[2]/div[1]/form/div/div/div[3]/div/div[1]/div/input"), year);
+    }
+
+    public void insertErrorInDoc(String lname){
+        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div/input"), lname);
+    }
+
+    public void returnToBookListBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void reviewBookBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[2]/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void selectDocForReview(){
+        click(By.xpath("//div[contains(text(),'Смерть')]"));
+    }
+
+    public void reviewDocBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void returnFromReviewDocBtn(){
+        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void editDocBtn(){
+        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
+    public void saveAndExitBtn(){
+        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    }
+
 }
