@@ -3,7 +3,12 @@ package qa.pww.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
+import static qa.pww.PmiLocators.EditUserPage.*;
+import static qa.pww.PmiLocators.MainMenu.*;
+import static qa.pww.PmiLocators.NewPassForm.*;
+import static qa.pww.PmiLocators.NewUserPage.*;
+import static qa.pww.PmiLocators.RolePage.*;
+import static qa.pww.PmiLocators.UserPage.*;
 
 /**
  * Created by k.smotrov on 07.08.2017.
@@ -14,334 +19,91 @@ public class PmiHelper extends HelperBase{
         super(wd);
     }
 
-    public void gotoMainPage(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[1]/a[2]/em/span/span"));
+    public void gotoRolePage(){
+        click(By.xpath(ROLEBTN));
     }
 
-    public void gotoAdmPage(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[4]/a[2]/em/span/span"));
+    public void selectRole(String role){
+        click(By.xpath("//div[text()='" + role + "']"));
     }
 
-    public void gotoUsersBtn(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[2]/em/button"));
+    public void fillRulesRole(){
+        click(By.xpath(MAINPAGERULE));
+        click(By.xpath(PATCHNOTERULE));
+        click(By.xpath(INPUTRULE));
+    }
+
+    public void saveRole(){
+        click(By.xpath(SAVEROLEBTN));
+    }
+
+    public void gotoUserPage(){
+        click(By.xpath(USERBTN));
     }
 
     public void createUserBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+        click(By.xpath(ADDUSERBTN));
     }
 
-    public void createNewUser (String login, String pass, String lastName, String firstName, String midName, String title, String room, String descr) throws InterruptedException {
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[1]/div/div[1]/div[1]/div/input"), login);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[1]/div/div[2]/div[1]/div/input"), pass);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[1]/div/div[3]/div[1]/div/input"), pass);
-        click(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[1]/div/div[4]/div[1]/div/img"));
-        click(By.xpath("html/body/div[11]/div/div[13]"));
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[1]/div[1]/div/input"), lastName);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[2]/div[1]/div/input"), firstName);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[3]/div[1]/div/input"), midName);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[6]/div[1]/div/input"), title);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[7]/div[1]/div/input"), room);
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[8]/div[1]/div/textarea"), descr);
-        //роль - админ
-        click(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset/div/div/div[1]/div[1]/div[2]/div/div[3]/table/tbody/tr/td[1]/div/div"));
-        //создать
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-        sleep(1);
-        //подтвердить
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-        // закрыть
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+    public void fillNewUser(String logpass, String lname, String fname, String mname, String title, String role){
+        type(By.xpath(LOGIN),logpass);
+        type(By.xpath(PASS),logpass);
+        type(By.xpath(PASS2),logpass);
+        click(By.xpath(LOCATION));
+        click(By.xpath(LOCATIONN));
+        type(By.xpath(LNAME), lname);
+        type(By.xpath(FNAME), fname);
+        type(By.xpath(MNAME), mname);
+        type(By.xpath(TITLE), title);
+        click(By.xpath(ROLE + "[text()='" + role + "']"));
     }
 
-    public void selectPMiUser(String login){
-        click(By.xpath("//div[contains(text(),'" + login+ "')]"));
+    public void saveNewUser(){
+        click(By.xpath(CREATEUSERBTN));
+        click(By.xpath(OKBTN));
+    }
+
+    public void exitNewUserBtn(){
+        click(By.xpath(EXITNEWUSERBTN));
+    }
+
+    public void selectUser(String userlog){
+        click(By.xpath("//div[text()='" + userlog + "']"));
     }
 
     public void editUserBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[2]/em/button"));
+        click(By.xpath(EDITUSERBTN));
     }
 
-    public void editPmiUser() throws InterruptedException {
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[1]/div[1]/div/input"), "Дмитриев");
-        //сохранить
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-        sleep(1);
-        //подтвердить
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-        //закрыть
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+    public void fillEditUser(String lname){
+        type(By.xpath(EDITUSERLNAME), lname);
     }
 
-    public void changePassBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[4]/table/tbody/tr[2]/td[2]/em/button"));
+    public void giveNewRoleToUser(String role){
+        click(By.xpath(EDITUSERROLE + "[text()='" + role + "']"));
     }
 
-    public void changePassPmiUser() throws InterruptedException {
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[1]/div[1]/div/input"), "adm_admin");
-        type(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/div/input"), "adm_admin");
-        //сохранить
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-        sleep(1);
-        //подтвердить
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
+    public void saveEditUser(){
+        click(By.xpath(SAVEEDITUSERBTN));
+        click(By.xpath(OKEDITBTN));
     }
 
-    public void gotoRole(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
+    public void exitEditUserBtn(){
+        click(By.xpath(EXITEDITUSERBTN));
     }
 
-    public void createNewRoleBtn(){
-
+    public void changePassUserBtn(){
+        click(By.xpath(NEWPASSUSERBTN));
     }
 
-    public void createNewRole(){
-
+    public void fillNewPassUser(String newpass){
+        type(By.xpath(NEWPASS), newpass);
+        type(By.xpath(NEWPASSS), newpass);
     }
 
-    public void selectPmiRole(String rolename){
-        click(By.xpath("//div[contains(text(),'" + rolename + "')]"));
-    }
-
-    public void changeRulesPmiRole(){
-        //главная
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/table/tbody/tr/td/div[1]/div[1]/img[3]"));
-        //последние изменения
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/table/tbody/tr/td/div[1]/div[2]/div/div/img[3]"));
-        //площадка ввода - ввод
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/table/tbody/tr/td/div[6]/div/img[3]"));
-        //сохранить
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button"));
-
-    }
-
-    public void changePmiRoleForUser(){
-        //снять админа
-        click(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset/div/div/div[1]/div[1]/div[2]/div/div[3]/table/tbody/tr/td[1]/div/div"));
-        //поставить оператора
-        click(By.xpath("html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset/div/div/div[1]/div[1]/div[2]/div/div[2]/table/tbody/tr/td[1]/div/div"));
-        //сохранить
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-        //подтвердить
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-        //закрыть
-        click(By.xpath("html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void gotoDistonaryForm(){
-       click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[3]/a[2]/em/span/span"));
-    }
-
-    public void gotoDictinaryBtn(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void createNewDistonaryBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void createNewDistinary(String distname, String distkod, String col1name, String col1kod){
-      type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[1]/div[1]/div/input"),col1name);
-      click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[2]/div[1]/div/img"));
-      click(By.xpath("html/body/div[12]/div/div[1]"));
-      type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[3]/div[1]/div/input"),col1kod);
-      click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-      type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[1]/div/div[1]/div[1]/div/input"),distname);
-      type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[1]/div/div[3]/div[1]/div/input"),distkod);
-      click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[1]/div/div[4]/div[1]/div/img"));
-      click(By.xpath("html/body/div[12]/div/div"));
-      click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void selectPmiDist(String distname) throws InterruptedException {
-        sleep(3);
-        click(By.xpath("//div[contains(text(),'" + distname + "')]"));
-    }
-
-    public void editDistBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void editDist(String col2name, String col2kod){
-        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[1]/div[1]/div/input"),col2name);
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[2]/div[1]/div/img"));
-        click(By.xpath("html/body/div[12]/div/div[3]"));
-        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[3]/div[1]/div/input"),col2kod);
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[2]/div/div/div[2]/div[3]/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/fieldset[1]/div/div[4]/div[1]/div/img"));
-        click(By.xpath("html/body/div[12]/div/div[2]"));
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void fillDistonaryBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void fillDistonary(String lgtname, String lgtkat, String lgtves) throws InterruptedException {
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/form/div[1]/div[1]/div/input"),lgtname);
-        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/form/div[2]/div[1]/div/input"),lgtkat);
-        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/form/div[3]/div[1]/div/input"), lgtves);
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
-        sleep(1);
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[1]/div[1]/ul/li[2]/a[1]"));
-    }
-
-    public void importDistBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[8]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void importDist(String distpath){
-        File file = new File(distpath);
-        attach(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/div[1]/div/input[2]"),file);
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void gotoInput(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/div[1]/ul/li[2]/a[2]/em/span/span"));
-    }
-
-    public void loadBookBtn(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void loadBook(String year, String typeBook, String nameZags, String numbook, String sNum, String lNum) throws InterruptedException {
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[1]/div[1]/div/img"));
-        click(By.xpath("//div[text()='" + year + "']"));
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[3]/div[1]/div/img"));
-        click(By.xpath("//div[text()='" + typeBook + "']"));
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[4]/div[1]/div/img"));
-        click(By.xpath("//div[text()='" + nameZags + "']"));
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[5]/div[1]/div/input"),numbook);
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[6]/div[1]/div/input"),sNum);
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[1]/form/div[7]/div[1]/div/input"),lNum);
-        sleep(1);
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/form/div/table/tbody/tr/td[1]/fieldset/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-        sleep(10);
-    }
-
-    public void gotoControlBookBtn(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void findControlBook(String name) throws InterruptedException {
-        sleep(1);
-        type(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[10]/div/input"),name);
-        click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[12]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void selectBook(String mainbook){
-        click(By.xpath("//div[text()='" + mainbook + "']"));
-    }
-
-    public void ediBookBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
-
-    }
-
-    public void editBook(String newbookname){
-        type(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div/fieldset[2]/div/div[1]/div[1]/div/input"),newbookname);
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void assignBookToUserBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void assignBookToUser(int stage, String user) throws InterruptedException {
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset[2]/div/div/div[2]/div[1]/div[1]/div[1]/div/img"));
-        if (stage == 1){
-            click(By.xpath("//div[text()='Этап 1']"));
-        } else {
-            click(By.xpath("//div[text()='Этап 2']"));
-        }
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/img"));
-        click(By.xpath("//div[text()='" + user + "']"));
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/fieldset[2]/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-        sleep(1);
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void exitUser(){
-        click(By.xpath("html/body/div[1]/div/div[1]/div[1]/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void loginUser(String login, String pass) throws InterruptedException {
-        type(By.xpath("html/body/div[1]/form/div[1]/div[3]/div[2]/input"),login);
-        type(By.xpath("html/body/div[1]/form/div[1]/div[4]/div[2]/input"), pass);
-        click(By.xpath("html/body/div[1]/form/div[1]/div[4]/div[2]/div/button"));
-        sleep(1);
-    }
-
-    public void inputBtn(){
-        click(By.xpath("//button[text()='Ввод']"));
-    }
-
-    public void startInputBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void fillClassFieldsDeathInputForm(){
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[6]/div[1]/div/input"), "РОССИЯ");
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[8]/div[1]/div/input"),"Ростовская область");
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[14]/div[1]/div/input"),"РОССИЯ");
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[16]/div[1]/div/input"),"Русские");
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[20]/div[1]/div/input"),"РОССИЯ");
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[22]/div[1]/div/input"),"г. Санкт-Петербург");
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[26]/div[1]/div/input"),"Холера");
-    }
-
-    public void hasChanges(int yesno){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[5]/div[1]/div/img"));
-        if (yesno == 0) {
-            click(By.xpath("html/body/div[9]/div/div[2]"));
-        } else {
-            click(By.xpath("html/body/div[9]/div/div[1]"));
-        }
-    }
-
-    public void saveDocBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void endInputBookBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[2]/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void insertDateCert(String year){
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[3]/div[2]/div[1]/form/div/div/div[3]/div/div[1]/div/input"), year);
-    }
-
-    public void insertErrorInDoc(String lname){
-        type(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div/input"), lname);
-    }
-
-    public void returnToBookListBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[1]/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void reviewBookBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[2]/div/table[2]/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void selectDocForReview(){
-        click(By.xpath("//div[contains(text(),'Смерть')]"));
-    }
-
-    public void reviewDocBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void returnFromReviewDocBtn(){
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void editDocBtn(){
-        click(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
-    }
-
-    public void saveAndExitBtn(){
-        click(By.xpath("html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    public void saveNewPassUser(){
+        click(By.xpath(SAVENEWPASSBTN));
+        click(By.xpath(OKNEWPASSBTN));
     }
 
 }

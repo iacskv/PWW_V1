@@ -42,161 +42,115 @@ public class PmiTest extends TestBase{
     String kron_opPass = "kron_op";
 
 
-    @Test (enabled = false, priority = 1)
-    public void createUser() throws InterruptedException {
-        app.pmiHelper().gotoMainPage();
-        app.pmiHelper().gotoAdmPage();
-        app.pmiHelper().gotoUsersBtn();
-        app.pmiHelper().createUserBtn();
-        app.pmiHelper().createNewUser(login, pass, lastname, firstname, midname, title, room, descr );
-    }
-
-
-
-    @Test (enabled = false, priority = 2)
-    public void editUser() throws InterruptedException {
-        app.pmiHelper().selectPMiUser("kron_op");
-        app.pmiHelper().editUserBtn();
-        app.pmiHelper().editPmiUser();
-    }
-
-    @Test (enabled = false, priority = 3)
-    public void changePassUser() throws InterruptedException {
-        app.pmiHelper().selectPMiUser("adm_admin");
-        app.pmiHelper().changePassBtn();
-        app.pmiHelper().changePassPmiUser();
-    }
-
-    @Test (enabled = false, priority = 4)
+    @Test (enabled = true, priority = 1)
     public void createRole(){
-        //пустой тест
-        app.pmiHelper().gotoRole();
-        app.pmiHelper().createNewRoleBtn();
-        app.pmiHelper().createNewRole();
+        app.pmiHelper().gotoRolePage();
+    }
+
+    @Test (enabled = true, priority = 2)
+    public void changeRulesForRole(){
+        app.pmiHelper().gotoRolePage();
+        app.pmiHelper().selectRole("Оператор ввода");
+        app.pmiHelper().fillRulesRole();
+        app.pmiHelper().saveRole();
+
+    }
+
+    @Test (enabled = true, priority = 3)
+    public void createUser() throws InterruptedException {
+        app.pmiHelper().gotoUserPage();
+        app.pmiHelper().createUserBtn();
+        app.pmiHelper().fillNewUser("kron_op","Васин", "Игорь", "Семенович", "Оператор ввода", "Сотрудник ЗАГС");
+        app.pmiHelper().saveNewUser();
+        app.pmiHelper().exitNewUserBtn();
+
+    }
+
+    @Test (enabled = true, priority = 4)
+    public void editUser() throws InterruptedException {
+        app.pmiHelper().gotoUserPage();
+        app.pmiHelper().selectUser("kron_op");
+        app.pmiHelper().editUserBtn();
+        app.pmiHelper().fillEditUser("Дмитриев");
+        app.pmiHelper().saveEditUser();
+        app.pmiHelper().exitEditUserBtn();
+
     }
 
     @Test (enabled = false, priority = 5)
-    public void changeRulesForRole(){
-        app.pmiHelper().selectPmiRole(rolename);
-        app.pmiHelper().changeRulesPmiRole();
+    public void changeUserRole(){
+        app.pmiHelper().gotoUserPage();
+        app.pmiHelper().selectUser("kron_op");
+        app.pmiHelper().editUserBtn();
+        app.pmiHelper().giveNewRoleToUser("Оператор ввода");
+        app.pmiHelper().saveEditUser();
+        app.pmiHelper().exitEditUserBtn();
+
     }
 
-    @Test (enabled = false, priority = 6)
-    public void changeUserRole(){
-        app.pmiHelper().gotoUsersBtn();
-        app.pmiHelper().selectPMiUser(login);
-        app.pmiHelper().editUserBtn();
-        app.pmiHelper().changePmiRoleForUser();
+    @Test (enabled = true, priority = 6)
+    public void changePassUser() throws InterruptedException {
+        app.pmiHelper().gotoUserPage();
+        app.pmiHelper().selectUser("kron_op");
+        app.pmiHelper().changePassUserBtn();
+        app.pmiHelper().fillNewPassUser("kron_op");
+        app.pmiHelper().saveNewPassUser();
     }
 
     @Test (enabled = false, priority = 7)
     public void createDistonary(){
-        app.pmiHelper().gotoDistonaryForm();
-        app.pmiHelper().gotoDictinaryBtn();
-        app.pmiHelper().createNewDistonaryBtn();
-        app.pmiHelper().createNewDistinary(distname, distkod, col1name, col1kod);
+
     }
 
     @Test (enabled = false, priority = 8)
     public void editAttrDistonary() throws InterruptedException {
-        app.pmiHelper().selectPmiDist(distname);
-        app.pmiHelper().editDistBtn();
-        app.pmiHelper().editDist(col2name, col2kode);
+
     }
 
     @Test (enabled = false, priority = 9)
     public void fillDistonary() throws InterruptedException {
-        app.pmiHelper().selectPmiDist(distname);
-        app.pmiHelper().fillDistonaryBtn();
-        app.pmiHelper().fillDistonary(lgtname, lgtkat, lgtves);
+
     }
 
     @Test (enabled = false, priority = 10)
     public void loadDistinaryFromFile(){
-        app.pmiHelper().importDistBtn();
-        app.pmiHelper().importDist(distpath);
+
     }
 
     @Test (enabled = true, priority = 11)
     //загрузка книг
     public void loadNewBook () throws InterruptedException {
-        app.pmiHelper().gotoInput();
-        app.pmiHelper().loadBookBtn();
-        //app.pmiHelper().loadBook("2003", "Рождение", "Кронштадтский (1997-2003)", "1РО", "1", "1");
-        //app.pmiHelper().loadBook("2003", "Регистрация брака", "Кронштадтский (1997-2003)", "1РБ", "1", "1");
-        app.pmiHelper().loadBook("2003", "Смерть", "Кронштадтский (1997-2003)", "1СМ", "1", "1");
+
     }
 
     @Test (enabled = true, priority = 12)
     public void filterListBook() throws InterruptedException {
-        app.pmiHelper().gotoInput();
-        app.pmiHelper().gotoControlBookBtn();
-        app.pmiHelper().findControlBook("Смерть");
+
     }
 
     @Test (enabled = true, priority = 13)
     public void changeBookInfo(){
-        app.pmiHelper().selectBook(mainbook);
-        app.pmiHelper().ediBookBtn();
-        app.pmiHelper().editBook(newbookname);
+
     }
 
     @Test (enabled = true, priority = 14)
     public void assignMainBook() throws InterruptedException {
-        app.pmiHelper().selectBook(newbookname);
-        app.pmiHelper().assignBookToUserBtn();
-        app.pmiHelper().assignBookToUser(1, kron_op);
+
     }
 
     @Test (enabled = true, priority = 15)
     public void inputMainBookDoc() throws InterruptedException {
-        app.pmiHelper().exitUser();
-        app.pmiHelper().loginUser(kron_opPass, kron_opPass);
-        app.pmiHelper().gotoInput();
-        app.pmiHelper().inputBtn();
-        app.pmiHelper().selectBook(kron_opFullname);
-        app.pmiHelper().startInputBtn();
-        app.pmiHelper().fillClassFieldsDeathInputForm();
-        app.pmiHelper().hasChanges(0);
-        app.pmiHelper().saveDocBtn();
-        app.pmiHelper().endInputBookBtn();
 
-        app.pmiHelper().exitUser();
-        app.pmiHelper().loginUser(adminPass, adminPass);
-
-        app.pmiHelper().gotoInput();
-        app.pmiHelper().gotoControlBookBtn();
-        app.pmiHelper().selectBook(newbookname);
-        app.pmiHelper().assignBookToUserBtn();
-        app.pmiHelper().assignBookToUser(2, admin);
-
-        app.pmiHelper().inputBtn();
-        app.pmiHelper().selectBook(adminFullname);
-        app.pmiHelper().startInputBtn();
-        app.pmiHelper().fillClassFieldsDeathInputForm();
-
-        app.pmiHelper().saveDocBtn();
-        app.pmiHelper().returnToBookListBtn();
     }
 
     @Test (enabled = false, priority = 16)
     public void reviewDoc(){
-        app.pmiHelper().reviewBookBtn();
-        app.pmiHelper().selectDocForReview();
-        app.pmiHelper().reviewDocBtn();
-        app.pmiHelper().returnFromReviewDocBtn();
+
     }
 
     @Test (enabled = false, priority = 17)
     public void editDoc(){
-        app.pmiHelper().selectDocForReview();
-        app.pmiHelper().editDocBtn();
-        app.pmiHelper().insertDateCert("03");
-        app.pmiHelper().insertErrorInDoc("Егорович");
-        app.pmiHelper().saveAndExitBtn();
-        app.pmiHelper().returnToBookListBtn();
-        app.pmiHelper().startInputBtn();
-        app.pmiHelper().endInputBookBtn();
+
     }
 
 }
