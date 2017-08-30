@@ -3,6 +3,8 @@ package qa.pww.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.File;
+
 import static qa.pww.PmiLocators.DistMaleContentPage.*;
 import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
 import static qa.pww.PmiLocators.DistMaleStringForm.*;
@@ -206,10 +208,11 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(LOADCONTBTN));
     }
 
-    public void fillContentFilePath(String path){
+    public void fillContentFilePath(File path){
+        attach(By.xpath(NAMEFILECONTENT), path);
     }
 
     public void loadFileContentBtn(){
-        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+        click(By.xpath(LOADCONTENTBTN));
     }
 }

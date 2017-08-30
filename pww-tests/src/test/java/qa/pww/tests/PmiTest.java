@@ -2,6 +2,8 @@ package qa.pww.tests;
 
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 /**
  * Created by k.smotrov on 07.08.2017.
  */
@@ -9,7 +11,7 @@ public class PmiTest extends TestBase{
 
 
     String distpath = "D:\\iacskv\\PWW_V1\\pww-tests\\src\\test\\resources\\maleContent.xlsx";
-
+    File path = new File("D:\\iacskv\\PWW_V1\\pww-tests\\src\\test\\resources\\maleContent.xlsx");
 
     @Test (enabled = true, priority = 1)
     public void createRole(){
@@ -127,10 +129,9 @@ public class PmiTest extends TestBase{
         app.pmiHelper().selectDistonary("Пол");
         app.pmiHelper().contentDistBtn();
         app.pmiHelper().loadContentBtn();
-        app.pmiHelper().fillContentFilePath(distpath);
+        app.pmiHelper().fillContentFilePath(path);
         app.pmiHelper().loadFileContentBtn();
         app.pmiHelper().exitMaleDist();
-
     }
 
     @Test (enabled = true, priority = 13)
