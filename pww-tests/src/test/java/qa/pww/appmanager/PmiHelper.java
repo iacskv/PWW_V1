@@ -3,10 +3,16 @@ package qa.pww.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static qa.pww.PmiLocators.EditUserPage.*;
+import static qa.pww.PmiLocators.DistMaleContentPage.*;
+import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
+import static qa.pww.PmiLocators.DistMaleStringForm.*;
+import static qa.pww.PmiLocators.DistonaryPage.*;
+import static qa.pww.PmiLocators.EditUserForm.*;
+import static qa.pww.PmiLocators.LoadContentForm.*;
 import static qa.pww.PmiLocators.MainMenu.*;
+import static qa.pww.PmiLocators.NewDistForm.*;
 import static qa.pww.PmiLocators.NewPassForm.*;
-import static qa.pww.PmiLocators.NewUserPage.*;
+import static qa.pww.PmiLocators.NewUserForm.*;
 import static qa.pww.PmiLocators.RolePage.*;
 import static qa.pww.PmiLocators.UserPage.*;
 
@@ -58,8 +64,9 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(ROLE + "[text()='" + role + "']"));
     }
 
-    public void saveNewUser(){
+    public void saveNewUser() throws InterruptedException {
         click(By.xpath(CREATEUSERBTN));
+        sleep(1);
         click(By.xpath(OKBTN));
     }
 
@@ -83,8 +90,9 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(EDITUSERROLE + "[text()='" + role + "']"));
     }
 
-    public void saveEditUser(){
+    public void saveEditUser() throws InterruptedException {
         click(By.xpath(SAVEEDITUSERBTN));
+        sleep(1);
         click(By.xpath(OKEDITBTN));
     }
 
@@ -101,9 +109,107 @@ public class PmiHelper extends HelperBase{
         type(By.xpath(NEWPASSS), newpass);
     }
 
-    public void saveNewPassUser(){
+    public void saveNewPassUser() throws InterruptedException {
         click(By.xpath(SAVENEWPASSBTN));
+        sleep(1);
         click(By.xpath(OKNEWPASSBTN));
     }
 
+    public void gotoDistonaryPage(){
+        click(By.xpath(DISTBTN));
+    }
+
+    public void addDistonaryBtn(){
+        click(By.xpath(ADDDISTBTN));
+    }
+
+    public void fillNewColumnDist(String nameCol, String typeCol, String codeCol){
+        type(By.xpath(NAMECOL), nameCol);
+        click(By.xpath(TYPECOL));
+        click(By.xpath(TYPEECOL + "[text()='" + typeCol + "']"));
+        type(By.xpath(CODECOL), codeCol);
+    }
+
+    public void createNewColumnBtn(){
+        click(By.xpath(CREATECOLUMNTBTN));
+    }
+
+    public void fillNewDist(String nameDist,String codeDist,String colDist){
+        type(By.xpath(NAMENEWDIST),nameDist);
+        type(By.xpath(CODENEWDIST), codeDist);
+        click(By.xpath(COLNEWDIST));
+        click(By.xpath(COLLNEWDIST + "[text()='" + colDist + "']"));
+    }
+
+    public void SaveAndExitDistBtn(){
+        click(By.xpath(SAVEEXITDISTBTN));
+    }
+
+    public void selectDistonary(String dist){
+        click(By.xpath(NAMEDIST + "[text()='" + dist + "']"));
+    }
+
+    public void editDistBtn(){
+        click(By.xpath(EDITDISTBTN));
+    }
+
+    public void contentDistBtn(){
+        click(By.xpath(CONTENTDISTBTN));
+    }
+
+    public void createNewMaleStringBtn(){
+        click(By.xpath(ADDSTRINGCONTBTN));
+    }
+
+    public void fillNewMaleString(String male, String code, String weigth){
+        type(By.xpath(NAMENEWSTRINGDIST), male);
+        type(By.xpath(CODENEWSTRINGDIST), code);
+        type(By.xpath(WEIGHTNEWSTRINGDIST), weigth);
+    }
+
+    public void saveNewStringDist(){
+        click(By.xpath(SAVEEXITNEWSTRINGDISTBTN));
+    }
+
+    public void selectStringDist(String name){
+        click(By.xpath(MALENAME + "[text()='" + name + "']"));
+    }
+
+    public void editStringDistBtn(){
+        click(By.xpath(EDITSTRINGCONTBTN));
+    }
+
+    public void fillMaleString(String male, String code, String weigth){
+        type(By.xpath(NAMESTRINGDIST), male);
+        type(By.xpath(CODESTRINGDIST), code);
+        type(By.xpath(WEIGHTSTRINGDIST), weigth);
+    }
+
+    public void saveStringDist(){
+        click(By.xpath(SAVEEXITSTRINGDISTBTN));
+    }
+
+    public void deleteStringDist(){
+        click(By.xpath(DELETESTRINGCONTBTN));
+        click(By.xpath(OKDELSTRINGDIST));
+    }
+
+    public void exitMaleDist() throws InterruptedException {
+        sleep(1);
+        click(By.xpath(SPANMALEDIST));
+        sleep(1);
+        click(By.xpath(CLOSEMALEDIST));
+        sleep(1);
+    }
+
+    public void loadContentBtn(){
+        click(By.xpath(LOADCONTBTN));
+    }
+
+    public void fillContentFilePath(String path){
+    }
+
+    public void loadFileContentBtn(){
+        click(By.xpath("html/body/div[9]/div[2]/div[1]/div/div/div/div/div[2]/div[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button"));
+    }
 }

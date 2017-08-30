@@ -3,7 +3,7 @@ package qa.pww.PmiLocators;
 /**
  * Created by k.smotrov on 29.08.2017.
  */
-public abstract class NewUserPage {
+public abstract class NewUserForm {
 
     //кнопки
     public static String CREATEUSERBTN = "html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";

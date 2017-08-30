@@ -3,7 +3,7 @@ package qa.pww.PmiLocators;
 /**
  * Created by k.smotrov on 29.08.2017.
  */
-public abstract class EditUserPage {
+public abstract class EditUserForm {
 
     //поля
     public static String EDITUSERLNAME = "html/body/div[8]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/form/div/fieldset[2]/div/div[1]/div[1]/div/input";
