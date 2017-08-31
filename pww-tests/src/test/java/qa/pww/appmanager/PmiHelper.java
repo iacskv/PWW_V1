@@ -1,21 +1,26 @@
 package qa.pww.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 
+import static qa.pww.PmiLocators.BookPage.*;
 import static qa.pww.PmiLocators.DistMaleContentPage.*;
 import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
 import static qa.pww.PmiLocators.DistMaleStringForm.*;
 import static qa.pww.PmiLocators.DistonaryPage.*;
 import static qa.pww.PmiLocators.EditUserForm.*;
+import static qa.pww.PmiLocators.InfoBookForm.*;
 import static qa.pww.PmiLocators.LoadContentForm.*;
+import static qa.pww.PmiLocators.LoadPage.*;
 import static qa.pww.PmiLocators.MainMenu.*;
 import static qa.pww.PmiLocators.NewDistForm.*;
 import static qa.pww.PmiLocators.NewPassForm.*;
 import static qa.pww.PmiLocators.NewUserForm.*;
 import static qa.pww.PmiLocators.RolePage.*;
+import static qa.pww.PmiLocators.SetOperatorForm.*;
 import static qa.pww.PmiLocators.UserPage.*;
 
 /**
@@ -214,5 +219,94 @@ public class PmiHelper extends HelperBase{
 
     public void loadFileContentBtn(){
         click(By.xpath(LOADCONTENTBTN));
+    }
+
+    public void loadPage(){
+        click(By.xpath(LOADBTN));
+    }
+
+    public void fillLoadParamBook(String year, String typeBook, String typeAgs, String dept, String numBook, String startNum, String endNum){
+        click(By.xpath(YEARLOAD));
+        click(By.xpath(YEARRLOAD + "[text()='" + year + "']"));
+        click(By.xpath(TYPEBOOKLOAD));
+        click(By.xpath(TYPEBOOKKLOAD + "[text()='" + typeBook + "']"));
+        click(By.xpath(TYPEAGSLOAD));
+        click(By.xpath(TYPEAGSSLOAD + "[text()='" + typeAgs + "']"));
+        click(By.xpath(DEPTLOAD));
+        click(By.xpath(DEPTTLOAD + "[text()='" + dept + "']"));
+        type(By.xpath(NUMBOOKLOAD), numBook);
+        type(By.xpath(STARTNUMLOAD), startNum);
+        type(By.xpath(ENDNUMLOAD), endNum);
+    }
+
+    public void startLoadBtn() throws InterruptedException {
+        sleep(1);
+        click(By.xpath(STARTLOAD));
+    }
+
+    public String waitLoadBookResult()throws InterruptedException{
+            int i = 0;
+            String a = "";
+            JavascriptExecutor js = (JavascriptExecutor) wd;
+            while (a.equals("")) {
+                a = js.executeScript("return document.evaluate('" + RESULTLOAD + "', document, null, XPathResult.ANY_TYPE, null).iterateNext().getAttributeNode('class').ownerElement.value").toString();
+                sleep(1);
+                i++;
+                if (i > 180) {
+                    return "Не дождались";
+                }
+            }
+            return a;
+    }
+
+    public void gotoBooks(){
+        click(By.xpath(BOOKBTN));
+    }
+
+    public void fillFilter(String filter){
+        type(By.xpath(NUMFILTERBOOK), filter);
+    }
+
+    public void startFilterBtn(){
+        click(By.xpath(STARTFILTERBOOK));
+    }
+
+    public void cleanFilterBtn(){
+        click(By.xpath(CLEANFILTERBOOK));
+    }
+
+    public void selectBook(String book){
+        click(By.xpath(NUMBOOK + "[text()='" + book + "']"));
+    }
+
+    public void editBookBtn(){
+        click(By.xpath(EDITBOOK));
+    }
+
+    public void fillNumBookInfo(String num){
+        type(By.xpath(NUMBOOKINFO), num);
+    }
+
+    public void saveExitInfoBookBtn(){
+        click(By.xpath(SAVEEXITINFOBOOK));
+    }
+
+    public void setOperatorBtn(){
+        click(By.xpath(SETOPERBOOK));
+    }
+
+    public void fillOperator(String stage, String name){
+        click(By.xpath(STAGESETOPER));
+        click(By.xpath(STAGEESETOPER + "[text()='" + stage + "']"));
+        click(By.xpath(SETOPER));
+        click(By.xpath(SETTOPER + "[text()='" + name + "']"));
+    }
+
+    public void confirmSetOperatorBtn(){
+        click(By.xpath(CONFRMSETOPER));
+    }
+
+    public void exitSetOperatorBtn(){
+        click(By.xpath(EXITSETOPER));
     }
 }

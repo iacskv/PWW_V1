@@ -137,21 +137,40 @@ public class PmiTest extends TestBase{
     @Test (enabled = true, priority = 13)
     //загрузка книг
     public void loadNewBook () throws InterruptedException {
-
+       app.pmiHelper().loadPage();
+       app.pmiHelper().fillLoadParamBook("2003", "Книга записей актов (2000-2003)", "Смерть", "Кронштадтский (1997-2003)", "1СМ", "1", "1");
+       app.pmiHelper().startLoadBtn();
+       String a = app.pmiHelper().waitLoadBookResult();
+       //System.out.println(a);
     }
 
     @Test (enabled = true, priority = 14)
     public void filterListBook() throws InterruptedException {
-
+        app.pmiHelper().gotoBooks();
+        app.pmiHelper().fillFilter("Смерть");
+        app.pmiHelper().startFilterBtn();
+        app.pmiHelper().cleanFilterBtn();
     }
 
     @Test (enabled = true, priority = 15)
     public void changeBookInfo(){
+        app.pmiHelper().gotoBooks();
+        app.pmiHelper().selectBook("1СМ");
+        app.pmiHelper().editBookBtn();
+        app.pmiHelper().fillNumBookInfo("11СМ");
+        app.pmiHelper().saveExitInfoBookBtn();
+
 
     }
 
     @Test (enabled = true, priority = 16)
-    public void assignMainBook() throws InterruptedException {
+    public void assignBook() throws InterruptedException {
+        app.pmiHelper().gotoBooks();
+        app.pmiHelper().selectBook("11СМ");
+        app.pmiHelper().setOperatorBtn();
+        app.pmiHelper().fillOperator("Этап 1", "Дмитриев И.С.");
+        app.pmiHelper().confirmSetOperatorBtn();
+        app.pmiHelper().exitSetOperatorBtn();
 
     }
 
