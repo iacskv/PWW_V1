@@ -5,8 +5,12 @@ package qa.pww.PmiLocators;
  */
 public abstract class MainMenu {
 
+    //кнопки
     public static String EXITBTN = "html/body/div[1]/div/div[1]/div[1]/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
+    public static String YESEXITBTN = "html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";
+    public static String NOEXITBTN = "html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
 
+    //кнопки для админа (с пропуском 2 этапа)
     public static String MAINBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String TYPEBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String BOOKBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button" ;
@@ -20,6 +24,9 @@ public abstract class MainMenu {
     public static String ROLEBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[15]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String USERBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[16]/table/tbody/tr[2]/td[2]/em/button" ;
 
+    //кнопки для оператора
+    public static String MAINOPERBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button" ;
+    public static String INPUTOPERBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button" ;
 
 
 }

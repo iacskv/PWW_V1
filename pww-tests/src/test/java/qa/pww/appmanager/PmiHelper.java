@@ -7,14 +7,17 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 import static qa.pww.PmiLocators.BookPage.*;
+import static qa.pww.PmiLocators.DeathInputPage.*;
 import static qa.pww.PmiLocators.DistMaleContentPage.*;
 import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
 import static qa.pww.PmiLocators.DistMaleStringForm.*;
 import static qa.pww.PmiLocators.DistonaryPage.*;
 import static qa.pww.PmiLocators.EditUserForm.*;
 import static qa.pww.PmiLocators.InfoBookForm.*;
+import static qa.pww.PmiLocators.InputPage.*;
 import static qa.pww.PmiLocators.LoadContentForm.*;
 import static qa.pww.PmiLocators.LoadPage.*;
+import static qa.pww.PmiLocators.LoginForm.*;
 import static qa.pww.PmiLocators.MainMenu.*;
 import static qa.pww.PmiLocators.NewDistForm.*;
 import static qa.pww.PmiLocators.NewPassForm.*;
@@ -287,8 +290,9 @@ public class PmiHelper extends HelperBase{
         type(By.xpath(NUMBOOKINFO), num);
     }
 
-    public void saveExitInfoBookBtn(){
+    public void saveExitInfoBookBtn() throws InterruptedException {
         click(By.xpath(SAVEEXITINFOBOOK));
+        sleep(1);
     }
 
     public void setOperatorBtn(){
@@ -308,5 +312,54 @@ public class PmiHelper extends HelperBase{
 
     public void exitSetOperatorBtn(){
         click(By.xpath(EXITSETOPER));
+    }
+
+    public void unloginBtn() throws InterruptedException {
+        click(By.xpath(EXITBTN));
+        sleep(1);
+    }
+
+    public void confUnloginBtn(){
+        click(By.xpath(YESEXITBTN));
+    }
+
+    public void login(String login, String pass) throws InterruptedException {
+        type(By.xpath(LOGINUSER), login);
+        type(By.xpath(PASSUSER), pass);
+        click(By.xpath(LOGINBTN));
+        sleep(2);
+    }
+
+    public void gotoInput(){
+        click(By.xpath(INPUTOPERBTN));
+    }
+
+    public void selectBookOnInput(String name){
+        click(By.xpath(BLOCKEDAGSUSER + "[text()='" + name + "']"));
+    }
+
+    public void startInputBookBtn(){
+        click(By.xpath(STARTINPUTBTN));
+    }
+
+    public void fillDeathAgs(){
+        type(By.xpath(LASTNAMEDEATHPERSON), "Егорович");
+    }
+
+    public void addSpecMarcDeathAgs(String typeMark, String dd, String mm, String yyyy){
+
+    }
+
+    public void fillHasInputHystory(String hasHystory){
+        click(By.xpath(HASHISTORYDEATHINPUT));
+        click(By.xpath(HASHISTORYYDEATHINPUT + "[text()='" + hasHystory + "']"));
+    }
+
+    public void saveDeathAgsBtn(){
+        click(By.xpath(SAVEINPUTAGSBTN));
+    }
+
+    public void leaveInputBtn(){
+        click(By.xpath(LEAVEINPUTBTN));
     }
 }
