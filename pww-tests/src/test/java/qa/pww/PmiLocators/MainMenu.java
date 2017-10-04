@@ -7,7 +7,7 @@ public abstract class MainMenu {
 
     //кнопки
     public static String EXITBTN = "html/body/div[1]/div/div[1]/div[1]/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
-    public static String YESEXITBTN = "html/body/div[8]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";
+    public static String YESEXITBTN = "html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button";
     public static String NOEXITBTN = "html/body/div[9]/div[2]/div[2]/div/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button";
 
     //кнопки для админа (с пропуском 2 этапа)

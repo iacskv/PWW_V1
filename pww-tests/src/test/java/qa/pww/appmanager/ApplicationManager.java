@@ -108,7 +108,36 @@ public class ApplicationManager {
     st7.close();
 
 
+  }
 
+  public void clearZagsDb() throws SQLException {
+    PreparedStatement st1 = getZagsDb().prepareStatement("delete from inputarena.born_ext");
+    rs = st1.executeUpdate();
+    st1.close();
+    PreparedStatement st2 = getZagsDb().prepareStatement("delete from inputarena.death_ext");
+    rs = st2.executeUpdate();
+    st2.close();
+    PreparedStatement st3 = getZagsDb().prepareStatement("delete from inputarena.married_ext");
+    rs = st3.executeUpdate();
+    st3.close();
+    PreparedStatement st4 = getZagsDb().prepareStatement("delete from inputarena.change_fam_ext");
+    rs = st4.executeUpdate();
+    st4.close();
+    PreparedStatement st5 = getZagsDb().prepareStatement("delete from inputarena.adopt_ext");
+    rs = st5.executeUpdate();
+    st5.close();
+    PreparedStatement st6 = getZagsDb().prepareStatement("delete from inputarena.divorce_ext");
+    rs = st6.executeUpdate();
+    st6.close();
+    PreparedStatement st7 = getZagsDb().prepareStatement("delete from inputarena.ftno_ext");
+    rs = st7.executeUpdate();
+    st7.close();
+    PreparedStatement st8 = getZagsDb().prepareStatement("delete from inputarena.processed_act_records");
+    rs = st8.executeUpdate();
+    st7.close();
+    PreparedStatement st9 = getZagsDb().prepareStatement("delete from inputarena.special_marks");
+    rs = st9.executeUpdate();
+    st7.close();
   }
 
   public void stop() throws SQLException {

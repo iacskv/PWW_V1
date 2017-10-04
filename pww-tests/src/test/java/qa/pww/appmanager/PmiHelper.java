@@ -312,9 +312,11 @@ public class PmiHelper extends HelperBase{
 
     public void exitSetOperatorBtn(){
         click(By.xpath(EXITSETOPER));
+
     }
 
     public void unloginBtn() throws InterruptedException {
+        sleep(2);
         click(By.xpath(EXITBTN));
         sleep(1);
     }
@@ -359,7 +361,8 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(SAVEINPUTAGSBTN));
     }
 
-    public void leaveInputBtn(){
+    public void leaveInputBtn() throws InterruptedException {
+        sleep(1);
         click(By.xpath(LEAVEINPUTBTN));
     }
 }
