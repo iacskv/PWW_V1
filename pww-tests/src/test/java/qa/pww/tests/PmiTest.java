@@ -142,7 +142,7 @@ public class PmiTest extends TestBase{
        //System.out.println(a);
     }
 
-    @Test (enabled = true, priority = 14)
+    @Test (enabled = false, priority = 14)
     public void filterListBook() throws InterruptedException {
         app.pmiHelper().gotoBooks();
         app.pmiHelper().fillFilter("Смерть");
@@ -183,7 +183,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().fillHasInputHystory("Нет");
         app.pmiHelper().saveDeathAgsBtn();
 
-        //отсюда неработает
+
         app.pmiHelper().leaveInputBtn();
     }
 
