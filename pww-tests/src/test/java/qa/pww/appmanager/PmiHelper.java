@@ -12,6 +12,7 @@ import static qa.pww.PmiLocators.DistMaleContentPage.*;
 import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
 import static qa.pww.PmiLocators.DistMaleStringForm.*;
 import static qa.pww.PmiLocators.DistonaryPage.*;
+import static qa.pww.PmiLocators.EditDeathAgsForm.*;
 import static qa.pww.PmiLocators.EditUserForm.*;
 import static qa.pww.PmiLocators.InfoBookForm.*;
 import static qa.pww.PmiLocators.InputPage.*;
@@ -22,6 +23,8 @@ import static qa.pww.PmiLocators.MainMenu.*;
 import static qa.pww.PmiLocators.NewDistForm.*;
 import static qa.pww.PmiLocators.NewPassForm.*;
 import static qa.pww.PmiLocators.NewUserForm.*;
+import static qa.pww.PmiLocators.ReviewAgsForm.*;
+import static qa.pww.PmiLocators.ReviewAllDocPage.*;
 import static qa.pww.PmiLocators.RolePage.*;
 import static qa.pww.PmiLocators.SetOperatorForm.*;
 import static qa.pww.PmiLocators.UserPage.*;
@@ -321,7 +324,8 @@ public class PmiHelper extends HelperBase{
         sleep(1);
     }
 
-    public void confUnloginBtn(){
+    public void confUnloginBtn() throws InterruptedException {
+        sleep(2);
         click(By.xpath(YESEXITBTN));
     }
 
@@ -332,11 +336,18 @@ public class PmiHelper extends HelperBase{
         sleep(2);
     }
 
-    public void gotoInput(){
+    public void gotoInputOper() throws InterruptedException {
+        sleep(2);
         click(By.xpath(INPUTOPERBTN));
     }
 
-    public void selectBookOnInput(String name){
+    public void gotoInputAdmin() throws InterruptedException {
+        sleep(2);
+        click(By.xpath(INPUTBTN));
+    }
+
+    public void selectBookOnInput(String name) throws InterruptedException {
+        //sleep(2);
         click(By.xpath(BLOCKEDAGSUSER + "[text()='" + name + "']"));
     }
 
@@ -344,8 +355,8 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(STARTINPUTBTN));
     }
 
-    public void fillDeathAgs(){
-        type(By.xpath(LASTNAMEDEATHPERSON), "Егорович");
+    public void fillDeathAgs(String secondName){
+        type(By.xpath(SECONDNAMEDEATHPERSON), secondName);
     }
 
     public void addSpecMarcDeathAgs(String typeMark, String dd, String mm, String yyyy){
@@ -364,5 +375,44 @@ public class PmiHelper extends HelperBase{
     public void leaveInputBtn() throws InterruptedException {
         sleep(1);
         click(By.xpath(LEAVEINPUTBTN));
+    }
+
+    public void reviewAllDocBtn(){
+        click(By.xpath(REVIEWINPUTAGSBTN));
+    }
+
+    public void selectReviewDoc(String doc){
+        click(By.xpath(AGSNAMEONREVIEWALLDOCPAGE + "[text()='" + doc + "']"));
+    }
+
+    public void openReviewDocForm(){
+        click(By.xpath(REVIEWAGSFORM));
+    }
+
+    public void closeReviewDocForm(){
+        click(By.xpath(CLOSEREVIEWAGSFORMBTN));
+    }
+
+    public void returnToInputBtn() throws InterruptedException {
+        sleep(3);
+        click(By.xpath(RETURNTOINPUTBTN));
+    }
+
+    public void openEditDocFormBtn() throws InterruptedException {
+        click(By.xpath(EDITAGSFORM));
+    }
+
+    public void fillDeathEditAgsForm(String secondName){
+        type(By.xpath(SECONDNAMEDEATHEDITFORM),secondName);
+    }
+
+
+    public void saveExitEditDeathAgsFormBtn(){
+        click(By.xpath(SAVECLOSEEDITAGSFORMBTN));
+    }
+
+    public void finishInput() throws InterruptedException {
+        sleep(2);
+        click(By.xpath(FINISHINPUTBOOKBTN));
     }
 }

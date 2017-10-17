@@ -174,27 +174,70 @@ public class PmiTest extends TestBase{
         app.pmiHelper().unloginBtn();
         app.pmiHelper().confUnloginBtn();
         app.pmiHelper().login("kron_op", "kron_op");
-        app.pmiHelper().gotoInput();
+        app.pmiHelper().gotoInputOper();
         app.pmiHelper().selectBookOnInput("Дмитриев Игорь Семенович");
         app.pmiHelper().startInputBookBtn();
-        app.pmiHelper().fillDeathAgs();
+        app.pmiHelper().fillDeathAgs("Егорович");
         //app.pmiHelper().addSpecMarcDeathAgs("", "", "", "");
         app.pmiHelper().saveDeathAgsBtn();
         app.pmiHelper().fillHasInputHystory("Нет");
         app.pmiHelper().saveDeathAgsBtn();
-
-
         app.pmiHelper().leaveInputBtn();
     }
 
-    @Test (enabled = false, priority = 18)
-    public void reviewDoc(){
-
+    @Test (enabled = true, priority = 18)
+    public void reviewDoc() throws InterruptedException {
+        app.pmiHelper().gotoInputOper();
+        app.pmiHelper().selectBookOnInput("Дмитриев Игорь Семенович");
+        app.pmiHelper().reviewAllDocBtn();
+        app.pmiHelper().selectReviewDoc("№1 Смерть");
+        app.pmiHelper().openReviewDocForm();
+        app.pmiHelper().closeReviewDocForm();
+        app.pmiHelper().returnToInputBtn();
     }
 
-    @Test (enabled = false, priority = 19)
-    public void editDoc(){
+    @Test (enabled = true, priority = 19)
+    public void editDoc() throws InterruptedException {
+        app.pmiHelper().gotoInputOper();
+        app.pmiHelper().selectBookOnInput("Дмитриев Игорь Семенович");
+        app.pmiHelper().reviewAllDocBtn();
+        app.pmiHelper().selectReviewDoc("№1 Смерть");
+        app.pmiHelper().openEditDocFormBtn();
+        app.pmiHelper().fillDeathEditAgsForm("Егорович");
+        app.pmiHelper().saveExitEditDeathAgsFormBtn();
+        app.pmiHelper().returnToInputBtn();
+    }
 
+    @Test (enabled = true, priority = 20)
+    public void endFirstInput() throws InterruptedException {
+        app.pmiHelper().startInputBookBtn();
+        app.pmiHelper().finishInput();
+    }
+
+    @Test (enabled = true, priority = 20)
+    public void secondInput() throws InterruptedException {
+        app.pmiHelper().unloginBtn();
+        app.pmiHelper().confUnloginBtn();
+        app.pmiHelper().login("admin", "admin");
+        //повторение первого этапа ввода
+        //
+        //назначение на второй этап
+        app.pmiHelper().gotoBooks();
+        app.pmiHelper().selectBook("11СМ");
+        app.pmiHelper().setOperatorBtn();
+        app.pmiHelper().fillOperator("Этап 2", "Касторин В.С.");
+        app.pmiHelper().confirmSetOperatorBtn();
+        app.pmiHelper().exitSetOperatorBtn();
+        //ввод основных полей
+        app.pmiHelper().gotoInputAdmin();
+        app.pmiHelper().selectBookOnInput("Касторин Владимир Сергеевич");
+        app.pmiHelper().startInputBookBtn();
+        app.pmiHelper().fillDeathAgs("Петрович");
+        //app.pmiHelper().addSpecMarcDeathAgs("", "", "", "");
+        app.pmiHelper().saveDeathAgsBtn();
+        app.pmiHelper().fillHasInputHystory("Нет");
+        app.pmiHelper().saveDeathAgsBtn();
+        app.pmiHelper().finishInput();
     }
 
 }
