@@ -214,7 +214,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().finishInput();
     }
 
-    @Test (enabled = true, priority = 20)
+    @Test (enabled = true, priority = 21)
     public void secondInput() throws InterruptedException {
         app.pmiHelper().unloginBtn();
         app.pmiHelper().confUnloginBtn();
@@ -239,5 +239,20 @@ public class PmiTest extends TestBase{
         app.pmiHelper().saveDeathAgsBtn();
         app.pmiHelper().finishInput();
     }
+
+    @Test (enabled = true, priority = 22)
+    public void moveBookToVerification() throws InterruptedException {
+        app.pmiHelper().gotoBooks();
+        app.pmiHelper().selectBook("11СМ");
+        app.pmiHelper().editBookBtn();
+        app.pmiHelper().changeFaseBook("верификация");
+        app.pmiHelper().saveExitInfoBookBtn();
+    }
+
+    @Test (enabled = true, priority = 23)
+    public void correctionBookFase(){
+
+    }
+
 
 }

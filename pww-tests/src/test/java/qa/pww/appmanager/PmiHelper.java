@@ -415,4 +415,9 @@ public class PmiHelper extends HelperBase{
         sleep(2);
         click(By.xpath(FINISHINPUTBOOKBTN));
     }
+
+    public void changeFaseBook(String fase){
+        click(By.xpath(FASEBOOKINFO));
+        click(By.xpath(FASEEBOOKINFO + "[text()='" + fase + "']"));
+    }
 }

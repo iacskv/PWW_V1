@@ -23,6 +23,7 @@ public abstract class InfoBookForm {
     public static String FASEBOOKINFO = "html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/div/div/div/fieldset[1]/div/div[2]/div[1]/div/img";
     public static String FASEEBOOKINFO = "html/body/div[12]/div/div";
 
+
     public static String NUMBOOKINFO = "html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/div/div/div/fieldset[2]/div/div[1]/div[1]/div/input";
     public static String DEPTBOOKINFO = "html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/div/div/div/fieldset[2]/div/div[2]/div[1]/div/input";
     public static String YEARBOOKINFO = "html/body/div[9]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/div/div/div/fieldset[2]/div/div[3]/div[1]/div/input";

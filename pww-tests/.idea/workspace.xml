@@ -104,8 +104,8 @@
       <file leaf-file-name="PmiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-492">
-              <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+            <state relative-caret-position="1094">
+              <caret line="235" column="62" lean-forward="true" selection-start-line="235" selection-start-column="62" selection-end-line="235" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
@@ -128,8 +128,8 @@
       <file leaf-file-name="PmiHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="906">
-              <caret line="407" column="0" lean-forward="false" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="420" column="32" lean-forward="false" selection-start-line="420" selection-start-column="32" selection-end-line="420" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
@@ -153,6 +153,16 @@
                 <element signature="e#11645#11646#0" expanded="true" />
                 <element signature="e#11701#11702#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoBookForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/InfoBookForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -617,7 +627,6 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoadContentForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/BookPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/InfoBookForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/SetOperatorForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoginForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoadPage.java" />
@@ -629,9 +638,10 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/EditDeathAgsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/InputPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DeathInputPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/InfoBookForm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
       </list>
     </option>
   </component>
@@ -849,39 +859,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.PmiTest">
-    <configuration default="false" name="PmiTest.changeBookInfo" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="qa.pww.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="pww-tests_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="qa.pww.tests" />
-      <option name="MAIN_CLASS_NAME" value="qa.pww.tests.PmiTest" />
-      <option name="METHOD_NAME" value="changeBookInfo" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="false" name="PmiTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -995,6 +972,39 @@
       <option name="PACKAGE_NAME" value="qa.pww.tests" />
       <option name="MAIN_CLASS_NAME" value="qa.pww.tests.PmiTest" />
       <option name="METHOD_NAME" value="reviewDoc" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="PmiTest.moveBookToVerification" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="qa.pww.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="pww-tests_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="qa.pww.tests" />
+      <option name="MAIN_CLASS_NAME" value="qa.pww.tests.PmiTest" />
+      <option name="METHOD_NAME" value="moveBookToVerification" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1219,19 +1229,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.PmiTest.changeBookInfo" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.PmiTest" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.PmiTest.assignBook" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.PmiTest.inputMainFieldsDoc" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.PmiTest.reviewDoc" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.PmiTest" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.PmiTest.assignBook" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.PmiTest.inputMainFieldsDoc" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.PmiTest.reviewDoc" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.PmiTest.moveBookToVerification" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="TestNG.PmiTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.PmiTest.reviewDoc" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.PmiTest.inputMainFieldsDoc" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.PmiTest.assignBook" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.PmiTest.changeBookInfo" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.PmiTest.moveBookToVerification" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.PmiTest.reviewDoc" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.PmiTest.inputMainFieldsDoc" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.PmiTest.assignBook" />
       </list>
     </recent_temporary>
   </component>
@@ -1249,21 +1259,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PmiTest - 2017.10.17 at 13h 28m 33s.xml">
-      <configuration name="PmiTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest - 2017.10.17 at 13h 31m 10s.xml">
-      <configuration name="PmiTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest - 2017.10.17 at 13h 33m 13s.xml">
-      <configuration name="PmiTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest - 2017.10.17 at 13h 36m 32s.xml">
-      <configuration name="PmiTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="PmiTest - 2017.10.17 at 13h 43m 16s.xml">
-      <configuration name="PmiTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="PmiTest - 2017.10.17 at 13h 48m 45s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
@@ -1279,6 +1274,21 @@
     <history-entry file="PmiTest - 2017.10.17 at 14h 31m 22s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="PmiTest - 2017.10.17 at 16h 31m 41s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.10.17 at 16h 33m 21s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.10.17 at 16h 37m 25s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest - 2017.10.17 at 16h 49m 35s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PmiTest_moveBookToVerification - 2017.10.17 at 16h 31m 10s.xml">
+      <configuration name="PmiTest.moveBookToVerification" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1290,7 +1300,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1330,7 +1340,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="827" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="859" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1567,14 +1580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/InfoBookForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/BookPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1733,10 +1738,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DeathInputPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="226" lean-forward="false" selection-start-line="17" selection-start-column="226" selection-end-line="17" selection-end-column="226" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/InfoBookForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="407" column="0" lean-forward="false" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="420" column="32" lean-forward="false" selection-start-line="420" selection-start-column="32" selection-end-line="420" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
@@ -1763,18 +1784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DeathInputPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="226" lean-forward="false" selection-start-line="17" selection-start-column="226" selection-end-line="17" selection-end-column="226" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-492">
-          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+        <state relative-caret-position="1094">
+          <caret line="235" column="62" lean-forward="true" selection-start-line="235" selection-start-column="62" selection-end-line="235" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
