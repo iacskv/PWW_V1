@@ -17,7 +17,7 @@ public abstract class MainMenu {
     public static String LOADBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[6]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String INPUTBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String KORBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[8]/table/tbody/tr[2]/td[2]/em/button" ;
-    public static String SAVEBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[9]/table/tbody/tr[2]/td[2]/em/button" ;
+    public static String OUTPUTBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[9]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String EDBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[10]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String STATSBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[11]/table/tbody/tr[2]/td[2]/em/button" ;
     public static String DISTBTN = "html/body/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[13]/table/tbody/tr[2]/td[2]/em/button" ;

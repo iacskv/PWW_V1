@@ -284,4 +284,12 @@ public class PmiTest extends TestBase{
         app.pmiHelper().finishCorrectionBtn();
     }
 
+    //выгрузка книги а/з
+    @Test (enabled = true, priority = 24)
+    public void outputBook() throws InterruptedException {
+        app.pmiHelper().gotoOutputBookPage();
+        app.pmiHelper().selectAllBookForOutputBtn();
+        app.pmiHelper().startOutputBookBtn();
+        app.pmiHelper().waitResaltOutputBook();
+    }
 }

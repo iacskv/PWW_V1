@@ -26,6 +26,7 @@ import static qa.pww.PmiLocators.MainMenu.*;
 import static qa.pww.PmiLocators.NewDistForm.*;
 import static qa.pww.PmiLocators.NewPassForm.*;
 import static qa.pww.PmiLocators.NewUserForm.*;
+import static qa.pww.PmiLocators.OutputBookPage.*;
 import static qa.pww.PmiLocators.ReviewAgsForm.*;
 import static qa.pww.PmiLocators.ReviewAllDocPage.*;
 import static qa.pww.PmiLocators.RolePage.*;
@@ -459,5 +460,21 @@ public class PmiHelper extends HelperBase{
 
     public void finishCorrectionBtn(){
         click(By.xpath(FINISHCORRECTIONBOOKBTN));
+    }
+
+    public void gotoOutputBookPage(){
+        click(By.xpath(OUTPUTBTN));
+    }
+
+    public void selectAllBookForOutputBtn(){
+        click(By.xpath(SELECTALLBOOKOUTPUTBTN));
+    }
+
+    public void startOutputBookBtn(){
+        click(By.xpath(STARTBOOKOUTPUTBTN));
+    }
+
+    public void waitResaltOutputBook(){
+        //на будущее
     }
 }
