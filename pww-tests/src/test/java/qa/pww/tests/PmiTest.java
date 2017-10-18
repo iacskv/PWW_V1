@@ -11,11 +11,13 @@ public class PmiTest extends TestBase{
 
     File path = new File("D:\\iacskv\\PWW_V1\\pww-tests\\src\\test\\resources\\maleContent.xlsx");
 
+    //создание роли пользователя
     @Test (enabled = false, priority = 1)
     public void createRole(){
         app.pmiHelper().gotoRolePage();
     }
 
+    //изменение прав роли пользователя
     @Test (enabled = false, priority = 2)
     public void changeRulesForRole(){
         app.pmiHelper().gotoRolePage();
@@ -25,6 +27,7 @@ public class PmiTest extends TestBase{
 
     }
 
+    //создание пользователя и назначение роли
     @Test (enabled = false, priority = 3)
     public void createUser() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
@@ -35,6 +38,7 @@ public class PmiTest extends TestBase{
 
     }
 
+    //редактирование пользователя
     @Test (enabled = false, priority = 4)
     public void editUser() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
@@ -46,6 +50,7 @@ public class PmiTest extends TestBase{
 
     }
 
+    //переназначение ролей для пользователя
     @Test (enabled = false, priority = 5)
     public void changeUserRole() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
@@ -57,6 +62,7 @@ public class PmiTest extends TestBase{
 
     }
 
+    //смена пароля пользователя
     @Test (enabled = false, priority = 6)
     public void changePassUser() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
@@ -66,6 +72,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().saveNewPassUser();
     }
 
+    //создание справочника
     @Test (enabled = false, priority = 7)
     public void createDistonary(){
         app.pmiHelper().gotoDistonaryPage();
@@ -76,6 +83,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().SaveAndExitDistBtn();
     }
 
+    //редактирование аттрибутов справочника
     @Test (enabled = false, priority = 8)
     public void editAttrDistonary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
@@ -87,6 +95,7 @@ public class PmiTest extends TestBase{
 
     }
 
+    //заполнение справочника данными
     @Test (enabled = false, priority = 9)
     public void fillContentDistonary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
@@ -98,6 +107,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().exitMaleDist();
     }
 
+    //редактирование данных справочника
     @Test (enabled = false, priority = 10)
     public void editContentDistinary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
@@ -111,6 +121,7 @@ public class PmiTest extends TestBase{
 
     }
 
+    //удаление данных в справочнике
     @Test (enabled = false, priority = 11)
     public void deleteContentDistinary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
@@ -121,6 +132,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().exitMaleDist();
     }
 
+    //загрузка данных в справочник из файла
     @Test (enabled = false, priority = 12)
     public void loadContentDistinaryFromFile() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
@@ -132,8 +144,8 @@ public class PmiTest extends TestBase{
         app.pmiHelper().exitMaleDist();
     }
 
+    //загрузка книги а/з
     @Test (enabled = true, priority = 13)
-    //загрузка книг
     public void loadNewBook () throws InterruptedException {
        app.pmiHelper().loadPage();
        app.pmiHelper().fillLoadParamBook("2003", "Книга записей актов (2000-2003)", "Смерть", "Кронштадтский (1997-2003)", "1СМ", "1", "1");
@@ -142,6 +154,7 @@ public class PmiTest extends TestBase{
        //System.out.println(a);
     }
 
+    //поиск книги а/з в списке
     @Test (enabled = false, priority = 14)
     public void filterListBook() throws InterruptedException {
         app.pmiHelper().gotoBooks();
@@ -150,6 +163,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().cleanFilterBtn();
     }
 
+    //изменение аттрибутов книги а/з
     @Test (enabled = true, priority = 15)
     public void changeBookInfo() throws InterruptedException {
         app.pmiHelper().gotoBooks();
@@ -159,6 +173,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().saveExitInfoBookBtn();
     }
 
+    //назначение пользователя на ввод книги а/з
     @Test (enabled = true, priority = 16)
     public void assignBook() throws InterruptedException {
         app.pmiHelper().gotoBooks();
@@ -169,6 +184,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().exitSetOperatorBtn();
     }
 
+    //ввод данных а/з (ЭТАП ВВОДА)
     @Test (enabled = true, priority = 17)
     public void inputMainFieldsDoc() throws InterruptedException {
         app.pmiHelper().unloginBtn();
@@ -185,6 +201,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().leaveInputBtn();
     }
 
+    //просмотр данных а/з (НА ЭТАПЕ ВВОДА)
     @Test (enabled = true, priority = 18)
     public void reviewDoc() throws InterruptedException {
         app.pmiHelper().gotoInputOper();
@@ -196,6 +213,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().returnToInputBtn();
     }
 
+    //редактирование данных а/з (НА ЭТАПЕ ВВОДА)
     @Test (enabled = true, priority = 19)
     public void editDoc() throws InterruptedException {
         app.pmiHelper().gotoInputOper();
@@ -208,12 +226,14 @@ public class PmiTest extends TestBase{
         app.pmiHelper().returnToInputBtn();
     }
 
+    //завершение этапа ввода книги а/з
     @Test (enabled = true, priority = 20)
     public void endFirstInput() throws InterruptedException {
         app.pmiHelper().startInputBookBtn();
         app.pmiHelper().finishInput();
     }
 
+    //второй этап ввода книги а/з (от назначения до завершения)
     @Test (enabled = true, priority = 21)
     public void secondInput() throws InterruptedException {
         app.pmiHelper().unloginBtn();
@@ -240,6 +260,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().finishInput();
     }
 
+    //прервод книги на этап верификации
     @Test (enabled = true, priority = 22)
     public void moveBookToVerification() throws InterruptedException {
         app.pmiHelper().gotoBooks();
@@ -249,6 +270,7 @@ public class PmiTest extends TestBase{
         app.pmiHelper().saveExitInfoBookBtn();
     }
 
+    //этап корректировки (ожидается ошибка в поле Отчество, разница в вводе на 1 и 2 этапе)
     @Test (enabled = true, priority = 23)
     public void correctionBookFase(){
 
