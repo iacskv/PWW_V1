@@ -11,6 +11,7 @@ import static qa.pww.PmiLocators.CorrectionAgsListPage.*;
 import static qa.pww.PmiLocators.CorrectionAgsStagePage.*;
 import static qa.pww.PmiLocators.CorrectionBookPage.*;
 import static qa.pww.PmiLocators.DeathInputPage.*;
+import static qa.pww.PmiLocators.DigitalDocPage.*;
 import static qa.pww.PmiLocators.DistMaleContentPage.*;
 import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
 import static qa.pww.PmiLocators.DistMaleStringForm.*;
@@ -32,6 +33,7 @@ import static qa.pww.PmiLocators.ReviewAllDocPage.*;
 import static qa.pww.PmiLocators.RolePage.*;
 import static qa.pww.PmiLocators.SetOperatorForm.*;
 import static qa.pww.PmiLocators.UserPage.*;
+import static qa.pww.PmiLocators.XmlDigDocForm.*;
 
 /**
  * Created by k.smotrov on 07.08.2017.
@@ -430,7 +432,7 @@ public class PmiHelper extends HelperBase{
     }
 
     public void gotoCorrectionPage(){
-        click(By.xpath(KORBTN));
+        click(By.xpath(CORRECTIONBTN));
     }
 
     public void selectBookOnCorrectionPage(String nameBook){
@@ -474,7 +476,36 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(STARTBOOKOUTPUTBTN));
     }
 
-    public void waitResaltOutputBook(){
+    public void waitResultOutputBook(){
         //на будущее
     }
+
+    public void gotoDigitalBtn(){
+        click(By.xpath(DIGITALDOCBTN));
+    }
+
+    public void needSignDigDocBtn(){
+        click(By.xpath(NEEDSIGNDIGDOCBTN));
+    }
+
+    public void selectDigDoc(String typeDoc){
+        click(By.xpath(TYPEDIGDOC + "[text()='" + typeDoc + "']"));
+    }
+
+    public void reviewDigDocBtn(){
+        click(By.xpath(REVIEWDIGDOCBTN));
+    }
+
+    public void gotoXmlSpanDigDocForm(){
+        click(By.xpath(XMLDIGDOCSPAN));
+    }
+
+    public void gotoInfoSpanDigDocForm(){
+        click(By.xpath(INFODIGDOCSPAN));
+    }
+
+    public void closeReviewDigDocForm() {
+        click(By.xpath(CLOSEDIGDOCFORM));
+    }
+
 }

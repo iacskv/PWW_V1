@@ -290,6 +290,48 @@ public class PmiTest extends TestBase{
         app.pmiHelper().gotoOutputBookPage();
         app.pmiHelper().selectAllBookForOutputBtn();
         app.pmiHelper().startOutputBookBtn();
-        app.pmiHelper().waitResaltOutputBook();
+        app.pmiHelper().waitResultOutputBook();
     }
+
+    //просмотр электронного документа
+    @Test (enabled = true, priority = 25)
+    public void reviewDigitalDoc (){
+        app.pmiHelper().gotoDigitalBtn();
+        app.pmiHelper().needSignDigDocBtn();
+        app.pmiHelper().selectDigDoc("Смерть");
+        app.pmiHelper().reviewDigDocBtn();
+        app.pmiHelper().gotoXmlSpanDigDocForm();
+        app.pmiHelper().closeReviewDigDocForm();
+    }
+
+    //просмотр аттрибутов ЭД
+    @Test (enabled = true, priority = 26)
+    public void reviewInfoDigitalDoc (){
+        app.pmiHelper().gotoDigitalBtn();
+        app.pmiHelper().needSignDigDocBtn();
+        app.pmiHelper().selectDigDoc("Смерть");
+        app.pmiHelper().reviewDigDocBtn();
+        app.pmiHelper().gotoInfoSpanDigDocForm();
+        app.pmiHelper().closeReviewDigDocForm();
+    }
+
+    //подписание электронного документа
+    @Test (enabled = true, priority = 27)
+    public void signDigitalDoc (){
+
+
+    }
+
+    //формирование статистики по площадкам
+    @Test (enabled = true, priority = 28)
+    public void statsLocation (){
+
+    }
+
+    //формирование по пользователям
+    @Test (enabled = true, priority = 29)
+    public void statsUser(){
+
+    }
+
 }

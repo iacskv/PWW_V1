@@ -104,8 +104,8 @@
       <file leaf-file-name="PmiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="291" column="31" lean-forward="false" selection-start-line="291" selection-start-column="31" selection-end-line="291" selection-end-column="31" />
+            <state relative-caret-position="277">
+              <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
@@ -125,65 +125,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputBookPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/OutputBookPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PmiHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="465" column="32" lean-forward="false" selection-start-line="465" selection-start-column="32" selection-end-line="465" selection-end-column="32" />
+            <state relative-caret-position="379">
+              <caret line="508" column="5" lean-forward="false" selection-start-line="508" selection-start-column="5" selection-end-line="508" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
-                <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillNewPassUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveNewPassUser#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#fillNewColumnDist#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillNewDist#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillNewMaleString#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillMaleString#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#deleteStringDist#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#exitMaleDist#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#10514#10515#0" expanded="true" />
-                <element signature="e#10579#10580#0" expanded="true" />
-                <element signature="e#11115#11116#0" expanded="true" />
-                <element signature="e#11165#11166#0" expanded="true" />
-                <element signature="e#11211#11212#0" expanded="true" />
-                <element signature="e#11296#11297#0" expanded="true" />
-                <element signature="e#11334#11335#0" expanded="true" />
-                <element signature="e#11380#11381#0" expanded="true" />
-                <element signature="e#11419#11420#0" expanded="true" />
-                <element signature="e#11473#11474#0" expanded="true" />
-                <element signature="e#11776#11777#0" expanded="true" />
-                <element signature="e#11842#11843#0" expanded="true" />
-                <element signature="e#11891#11892#0" expanded="true" />
-                <element signature="e#11947#11948#0" expanded="true" />
-                <element signature="e#12382#12383#0" expanded="true" />
-                <element signature="e#12421#12422#0" expanded="true" />
-                <element signature="e#12602#12603#0" expanded="true" />
-                <element signature="e#12652#12653#0" expanded="true" />
-                <element signature="e#12827#12828#0" expanded="true" />
-                <element signature="e#12876#12877#0" expanded="true" />
-                <element signature="e#12933#12934#0" expanded="true" />
-                <element signature="e#12994#12995#0" expanded="true" />
-                <element signature="e#13184#13185#0" expanded="true" />
-                <element signature="e#13240#13241#0" expanded="true" />
-                <element signature="e#13279#13280#0" expanded="true" />
-                <element signature="e#13321#13322#0" expanded="true" />
-                <element signature="e#13367#13368#0" expanded="true" />
-                <element signature="e#13422#13423#0" expanded="true" />
-                <element signature="e#13461#13462#0" expanded="true" />
-                <element signature="e#13512#13513#0" expanded="true" />
+                <element signature="method#fillLoadParamBook#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#13723#13724#0" expanded="true" />
+                <element signature="e#13769#13770#0" expanded="true" />
+                <element signature="e#13807#13808#0" expanded="true" />
+                <element signature="e#13857#13858#0" expanded="true" />
+                <element signature="e#13904#13905#0" expanded="true" />
+                <element signature="e#13978#13979#0" expanded="true" />
+                <element signature="e#14014#14015#0" expanded="true" />
+                <element signature="e#14062#14063#0" expanded="true" />
+                <element signature="e#14104#14105#0" expanded="true" />
+                <element signature="e#14150#14151#0" expanded="true" />
+                <element signature="e#14193#14194#0" expanded="true" />
+                <element signature="e#14240#14241#0" expanded="true" />
+                <element signature="e#14283#14284#0" expanded="true" />
+                <element signature="e#14331#14332#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XmlDigDocForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/XmlDigDocForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DigitalDocPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DigitalDocPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,8 +208,8 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="289">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -602,8 +619,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/InputFormHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageBornHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/models/MarriageDataMainFields.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/DbTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java" />
@@ -649,9 +664,11 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/CorrectionBookPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/CorrectionAgsListPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/CorrectionAgsStagePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/OutputBookPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DigitalDocPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/XmlDigDocForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
       </list>
     </option>
@@ -1354,7 +1371,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="867" />
+      <option name="time" value="868" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1363,20 +1380,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/2.53.1/de4719beceae211f44c038c59691b4aea1b3ebd2/selenium-api-2.53.1-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/internal/TestMethodWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/TestRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -1769,67 +1772,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="289">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DigitalDocPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/XmlDigDocForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="465" column="32" lean-forward="false" selection-start-line="465" selection-start-column="32" selection-end-line="465" selection-end-column="32" />
+        <state relative-caret-position="379">
+          <caret line="508" column="5" lean-forward="false" selection-start-line="508" selection-start-column="5" selection-end-line="508" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#fillNewPassUser#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveNewPassUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillNewColumnDist#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#fillNewDist#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#fillNewMaleString#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#fillMaleString#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#deleteStringDist#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#exitMaleDist#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#10514#10515#0" expanded="true" />
-            <element signature="e#10579#10580#0" expanded="true" />
-            <element signature="e#11115#11116#0" expanded="true" />
-            <element signature="e#11165#11166#0" expanded="true" />
-            <element signature="e#11211#11212#0" expanded="true" />
-            <element signature="e#11296#11297#0" expanded="true" />
-            <element signature="e#11334#11335#0" expanded="true" />
-            <element signature="e#11380#11381#0" expanded="true" />
-            <element signature="e#11419#11420#0" expanded="true" />
-            <element signature="e#11473#11474#0" expanded="true" />
-            <element signature="e#11776#11777#0" expanded="true" />
-            <element signature="e#11842#11843#0" expanded="true" />
-            <element signature="e#11891#11892#0" expanded="true" />
-            <element signature="e#11947#11948#0" expanded="true" />
-            <element signature="e#12382#12383#0" expanded="true" />
-            <element signature="e#12421#12422#0" expanded="true" />
-            <element signature="e#12602#12603#0" expanded="true" />
-            <element signature="e#12652#12653#0" expanded="true" />
-            <element signature="e#12827#12828#0" expanded="true" />
-            <element signature="e#12876#12877#0" expanded="true" />
-            <element signature="e#12933#12934#0" expanded="true" />
-            <element signature="e#12994#12995#0" expanded="true" />
-            <element signature="e#13184#13185#0" expanded="true" />
-            <element signature="e#13240#13241#0" expanded="true" />
-            <element signature="e#13279#13280#0" expanded="true" />
-            <element signature="e#13321#13322#0" expanded="true" />
-            <element signature="e#13367#13368#0" expanded="true" />
-            <element signature="e#13422#13423#0" expanded="true" />
-            <element signature="e#13461#13462#0" expanded="true" />
-            <element signature="e#13512#13513#0" expanded="true" />
+            <element signature="method#fillLoadParamBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#13723#13724#0" expanded="true" />
+            <element signature="e#13769#13770#0" expanded="true" />
+            <element signature="e#13807#13808#0" expanded="true" />
+            <element signature="e#13857#13858#0" expanded="true" />
+            <element signature="e#13904#13905#0" expanded="true" />
+            <element signature="e#13978#13979#0" expanded="true" />
+            <element signature="e#14014#14015#0" expanded="true" />
+            <element signature="e#14062#14063#0" expanded="true" />
+            <element signature="e#14104#14105#0" expanded="true" />
+            <element signature="e#14150#14151#0" expanded="true" />
+            <element signature="e#14193#14194#0" expanded="true" />
+            <element signature="e#14240#14241#0" expanded="true" />
+            <element signature="e#14283#14284#0" expanded="true" />
+            <element signature="e#14331#14332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="291" column="31" lean-forward="false" selection-start-line="291" selection-start-column="31" selection-end-line="291" selection-end-column="31" />
+        <state relative-caret-position="277">
+          <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
