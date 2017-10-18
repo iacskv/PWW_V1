@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 import static qa.pww.PmiLocators.BookPage.*;
+import static qa.pww.PmiLocators.CorrectionAgsListPage.*;
+import static qa.pww.PmiLocators.CorrectionAgsStagePage.*;
+import static qa.pww.PmiLocators.CorrectionBookPage.*;
 import static qa.pww.PmiLocators.DeathInputPage.*;
 import static qa.pww.PmiLocators.DistMaleContentPage.*;
 import static qa.pww.PmiLocators.DistMaleNewStringForm.*;
@@ -265,7 +268,7 @@ public class PmiHelper extends HelperBase{
             return a;
     }
 
-    public void gotoBooks(){
+    public void gotoBooksPage(){
         click(By.xpath(BOOKBTN));
     }
 
@@ -281,7 +284,7 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(CLEANFILTERBOOK));
     }
 
-    public void selectBook(String book){
+    public void selectBookOnBooksPage(String book){
         click(By.xpath(NUMBOOK + "[text()='" + book + "']"));
     }
 
@@ -336,7 +339,7 @@ public class PmiHelper extends HelperBase{
         sleep(2);
     }
 
-    public void gotoInputOper() throws InterruptedException {
+    public void gotoInputPageOper() throws InterruptedException {
         sleep(2);
         click(By.xpath(INPUTOPERBTN));
     }
@@ -346,7 +349,7 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(INPUTBTN));
     }
 
-    public void selectBookOnInput(String name) throws InterruptedException {
+    public void selectBookOnInputPage(String name) throws InterruptedException {
         //sleep(2);
         click(By.xpath(BLOCKEDAGSUSER + "[text()='" + name + "']"));
     }
@@ -411,7 +414,7 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(SAVECLOSEEDITAGSFORMBTN));
     }
 
-    public void finishInput() throws InterruptedException {
+    public void finishInputBtn() throws InterruptedException {
         sleep(2);
         click(By.xpath(FINISHINPUTBOOKBTN));
     }
@@ -419,5 +422,42 @@ public class PmiHelper extends HelperBase{
     public void changeFaseBook(String fase){
         click(By.xpath(FASEBOOKINFO));
         click(By.xpath(FASEEBOOKINFO + "[text()='" + fase + "']"));
+    }
+
+    public void waitVerificationJob(int time) throws InterruptedException {
+        sleep(time);
+    }
+
+    public void gotoCorrectionPage(){
+        click(By.xpath(KORBTN));
+    }
+
+    public void selectBookOnCorrectionPage(String nameBook){
+        click(By.xpath(NUMBERBOOKONCORR + "[text()='" + nameBook + "']"));
+    }
+
+    public void gotoCorrectionBtn(){
+        click(By.xpath(GOTOCORRECTIONBTN));
+    }
+
+    public void selectAgsForCorrection(String nameAgs){
+        click(By.xpath(NAMEAGSCORRECTION + "[text()='" + nameAgs + "']"));
+    }
+
+    public void correctionAgsBtn(){
+        click(By.xpath(CORRECTIONAGSBTN));
+    }
+
+    public void fillCorrectionStage(String secondName){
+        click(By.xpath(SECONDNAMEDEATHCORRECTIONAGS));
+    }
+
+    public void saveCloseCorrectionAgsBtn() throws InterruptedException {
+        click(By.xpath(SAVEEXITCORRECTIONAGSBTN));
+        sleep(3);
+    }
+
+    public void finishCorrectionBtn(){
+        click(By.xpath(FINISHCORRECTIONBOOKBTN));
     }
 }
