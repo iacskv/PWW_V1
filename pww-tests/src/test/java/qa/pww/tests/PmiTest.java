@@ -12,13 +12,13 @@ public class PmiTest extends TestBase{
     File path = new File("D:\\iacskv\\PWW_V1\\pww-tests\\src\\test\\resources\\maleContent.xlsx");
 
     //создание роли пользователя
-    @Test (enabled = false, priority = 1)
+    @Test (enabled = true, priority = 1)
     public void createRole(){
         app.pmiHelper().gotoRolePage();
     }
 
     //изменение прав роли пользователя
-    @Test (enabled = false, priority = 2)
+    @Test (enabled = true, priority = 2)
     public void changeRulesForRole(){
         app.pmiHelper().gotoRolePage();
         app.pmiHelper().selectRole("Оператор ввода");
@@ -28,7 +28,7 @@ public class PmiTest extends TestBase{
     }
 
     //создание пользователя и назначение роли
-    @Test (enabled = false, priority = 3)
+    @Test (enabled = true, priority = 3)
     public void createUser() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
         app.pmiHelper().createUserBtn();
@@ -39,7 +39,7 @@ public class PmiTest extends TestBase{
     }
 
     //редактирование пользователя
-    @Test (enabled = false, priority = 4)
+    @Test (enabled = true, priority = 4)
     public void editUser() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
         app.pmiHelper().selectUser("kron_op");
@@ -51,7 +51,7 @@ public class PmiTest extends TestBase{
     }
 
     //переназначение ролей для пользователя
-    @Test (enabled = false, priority = 5)
+    @Test (enabled = true, priority = 5)
     public void changeUserRole() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
         app.pmiHelper().selectUser("kron_op");
@@ -63,7 +63,7 @@ public class PmiTest extends TestBase{
     }
 
     //смена пароля пользователя
-    @Test (enabled = false, priority = 6)
+    @Test (enabled = true, priority = 6)
     public void changePassUser() throws InterruptedException {
         app.pmiHelper().gotoUserPage();
         app.pmiHelper().selectUser("kron_op");
@@ -73,7 +73,7 @@ public class PmiTest extends TestBase{
     }
 
     //создание справочника
-    @Test (enabled = false, priority = 7)
+    @Test (enabled = true, priority = 7)
     public void createDistonary(){
         app.pmiHelper().gotoDistonaryPage();
         app.pmiHelper().addDistonaryBtn();
@@ -84,7 +84,7 @@ public class PmiTest extends TestBase{
     }
 
     //редактирование аттрибутов справочника
-    @Test (enabled = false, priority = 8)
+    @Test (enabled = true, priority = 8)
     public void editAttrDistonary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
         app.pmiHelper().selectDistonary("Пол");
@@ -96,7 +96,7 @@ public class PmiTest extends TestBase{
     }
 
     //заполнение справочника данными
-    @Test (enabled = false, priority = 9)
+    @Test (enabled = true, priority = 9)
     public void fillContentDistonary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
         app.pmiHelper().selectDistonary("Пол");
@@ -108,7 +108,7 @@ public class PmiTest extends TestBase{
     }
 
     //редактирование данных справочника
-    @Test (enabled = false, priority = 10)
+    @Test (enabled = true, priority = 10)
     public void editContentDistinary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
         app.pmiHelper().selectDistonary("Пол");
@@ -122,7 +122,7 @@ public class PmiTest extends TestBase{
     }
 
     //удаление данных в справочнике
-    @Test (enabled = false, priority = 11)
+    @Test (enabled = true, priority = 11)
     public void deleteContentDistinary() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
         app.pmiHelper().selectDistonary("Пол");
@@ -133,7 +133,7 @@ public class PmiTest extends TestBase{
     }
 
     //загрузка данных в справочник из файла
-    @Test (enabled = false, priority = 12)
+    @Test (enabled = true, priority = 12)
     public void loadContentDistinaryFromFile() throws InterruptedException {
         app.pmiHelper().gotoDistonaryPage();
         app.pmiHelper().selectDistonary("Пол");
@@ -155,7 +155,7 @@ public class PmiTest extends TestBase{
     }
 
     //поиск книги а/з в списке
-    @Test (enabled = false, priority = 14)
+    @Test (enabled = true, priority = 14)
     public void filterListBook() throws InterruptedException {
         app.pmiHelper().gotoBooksPage();
         app.pmiHelper().fillFilter("Смерть");
@@ -295,7 +295,7 @@ public class PmiTest extends TestBase{
 
     //просмотр электронного документа
     @Test (enabled = true, priority = 25)
-    public void reviewDigitalDoc (){
+    public void reviewDigitalDoc(){
         app.pmiHelper().gotoDigitalBtn();
         app.pmiHelper().needSignDigDocBtn();
         app.pmiHelper().selectDigDoc("Смерть");
@@ -306,7 +306,7 @@ public class PmiTest extends TestBase{
 
     //просмотр аттрибутов ЭД
     @Test (enabled = true, priority = 26)
-    public void reviewInfoDigitalDoc (){
+    public void reviewInfoDigitalDoc(){
         app.pmiHelper().gotoDigitalBtn();
         app.pmiHelper().needSignDigDocBtn();
         app.pmiHelper().selectDigDoc("Смерть");
@@ -317,21 +317,24 @@ public class PmiTest extends TestBase{
 
     //подписание электронного документа
     @Test (enabled = true, priority = 27)
-    public void signDigitalDoc (){
-
+    public void signDigitalDoc(){
+    //потом (вопрос о проверке флешки с подписью)
 
     }
 
     //формирование статистики по площадкам
     @Test (enabled = true, priority = 28)
-    public void statsLocation (){
-
+    public void statsLocation(){
+        app.pmiHelper().gotoStatistics();
+        app.pmiHelper().gotoLocationStatSpan();
     }
 
     //формирование по пользователям
     @Test (enabled = true, priority = 29)
-    public void statsUser(){
-
+    public void statsUser() throws InterruptedException {
+        app.pmiHelper().gotoStatistics();
+        app.pmiHelper().gotoUserStatsSpan();
+        app.pmiHelper().searchUserStats();
     }
 
 }

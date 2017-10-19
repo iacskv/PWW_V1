@@ -32,6 +32,7 @@ import static qa.pww.PmiLocators.ReviewAgsForm.*;
 import static qa.pww.PmiLocators.ReviewAllDocPage.*;
 import static qa.pww.PmiLocators.RolePage.*;
 import static qa.pww.PmiLocators.SetOperatorForm.*;
+import static qa.pww.PmiLocators.StatisticPage.*;
 import static qa.pww.PmiLocators.UserPage.*;
 import static qa.pww.PmiLocators.XmlDigDocForm.*;
 
@@ -506,6 +507,22 @@ public class PmiHelper extends HelperBase{
 
     public void closeReviewDigDocForm() {
         click(By.xpath(CLOSEDIGDOCFORM));
+    }
+
+    public void gotoStatistics(){
+        click(By.xpath(STATSBTN));
+    }
+
+    public void gotoLocationStatSpan(){
+        click(By.xpath(LOCATIONSTATSSPAN));
+    }
+
+    public void gotoUserStatsSpan(){
+        click(By.xpath(USERSTATSSPAN));
+    }
+
+    public void searchUserStats() throws InterruptedException {
+        click(By.xpath(SEARCHUSERSTATSBTN));
     }
 
 }

@@ -104,15 +104,12 @@
       <file leaf-file-name="PmiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+            <state relative-caret-position="2261">
+              <caret line="329" column="0" lean-forward="false" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#createUser#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#editUser#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#changeUserRole#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#changePassUser#0;class#PmiTest#0" expanded="false" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
                 <element signature="method#createDistonary#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#editAttrDistonary#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#fillContentDistonary#0;class#PmiTest#0" expanded="false" />
@@ -120,7 +117,31 @@
                 <element signature="method#deleteContentDistinary#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#loadContentDistinaryFromFile#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#loadNewBook#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#filterListBook#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#changeBookInfo#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#assignBook#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#inputMainFieldsDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#reviewDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#editDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#endFirstInput#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#secondInput#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#moveBookToVerification#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#correctionBookFase#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#outputBook#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#reviewDigitalDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#reviewInfoDigitalDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#signDigitalDoc#0;class#PmiTest#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,8 +149,8 @@
       <file leaf-file-name="PmiHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="508" column="5" lean-forward="false" selection-start-line="508" selection-start-column="5" selection-end-line="508" selection-end-column="5" />
+            <state relative-caret-position="4692">
+              <caret line="520" column="36" lean-forward="false" selection-start-line="520" selection-start-column="36" selection-end-line="520" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
@@ -166,21 +187,47 @@
                 <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#13723#13724#0" expanded="true" />
-                <element signature="e#13769#13770#0" expanded="true" />
-                <element signature="e#13807#13808#0" expanded="true" />
+                <element signature="e#13773#13774#0" expanded="true" />
+                <element signature="e#13819#13820#0" expanded="true" />
                 <element signature="e#13857#13858#0" expanded="true" />
-                <element signature="e#13904#13905#0" expanded="true" />
-                <element signature="e#13978#13979#0" expanded="true" />
-                <element signature="e#14014#14015#0" expanded="true" />
-                <element signature="e#14062#14063#0" expanded="true" />
-                <element signature="e#14104#14105#0" expanded="true" />
-                <element signature="e#14150#14151#0" expanded="true" />
-                <element signature="e#14193#14194#0" expanded="true" />
-                <element signature="e#14240#14241#0" expanded="true" />
-                <element signature="e#14283#14284#0" expanded="true" />
-                <element signature="e#14331#14332#0" expanded="true" />
+                <element signature="e#13907#13908#0" expanded="true" />
+                <element signature="e#13954#13955#0" expanded="true" />
+                <element signature="e#14028#14029#0" expanded="true" />
+                <element signature="e#14064#14065#0" expanded="true" />
+                <element signature="e#14112#14113#0" expanded="true" />
+                <element signature="e#14154#14155#0" expanded="true" />
+                <element signature="e#14200#14201#0" expanded="true" />
+                <element signature="e#14243#14244#0" expanded="true" />
+                <element signature="e#14290#14291#0" expanded="true" />
+                <element signature="e#14333#14334#0" expanded="true" />
+                <element signature="e#14381#14382#0" expanded="true" />
+                <element signature="e#14416#14417#0" expanded="true" />
+                <element signature="e#14457#14458#0" expanded="true" />
+                <element signature="e#14498#14499#0" expanded="true" />
+                <element signature="e#14548#14549#0" expanded="true" />
+                <element signature="e#14586#14587#0" expanded="true" />
+                <element signature="e#14632#14633#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/StatisticPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1285">
+              <caret line="142" column="14" lean-forward="false" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,8 +255,8 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="306">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -619,7 +666,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/models/MarriageDataMainFields.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/DbTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/BornInputStageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/FirstInputStageMarriageHelper.java" />
@@ -653,7 +699,6 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoginForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoadPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAllDocPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/EditAgsForm.java" />
@@ -665,11 +710,13 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/CorrectionAgsListPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/CorrectionAgsStagePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/OutputBookPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DigitalDocPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/XmlDigDocForm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/StatisticPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
       </list>
     </option>
   </component>
@@ -822,24 +869,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ojdbc6-11.2.0.3.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1287,35 +1316,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PmiTest - 2017.10.17 at 16h 49m 35s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 29m 02s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 09h 26m 32s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 45m 40s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 10h 46m 02s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 47m 07s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 10h 49m 01s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 49m 15s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 10h 53m 42s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 50m 33s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 10h 56m 14s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 51m 46s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 11h 01m 02s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 52m 51s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.18 at 14h 49m 16s.xml">
+    <history-entry file="PmiTest - 2017.10.19 at 10h 55m 04s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest_outputBook - 2017.10.18 at 14h 46m 56s.xml">
-      <configuration name="PmiTest.outputBook" configurationId="TestNG" />
+    <history-entry file="PmiTest - 2017.10.19 at 10h 55m 45s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest_outputBook - 2017.10.18 at 14h 47m 01s.xml">
-      <configuration name="PmiTest.outputBook" configurationId="TestNG" />
+    <history-entry file="PmiTest - 2017.10.19 at 11h 04m 41s.xml">
+      <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1371,7 +1400,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="868" />
+      <option name="time" value="881" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1380,13 +1409,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="743" column="0" lean-forward="false" selection-start-line="743" selection-start-column="0" selection-end-line="743" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1534,6 +1556,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,52 +1643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="142" column="14" lean-forward="false" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5766#5767#0" expanded="false" />
-            <element signature="e#5797#5798#0" expanded="false" />
-            <element signature="e#5842#5843#0" expanded="false" />
-            <element signature="e#5874#5875#0" expanded="false" />
-            <element signature="e#5940#5941#0" expanded="false" />
-            <element signature="e#5982#5983#0" expanded="false" />
-            <element signature="e#6056#6057#0" expanded="false" />
-            <element signature="e#6102#6103#0" expanded="false" />
-            <element signature="e#6152#6153#0" expanded="false" />
-            <element signature="e#6186#6187#0" expanded="false" />
-            <element signature="e#6221#6222#0" expanded="false" />
-            <element signature="e#6247#6248#0" expanded="false" />
-            <element signature="e#6281#6282#0" expanded="false" />
-            <element signature="e#6309#6310#0" expanded="false" />
-            <element signature="e#6343#6344#0" expanded="false" />
-            <element signature="e#6372#6373#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/internal/Invoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="670" column="0" lean-forward="false" selection-start-line="670" selection-start-column="0" selection-end-line="670" selection-end-column="0" />
-          <folding>
-            <element signature="e#27713#27726#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1686,14 +1663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="41" column="60" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/internal/MethodInvocationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="119" column="38" lean-forward="true" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1770,14 +1739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DigitalDocPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1794,10 +1755,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/internal/MethodInvocationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/internal/Invoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="670" column="0" lean-forward="false" selection-start-line="670" selection-start-column="0" selection-end-line="670" selection-end-column="0" />
+          <folding>
+            <element signature="e#27713#27726#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1285">
+          <caret line="142" column="14" lean-forward="false" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/StatisticPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="508" column="5" lean-forward="false" selection-start-line="508" selection-start-column="5" selection-end-line="508" selection-end-column="5" />
+        <state relative-caret-position="4692">
+          <caret line="520" column="36" lean-forward="false" selection-start-line="520" selection-start-column="36" selection-end-line="520" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
@@ -1834,35 +1845,38 @@
             <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#13723#13724#0" expanded="true" />
-            <element signature="e#13769#13770#0" expanded="true" />
-            <element signature="e#13807#13808#0" expanded="true" />
+            <element signature="e#13773#13774#0" expanded="true" />
+            <element signature="e#13819#13820#0" expanded="true" />
             <element signature="e#13857#13858#0" expanded="true" />
-            <element signature="e#13904#13905#0" expanded="true" />
-            <element signature="e#13978#13979#0" expanded="true" />
-            <element signature="e#14014#14015#0" expanded="true" />
-            <element signature="e#14062#14063#0" expanded="true" />
-            <element signature="e#14104#14105#0" expanded="true" />
-            <element signature="e#14150#14151#0" expanded="true" />
-            <element signature="e#14193#14194#0" expanded="true" />
-            <element signature="e#14240#14241#0" expanded="true" />
-            <element signature="e#14283#14284#0" expanded="true" />
-            <element signature="e#14331#14332#0" expanded="true" />
+            <element signature="e#13907#13908#0" expanded="true" />
+            <element signature="e#13954#13955#0" expanded="true" />
+            <element signature="e#14028#14029#0" expanded="true" />
+            <element signature="e#14064#14065#0" expanded="true" />
+            <element signature="e#14112#14113#0" expanded="true" />
+            <element signature="e#14154#14155#0" expanded="true" />
+            <element signature="e#14200#14201#0" expanded="true" />
+            <element signature="e#14243#14244#0" expanded="true" />
+            <element signature="e#14290#14291#0" expanded="true" />
+            <element signature="e#14333#14334#0" expanded="true" />
+            <element signature="e#14381#14382#0" expanded="true" />
+            <element signature="e#14416#14417#0" expanded="true" />
+            <element signature="e#14457#14458#0" expanded="true" />
+            <element signature="e#14498#14499#0" expanded="true" />
+            <element signature="e#14548#14549#0" expanded="true" />
+            <element signature="e#14586#14587#0" expanded="true" />
+            <element signature="e#14632#14633#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+        <state relative-caret-position="2261">
+          <caret line="329" column="0" lean-forward="false" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#createUser#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#editUser#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#changeUserRole#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#changePassUser#0;class#PmiTest#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
             <element signature="method#createDistonary#0;class#PmiTest#0" expanded="false" />
             <element signature="method#editAttrDistonary#0;class#PmiTest#0" expanded="false" />
             <element signature="method#fillContentDistonary#0;class#PmiTest#0" expanded="false" />
@@ -1870,6 +1884,20 @@
             <element signature="method#deleteContentDistinary#0;class#PmiTest#0" expanded="false" />
             <element signature="method#loadContentDistinaryFromFile#0;class#PmiTest#0" expanded="false" />
             <element signature="method#loadNewBook#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#filterListBook#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#changeBookInfo#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#assignBook#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#inputMainFieldsDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#reviewDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#editDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#endFirstInput#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#secondInput#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#moveBookToVerification#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#correctionBookFase#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#outputBook#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#reviewDigitalDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#reviewInfoDigitalDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#signDigitalDoc#0;class#PmiTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
