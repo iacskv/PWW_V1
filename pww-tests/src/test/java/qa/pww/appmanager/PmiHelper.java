@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 import static qa.pww.PmiLocators.BookPage.*;
+import static qa.pww.PmiLocators.ConfirmFormDistonary.*;
+import static qa.pww.PmiLocators.ConfirmFormUser.*;
 import static qa.pww.PmiLocators.CorrectionAgsListPage.*;
 import static qa.pww.PmiLocators.CorrectionAgsStagePage.*;
 import static qa.pww.PmiLocators.CorrectionBookPage.*;
@@ -49,8 +51,76 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(ROLEBTN));
     }
 
+    public void gotoDistonaryPage(){
+        click(By.xpath(DISTBTN));
+    }
+
+    public void gotoBooksPage(){
+        click(By.xpath(BOOKBTN));
+    }
+
+    public void gotoInputPageOper() throws InterruptedException {
+        sleep(2);
+        click(By.xpath(INPUTOPERBTN));
+    }
+
+    public void gotoCorrectionPage(){
+        click(By.xpath(CORRECTIONBTN));
+    }
+
+    public void gotoOutputBookPage(){
+        click(By.xpath(OUTPUTBTN));
+    }
+
+    public void gotoDigital(){
+        click(By.xpath(DIGITALDOCBTN));
+    }
+
+    public void gotoStatistics(){
+        click(By.xpath(STATSBTN));
+    }
+
+
+    public void deleteRole(String nameRole) throws InterruptedException {
+        gotoRolePage();
+        if (isElementPresent(By.xpath("//div[text()='" + nameRole + "']")) == true) {
+            selectRole(nameRole);
+            click(By.xpath(DELETEROLEBTN));
+            saveRole();
+        }
+    }
+
+    public void deleteUser(String nameUser){
+        gotoUserPage();
+        if (isElementPresent(By.xpath("//div[text()='" + nameUser + "']")) == true) {
+            selectUser(nameUser);
+            click(By.xpath(DELETEUSERBTN));
+            click(By.xpath(YESCONFIRMUSER));
+            click(By.xpath(OKCONFIRMUSER));
+        }
+    }
+
+    public void deleteDist(String nameDist){
+        gotoDistonaryPage();
+        if (isElementPresent(By.xpath("//div[text()='" + nameDist + "']")) == true) {
+            selectDistonary(nameDist);
+            click(By.xpath(DELETEDISTBTN));
+            click(By.xpath(YESCONFIRMDIST));
+        }
+    }
+
+
+    public void createNewRole(){
+        click(By.xpath(ADDROLEBTN));
+    }
+
     public void selectRole(String role){
         click(By.xpath("//div[text()='" + role + "']"));
+    }
+
+    public void fillRole(String nameRole, String descrRole) throws InterruptedException {
+        doubleClickAndType(By.xpath("//div[text()='Новая роль']"),nameRole);
+        doubleClickAndType(By.xpath("//div[text()='Описание']"),descrRole);
     }
 
     public void fillRulesRole(){
@@ -59,7 +129,8 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(INPUTRULE));
     }
 
-    public void saveRole(){
+    public void saveRole() throws InterruptedException {
+        sleep(2);
         click(By.xpath(SAVEROLEBTN));
     }
 
@@ -133,10 +204,6 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(SAVENEWPASSBTN));
         sleep(1);
         click(By.xpath(OKNEWPASSBTN));
-    }
-
-    public void gotoDistonaryPage(){
-        click(By.xpath(DISTBTN));
     }
 
     public void addDistonaryBtn(){
@@ -272,10 +339,6 @@ public class PmiHelper extends HelperBase{
             return a;
     }
 
-    public void gotoBooksPage(){
-        click(By.xpath(BOOKBTN));
-    }
-
     public void fillFilter(String filter){
         type(By.xpath(NUMFILTERBOOK), filter);
     }
@@ -343,11 +406,6 @@ public class PmiHelper extends HelperBase{
         sleep(2);
     }
 
-    public void gotoInputPageOper() throws InterruptedException {
-        sleep(2);
-        click(By.xpath(INPUTOPERBTN));
-    }
-
     public void gotoInputAdmin() throws InterruptedException {
         sleep(2);
         click(By.xpath(INPUTBTN));
@@ -413,7 +471,6 @@ public class PmiHelper extends HelperBase{
         type(By.xpath(SECONDNAMEDEATHEDITFORM),secondName);
     }
 
-
     public void saveExitEditDeathAgsFormBtn(){
         click(By.xpath(SAVECLOSEEDITAGSFORMBTN));
     }
@@ -430,10 +487,6 @@ public class PmiHelper extends HelperBase{
 
     public void waitVerificationJob(int time) throws InterruptedException {
         sleep(time);
-    }
-
-    public void gotoCorrectionPage(){
-        click(By.xpath(CORRECTIONBTN));
     }
 
     public void selectBookOnCorrectionPage(String nameBook){
@@ -465,10 +518,6 @@ public class PmiHelper extends HelperBase{
         click(By.xpath(FINISHCORRECTIONBOOKBTN));
     }
 
-    public void gotoOutputBookPage(){
-        click(By.xpath(OUTPUTBTN));
-    }
-
     public void selectAllBookForOutputBtn(){
         click(By.xpath(SELECTALLBOOKOUTPUTBTN));
     }
@@ -479,10 +528,6 @@ public class PmiHelper extends HelperBase{
 
     public void waitResultOutputBook(){
         //на будущее
-    }
-
-    public void gotoDigitalBtn(){
-        click(By.xpath(DIGITALDOCBTN));
     }
 
     public void needSignDigDocBtn(){
@@ -507,10 +552,6 @@ public class PmiHelper extends HelperBase{
 
     public void closeReviewDigDocForm() {
         click(By.xpath(CLOSEDIGDOCFORM));
-    }
-
-    public void gotoStatistics(){
-        click(By.xpath(STATSBTN));
     }
 
     public void gotoLocationStatSpan(){

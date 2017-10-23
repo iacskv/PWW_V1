@@ -11,6 +11,10 @@ public abstract class RolePage {
     public static String SAVEROLEBTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button";
     public static String ESCAPEROLEBTN = "html/body/div[1]/div/div[2]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button";
 
+    //поля
+    public static String NAMEROLE = "html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[1]/table/tbody/tr/td[1]/div";
+    public static String DESCRIPTIONROLE = "html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[1]/table/tbody/tr/td[2]/div";
+    public static String RULEROLE = "html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div[2]/div[1]/div[1]/table/tbody/tr/td[3]";
 
     //права
     public static String MAINPAGERULE = "html/body/div[1]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/table/tbody/tr/td/div[1]/div[1]/img[3]";

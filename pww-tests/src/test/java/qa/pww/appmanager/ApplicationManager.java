@@ -47,20 +47,20 @@ public class ApplicationManager {
 
   public void init() throws IOException {
 
-
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
 
     if (browser.equals(BrowserType.FIREFOX)) {
       FirefoxBinary binary = new FirefoxBinary(new File("D:/Program Files/Mozilla Firefox/firefox.exe"));
       wd = new FirefoxDriver(binary, new FirefoxProfile());
-      wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      //wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     } else if (browser.equals(BrowserType.CHROME)) {
       wd = new ChromeDriver();
     } else if (browser.equals(BrowserType.IE)) {
       wd = new InternetExplorerDriver();
     }
     wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    wd.manage().window().maximize();
     wd.get(properties.getProperty("web.baseUrl"));
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
@@ -84,6 +84,7 @@ public class ApplicationManager {
 
   }
 
+  //очистка БД ПВВ
   public void clearPvvDb() throws SQLException {
     PreparedStatement st1 = getPvvDb().prepareStatement("DELETE FROM EXPORT_ERROR_LOG");
      rs = st1.executeUpdate();
@@ -110,6 +111,7 @@ public class ApplicationManager {
 
   }
 
+  //очистка БД ЗАГС от выгруженных а/з из ПВВ
   public void clearZagsDb() throws SQLException {
     PreparedStatement st1 = getZagsDb().prepareStatement("delete from inputarena.born_ext");
     rs = st1.executeUpdate();
@@ -173,6 +175,7 @@ public class ApplicationManager {
   public Connection getPvvDb() {
         return pvvDb;
     }
+
   public Connection getZagsDb() {
         return zagsDb;
     }
