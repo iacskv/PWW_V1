@@ -530,7 +530,8 @@ public class PmiHelper extends HelperBase{
         //на будущее
     }
 
-    public void needSignDigDocBtn(){
+    public void needSignDigDocBtn() throws InterruptedException {
+        sleep(2);
         click(By.xpath(NEEDSIGNDIGDOCBTN));
     }
 
