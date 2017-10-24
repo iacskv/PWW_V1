@@ -45,6 +45,7 @@ public class ApplicationManager {
     properties = new Properties();
   }
 
+  //инициализация вэб-драйвера
   public void init() throws IOException {
 
     String target = System.getProperty("target", "local");
@@ -73,6 +74,7 @@ public class ApplicationManager {
 
   }
 
+  //инициализация подключения к БД ПВВ и ЗАГС
   public void initDb () throws IOException {
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
@@ -142,6 +144,7 @@ public class ApplicationManager {
     st7.close();
   }
 
+ //остановка вэб-драйвера и отключения от БД
   public void stop() throws SQLException {
     wd.quit();
     pvvDb.close();

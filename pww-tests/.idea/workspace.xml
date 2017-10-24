@@ -107,12 +107,13 @@
       <file leaf-file-name="PmiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="326" column="27" lean-forward="false" selection-start-line="326" selection-start-column="27" selection-end-line="326" selection-end-column="27" />
+            <state relative-caret-position="271">
+              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#prepareFotTests#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#createRole#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#createUser#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#editUser#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#changeUserRole#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#changePassUser#0;class#PmiTest#0" expanded="false" />
@@ -125,10 +126,20 @@
                 <element signature="method#loadNewBook#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#filterListBook#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#changeBookInfo#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#assignBook#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#inputMainFieldsDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#reviewDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#editDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#endFirstInput#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#secondInput#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#moveBookToVerification#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#correctionBookFase#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#outputBook#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#reviewDigitalDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#reviewInfoDigitalDoc#0;class#PmiTest#0" expanded="false" />
                 <element signature="method#signDigitalDoc#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#statsLocation#0;class#PmiTest#0" expanded="false" />
+                <element signature="method#statsUser#0;class#PmiTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -137,16 +148,17 @@
       <file leaf-file-name="PmiHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
+            <state relative-caret-position="3484">
               <caret line="535" column="5" lean-forward="true" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#PmiHelper#0" expanded="false" />
                 <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#3634#3635#0" expanded="true" />
-                <element signature="e#3697#3698#0" expanded="true" />
+                <element signature="method#deleteRole#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#deleteUser#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#deleteDist#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#fillRole#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#4255#4256#0" expanded="true" />
-                <element signature="e#4295#4296#0" expanded="true" />
+                <element signature="method#saveRole#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
@@ -162,25 +174,18 @@
                 <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#12417#12418#0" expanded="true" />
-                <element signature="e#12482#12483#0" expanded="true" />
                 <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#12807#12808#0" expanded="true" />
-                <element signature="e#12855#12856#0" expanded="true" />
-                <element signature="e#13322#13323#0" expanded="true" />
-                <element signature="e#13376#13377#0" expanded="true" />
+                <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
-                <element signature="e#13679#13680#0" expanded="true" />
-                <element signature="e#13745#13746#0" expanded="true" />
-                <element signature="e#13793#13794#0" expanded="true" />
-                <element signature="e#13849#13850#0" expanded="true" />
                 <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
@@ -188,28 +193,9 @@
                 <element signature="method#selectAgsForCorrection#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
+                <element signature="method#needSignDigDocBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#searchUserStats#0;class#PmiHelper#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditDeathAgsForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/EditDeathAgsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReviewAgsForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="193" lean-forward="false" selection-start-line="8" selection-start-column="193" selection-end-line="8" selection-end-column="193" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,14 +203,16 @@
       <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="407">
+              <caret line="30" column="88" lean-forward="false" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
               <folding>
                 <element signature="e#589#590#0" expanded="true" />
                 <element signature="e#636#637#0" expanded="true" />
+                <element signature="method#doubleClickAndType#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#type#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#attach#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#sleep#0;class#HelperBase#0" expanded="false" />
+                <element signature="method#isElementPresent#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#isAlertPresent#0;class#HelperBase#0" expanded="false" />
               </folding>
             </state>
@@ -234,9 +222,11 @@
       <file leaf-file-name="SessionHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/SessionHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="255">
               <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -244,19 +234,14 @@
       <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1184">
-              <caret line="61" column="44" lean-forward="false" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeathInputPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DeathInputPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="149" lean-forward="false" selection-start-line="13" selection-start-column="149" selection-end-line="13" selection-end-column="149" />
-              <folding />
+            <state relative-caret-position="-151">
+              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+              <folding>
+                <element signature="method#ApplicationManager#0;class#ApplicationManager#0" expanded="false" />
+                <element signature="method#initDb#0;class#ApplicationManager#0" expanded="false" />
+                <element signature="method#clearZagsDb#0;class#ApplicationManager#0" expanded="false" />
+                <element signature="method#stop#0;class#ApplicationManager#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -701,20 +686,20 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ConfirmForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ConfirmFormUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ConfirmFormDistonary.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DeathInputPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/EditDeathAgsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1688" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -1382,7 +1367,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1688" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1395,7 +1380,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33179724" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33810574" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35368663" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885087" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1408,7 +1393,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3006608" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29953918" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1454,254 +1439,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>260</line>
-          <properties />
-          <option name="timeStamp" value="1055" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>261</line>
-          <properties />
-          <option name="timeStamp" value="1056" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>262</line>
-          <properties />
-          <option name="timeStamp" value="1057" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>263</line>
-          <properties />
-          <option name="timeStamp" value="1058" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>265</line>
-          <properties />
-          <option name="timeStamp" value="1059" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>264</line>
-          <properties />
-          <option name="timeStamp" value="1060" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>267</line>
-          <properties />
-          <option name="timeStamp" value="1061" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>269</line>
-          <properties />
-          <option name="timeStamp" value="1062" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>268</line>
-          <properties />
-          <option name="timeStamp" value="1063" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>270</line>
-          <properties />
-          <option name="timeStamp" value="1064" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>272</line>
-          <properties />
-          <option name="timeStamp" value="1065" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>273</line>
-          <properties />
-          <option name="timeStamp" value="1066" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>274</line>
-          <properties />
-          <option name="timeStamp" value="1067" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>275</line>
-          <properties />
-          <option name="timeStamp" value="1068" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>214</line>
-          <properties />
-          <option name="timeStamp" value="1082" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>216</line>
-          <properties />
-          <option name="timeStamp" value="1083" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>215</line>
-          <properties />
-          <option name="timeStamp" value="1084" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>222</line>
-          <properties />
-          <option name="timeStamp" value="1085" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>223</line>
-          <properties />
-          <option name="timeStamp" value="1086" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>224</line>
-          <properties />
-          <option name="timeStamp" value="1087" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>225</line>
-          <properties />
-          <option name="timeStamp" value="1088" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>226</line>
-          <properties />
-          <option name="timeStamp" value="1089" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>228</line>
-          <properties />
-          <option name="timeStamp" value="1090" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>227</line>
-          <properties />
-          <option name="timeStamp" value="1091" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>234</line>
-          <properties />
-          <option name="timeStamp" value="1093" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>235</line>
-          <properties />
-          <option name="timeStamp" value="1094" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>236</line>
-          <properties />
-          <option name="timeStamp" value="1095" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>237</line>
-          <properties />
-          <option name="timeStamp" value="1096" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>238</line>
-          <properties />
-          <option name="timeStamp" value="1097" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>239</line>
-          <properties />
-          <option name="timeStamp" value="1098" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>240</line>
-          <properties />
-          <option name="timeStamp" value="1099" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>241</line>
-          <properties />
-          <option name="timeStamp" value="1100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>247</line>
-          <properties />
-          <option name="timeStamp" value="1101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>248</line>
-          <properties />
-          <option name="timeStamp" value="1102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>254</line>
-          <properties />
-          <option name="timeStamp" value="1103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>255</line>
-          <properties />
-          <option name="timeStamp" value="1104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java</url>
-          <line>256</line>
-          <properties />
-          <option name="timeStamp" value="1105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
-          <line>375</line>
-          <properties />
-          <option name="timeStamp" value="1106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
-          <line>376</line>
-          <properties />
-          <option name="timeStamp" value="1107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
-          <line>377</line>
-          <properties />
-          <option name="timeStamp" value="1108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java</url>
-          <line>378</line>
-          <properties />
-          <option name="timeStamp" value="1109" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -1714,14 +1451,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/DistMaleContentPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoadContentForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -2078,14 +1807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="193" lean-forward="false" selection-start-line="8" selection-start-column="193" selection-end-line="8" selection-end-column="193" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/EditDeathAgsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -2094,49 +1815,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="193" lean-forward="false" selection-start-line="8" selection-start-column="193" selection-end-line="8" selection-end-column="193" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/SessionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="255">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="30" column="88" lean-forward="false" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
+          <folding>
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="method#doubleClickAndType#0;class#HelperBase#0" expanded="false" />
+            <element signature="method#type#0;class#HelperBase#0" expanded="false" />
+            <element signature="method#attach#0;class#HelperBase#0" expanded="false" />
+            <element signature="method#sleep#0;class#HelperBase#0" expanded="false" />
+            <element signature="method#isElementPresent#0;class#HelperBase#0" expanded="false" />
+            <element signature="method#isAlertPresent#0;class#HelperBase#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="748" column="25" lean-forward="false" selection-start-line="748" selection-start-column="25" selection-end-line="748" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1184">
-          <caret line="61" column="44" lean-forward="false" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="-151">
+          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding>
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="method#type#0;class#HelperBase#0" expanded="false" />
-            <element signature="method#attach#0;class#HelperBase#0" expanded="false" />
-            <element signature="method#sleep#0;class#HelperBase#0" expanded="false" />
-            <element signature="method#isAlertPresent#0;class#HelperBase#0" expanded="false" />
+            <element signature="method#ApplicationManager#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="method#initDb#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="method#clearZagsDb#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="method#stop#0;class#ApplicationManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="3484">
           <caret line="535" column="5" lean-forward="true" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#PmiHelper#0" expanded="false" />
             <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#3634#3635#0" expanded="true" />
-            <element signature="e#3697#3698#0" expanded="true" />
+            <element signature="method#deleteRole#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#deleteDist#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillRole#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#4255#4256#0" expanded="true" />
-            <element signature="e#4295#4296#0" expanded="true" />
+            <element signature="method#saveRole#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
@@ -2152,25 +1899,18 @@
             <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#12417#12418#0" expanded="true" />
-            <element signature="e#12482#12483#0" expanded="true" />
             <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#12807#12808#0" expanded="true" />
-            <element signature="e#12855#12856#0" expanded="true" />
-            <element signature="e#13322#13323#0" expanded="true" />
-            <element signature="e#13376#13377#0" expanded="true" />
+            <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="e#13679#13680#0" expanded="true" />
-            <element signature="e#13745#13746#0" expanded="true" />
-            <element signature="e#13793#13794#0" expanded="true" />
-            <element signature="e#13849#13850#0" expanded="true" />
             <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
@@ -2178,6 +1918,7 @@
             <element signature="method#selectAgsForCorrection#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#needSignDigDocBtn#0;class#PmiHelper#0" expanded="false" />
             <element signature="method#searchUserStats#0;class#PmiHelper#0" expanded="false" />
           </folding>
         </state>
@@ -2185,12 +1926,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="326" column="27" lean-forward="false" selection-start-line="326" selection-start-column="27" selection-end-line="326" selection-end-column="27" />
+        <state relative-caret-position="271">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#prepareFotTests#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#createRole#0;class#PmiTest#0" expanded="false" />
             <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#createUser#0;class#PmiTest#0" expanded="false" />
             <element signature="method#editUser#0;class#PmiTest#0" expanded="false" />
             <element signature="method#changeUserRole#0;class#PmiTest#0" expanded="false" />
             <element signature="method#changePassUser#0;class#PmiTest#0" expanded="false" />
@@ -2203,10 +1945,20 @@
             <element signature="method#loadNewBook#0;class#PmiTest#0" expanded="false" />
             <element signature="method#filterListBook#0;class#PmiTest#0" expanded="false" />
             <element signature="method#changeBookInfo#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#assignBook#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#inputMainFieldsDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#reviewDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#editDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#endFirstInput#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#secondInput#0;class#PmiTest#0" expanded="false" />
             <element signature="method#moveBookToVerification#0;class#PmiTest#0" expanded="false" />
             <element signature="method#correctionBookFase#0;class#PmiTest#0" expanded="false" />
             <element signature="method#outputBook#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#reviewDigitalDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#reviewInfoDigitalDoc#0;class#PmiTest#0" expanded="false" />
             <element signature="method#signDigitalDoc#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#statsLocation#0;class#PmiTest#0" expanded="false" />
+            <element signature="method#statsUser#0;class#PmiTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
