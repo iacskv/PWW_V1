@@ -60,7 +60,7 @@ public class ApplicationManager {
     } else if (browser.equals(BrowserType.IE)) {
       wd = new InternetExplorerDriver();
     }
-    wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     wd.manage().window().maximize();
     wd.get(properties.getProperty("web.baseUrl"));
     sessionHelper = new SessionHelper(wd);

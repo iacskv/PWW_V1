@@ -107,39 +107,10 @@
       <file leaf-file-name="PmiTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="438">
+              <caret line="444" column="30" lean-forward="false" selection-start-line="444" selection-start-column="30" selection-end-line="444" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createRole#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#createUser#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#editUser#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#changeUserRole#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#changePassUser#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#createDistonary#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#editAttrDistonary#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#fillContentDistonary#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#editContentDistinary#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#deleteContentDistinary#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#loadContentDistinaryFromFile#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#loadNewBook#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#filterListBook#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#changeBookInfo#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#assignBook#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#inputMainFieldsDoc#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#reviewDoc#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#editDoc#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#endFirstInput#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#secondInput#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#moveBookToVerification#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#correctionBookFase#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#outputBook#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#reviewDigitalDoc#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#reviewInfoDigitalDoc#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#signDigitalDoc#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#statsLocation#0;class#PmiTest#0" expanded="false" />
-                <element signature="method#statsUser#0;class#PmiTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,52 +119,181 @@
       <file leaf-file-name="PmiHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3484">
-              <caret line="535" column="5" lean-forward="true" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
+            <state relative-caret-position="3485">
+              <caret line="535" column="5" lean-forward="false" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#PmiHelper#0" expanded="false" />
+                <element signature="e#1866#1867#0" expanded="false" />
+                <element signature="e#1891#1892#0" expanded="false" />
+                <element signature="e#1924#1925#0" expanded="false" />
+                <element signature="e#1964#1965#0" expanded="false" />
+                <element signature="e#2002#2003#0" expanded="false" />
+                <element signature="e#2042#2043#0" expanded="false" />
+                <element signature="e#2076#2077#0" expanded="false" />
+                <element signature="e#2116#2117#0" expanded="false" />
                 <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#2285#2286#0" expanded="false" />
+                <element signature="e#2331#2332#0" expanded="false" />
+                <element signature="e#2370#2371#0" expanded="false" />
+                <element signature="e#2412#2413#0" expanded="false" />
+                <element signature="e#2444#2445#0" expanded="false" />
+                <element signature="e#2490#2491#0" expanded="false" />
+                <element signature="e#2525#2526#0" expanded="false" />
+                <element signature="e#2566#2567#0" expanded="false" />
                 <element signature="method#deleteRole#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#deleteUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#deleteDist#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#3549#3550#0" expanded="false" />
+                <element signature="e#3592#3593#0" expanded="false" />
+                <element signature="e#3634#3635#0" expanded="false" />
+                <element signature="e#3697#3698#0" expanded="false" />
                 <element signature="method#fillRole#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveRole#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#4255#4256#0" expanded="false" />
+                <element signature="e#4295#4296#0" expanded="false" />
+                <element signature="e#4329#4330#0" expanded="false" />
+                <element signature="e#4372#4373#0" expanded="false" />
                 <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#5083#5084#0" expanded="false" />
+                <element signature="e#5130#5131#0" expanded="false" />
+                <element signature="e#5175#5176#0" expanded="false" />
+                <element signature="e#5241#5242#0" expanded="false" />
+                <element signature="e#5273#5274#0" expanded="false" />
+                <element signature="e#5317#5318#0" expanded="false" />
+                <element signature="e#5362#5363#0" expanded="false" />
+                <element signature="e#5414#5415#0" expanded="false" />
+                <element signature="e#5463#5464#0" expanded="false" />
+                <element signature="e#5536#5537#0" expanded="false" />
                 <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#5736#5737#0" expanded="false" />
+                <element signature="e#5784#5785#0" expanded="false" />
+                <element signature="e#5822#5823#0" expanded="false" />
+                <element signature="e#5869#5870#0" expanded="false" />
                 <element signature="method#fillNewPassUser#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#saveNewPassUser#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#6215#6216#0" expanded="false" />
+                <element signature="e#6258#6259#0" expanded="false" />
                 <element signature="method#fillNewColumnDist#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#6571#6572#0" expanded="false" />
+                <element signature="e#6620#6621#0" expanded="false" />
                 <element signature="method#fillNewDist#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#6942#6943#0" expanded="false" />
+                <element signature="e#6990#6991#0" expanded="false" />
+                <element signature="e#7037#7038#0" expanded="false" />
+                <element signature="e#7106#7107#0" expanded="false" />
+                <element signature="e#7138#7139#0" expanded="false" />
+                <element signature="e#7182#7183#0" expanded="false" />
+                <element signature="e#7217#7218#0" expanded="false" />
+                <element signature="e#7264#7265#0" expanded="false" />
+                <element signature="e#7307#7308#0" expanded="false" />
+                <element signature="e#7356#7357#0" expanded="false" />
                 <element signature="method#fillNewMaleString#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#7628#7629#0" expanded="false" />
+                <element signature="e#7685#7686#0" expanded="false" />
+                <element signature="e#7733#7734#0" expanded="false" />
+                <element signature="e#7802#7803#0" expanded="false" />
+                <element signature="e#7840#7841#0" expanded="false" />
+                <element signature="e#7890#7891#0" expanded="false" />
                 <element signature="method#fillMaleString#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#8147#8148#0" expanded="false" />
+                <element signature="e#8201#8202#0" expanded="false" />
                 <element signature="method#deleteStringDist#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#exitMaleDist#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#8568#8569#0" expanded="false" />
+                <element signature="e#8612#8613#0" expanded="false" />
+                <element signature="e#8661#8662#0" expanded="false" />
+                <element signature="e#8716#8717#0" expanded="false" />
+                <element signature="e#8755#8756#0" expanded="false" />
+                <element signature="e#8802#8803#0" expanded="false" />
+                <element signature="e#8831#8832#0" expanded="false" />
+                <element signature="e#8871#8872#0" expanded="false" />
                 <element signature="method#fillLoadParamBook#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#10338#10339#0" expanded="false" />
+                <element signature="e#10391#10392#0" expanded="false" />
+                <element signature="e#10426#10427#0" expanded="false" />
+                <element signature="e#10474#10475#0" expanded="false" />
+                <element signature="e#10509#10510#0" expanded="false" />
+                <element signature="e#10557#10558#0" expanded="false" />
+                <element signature="e#10610#10611#0" expanded="false" />
+                <element signature="e#10678#10679#0" expanded="false" />
+                <element signature="e#10710#10711#0" expanded="false" />
+                <element signature="e#10751#10752#0" expanded="false" />
+                <element signature="e#10797#10798#0" expanded="false" />
+                <element signature="e#10845#10846#0" expanded="false" />
                 <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#11016#11017#0" expanded="false" />
+                <element signature="e#11060#11061#0" expanded="false" />
                 <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#11371#11372#0" expanded="false" />
+                <element signature="e#11417#11418#0" expanded="false" />
                 <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#12321#12322#0" expanded="false" />
+                <element signature="e#12367#12368#0" expanded="false" />
+                <element signature="e#12417#12418#0" expanded="false" />
+                <element signature="e#12482#12483#0" expanded="false" />
                 <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#12807#12808#0" expanded="false" />
+                <element signature="e#12855#12856#0" expanded="false" />
                 <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#13018#13019#0" expanded="false" />
+                <element signature="e#13068#13069#0" expanded="false" />
+                <element signature="e#13114#13115#0" expanded="false" />
+                <element signature="e#13199#13200#0" expanded="false" />
+                <element signature="e#13237#13238#0" expanded="false" />
+                <element signature="e#13283#13284#0" expanded="false" />
+                <element signature="e#13322#13323#0" expanded="false" />
+                <element signature="e#13376#13377#0" expanded="false" />
                 <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#13679#13680#0" expanded="false" />
+                <element signature="e#13745#13746#0" expanded="false" />
+                <element signature="e#13793#13794#0" expanded="false" />
+                <element signature="e#13849#13850#0" expanded="false" />
                 <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#14426#14427#0" expanded="false" />
+                <element signature="e#14476#14477#0" expanded="false" />
                 <element signature="method#selectAgsForCorrection#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#14651#14652#0" expanded="false" />
+                <element signature="e#14700#14701#0" expanded="false" />
+                <element signature="e#14757#14758#0" expanded="false" />
+                <element signature="e#14818#14819#0" expanded="false" />
                 <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#15008#15009#0" expanded="false" />
+                <element signature="e#15064#15065#0" expanded="false" />
+                <element signature="e#15110#15111#0" expanded="false" />
+                <element signature="e#15165#15166#0" expanded="false" />
+                <element signature="e#15204#15205#0" expanded="false" />
+                <element signature="e#15255#15256#0" expanded="false" />
                 <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
                 <element signature="method#needSignDigDocBtn#0;class#PmiHelper#0" expanded="false" />
+                <element signature="e#15505#15506#0" expanded="false" />
+                <element signature="e#15579#15580#0" expanded="false" />
+                <element signature="e#15615#15616#0" expanded="false" />
+                <element signature="e#15663#15664#0" expanded="false" />
+                <element signature="e#15705#15706#0" expanded="false" />
+                <element signature="e#15751#15752#0" expanded="false" />
+                <element signature="e#15794#15795#0" expanded="false" />
+                <element signature="e#15841#15842#0" expanded="false" />
+                <element signature="e#15884#15885#0" expanded="false" />
+                <element signature="e#15932#15933#0" expanded="false" />
+                <element signature="e#15973#15974#0" expanded="false" />
+                <element signature="e#16023#16024#0" expanded="false" />
+                <element signature="e#16061#16062#0" expanded="false" />
+                <element signature="e#16107#16108#0" expanded="false" />
                 <element signature="method#searchUserStats#0;class#PmiHelper#0" expanded="false" />
               </folding>
             </state>
@@ -203,17 +303,24 @@
       <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
+            <state relative-caret-position="408">
               <caret line="30" column="88" lean-forward="false" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
               <folding>
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#524#525#0" expanded="false" />
+                <element signature="e#552#553#0" expanded="false" />
                 <element signature="method#doubleClickAndType#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#type#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#attach#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#sleep#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#isElementPresent#0;class#HelperBase#0" expanded="false" />
                 <element signature="method#isAlertPresent#0;class#HelperBase#0" expanded="false" />
+                <element signature="e#1873#1874#0" expanded="false" />
+                <element signature="e#1898#1899#0" expanded="false" />
+                <element signature="e#1934#1935#0" expanded="false" />
+                <element signature="e#1962#1963#0" expanded="false" />
+                <element signature="e#1999#2000#0" expanded="false" />
+                <element signature="e#2028#2029#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -224,9 +331,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,8 +339,8 @@
       <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-151">
-              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="-34">
+              <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
               <folding>
                 <element signature="method#ApplicationManager#0;class#ApplicationManager#0" expanded="false" />
                 <element signature="method#initDb#0;class#ApplicationManager#0" expanded="false" />
@@ -690,16 +795,16 @@
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/ReviewAgsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/EditDeathAgsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-1688" />
     <option name="y" value="-8" />
     <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -716,6 +821,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -725,144 +833,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PmiLocators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww-tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pww" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appmanager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -900,9 +870,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1326,34 +1293,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PmiTest - 2017.10.23 at 16h 21m 37s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 11h 51m 45s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.23 at 16h 33m 52s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 11h 55m 16s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.23 at 16h 35m 11s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 11h 55m 28s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.23 at 16h 37m 09s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 11h 55m 55s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.24 at 08h 12m 51s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 13h 49m 55s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.24 at 08h 12m 53s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 13h 52m 11s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.24 at 08h 14m 15s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 14h 04m 25s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.24 at 08h 19m 54s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 14h 06m 18s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.24 at 08h 23m 17s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 14h 09m 32s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PmiTest - 2017.10.24 at 08h 30m 55s.xml">
+    <history-entry file="PmiTest - 2017.10.24 at 16h 33m 45s.xml">
       <configuration name="PmiTest" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1367,26 +1334,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-1688" y="-8" width="1696" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32378855" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32373273" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33179724" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33810574" sideWeight="0.50488997" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35368663" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885087" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33810574" sideWeight="0.49511003" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23471883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23777506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25366747" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1399,6 +1365,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885087" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1442,7 +1409,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1110" />
+      <option name="time" value="1113" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1451,14 +1418,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/PmiLocators/LoadContentForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/LoadNewDocGroupTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -1623,7 +1582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1639,7 +1597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1647,7 +1604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="41" column="76" lean-forward="false" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1670,7 +1626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1678,7 +1633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1795,7 +1749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1803,7 +1756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="149" lean-forward="false" selection-start-line="13" selection-start-column="149" selection-end-line="13" selection-end-column="149" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1819,7 +1771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="193" lean-forward="false" selection-start-line="8" selection-start-column="193" selection-end-line="8" selection-end-column="193" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1827,25 +1778,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/HelperBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
+        <state relative-caret-position="408">
           <caret line="30" column="88" lean-forward="false" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
           <folding>
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#524#525#0" expanded="false" />
+            <element signature="e#552#553#0" expanded="false" />
             <element signature="method#doubleClickAndType#0;class#HelperBase#0" expanded="false" />
             <element signature="method#type#0;class#HelperBase#0" expanded="false" />
             <element signature="method#attach#0;class#HelperBase#0" expanded="false" />
             <element signature="method#sleep#0;class#HelperBase#0" expanded="false" />
             <element signature="method#isElementPresent#0;class#HelperBase#0" expanded="false" />
             <element signature="method#isAlertPresent#0;class#HelperBase#0" expanded="false" />
+            <element signature="e#1873#1874#0" expanded="false" />
+            <element signature="e#1898#1899#0" expanded="false" />
+            <element signature="e#1934#1935#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#1999#2000#0" expanded="false" />
+            <element signature="e#2028#2029#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1858,10 +1814,200 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3485">
+          <caret line="535" column="5" lean-forward="false" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#PmiHelper#0" expanded="false" />
+            <element signature="e#1866#1867#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1924#1925#0" expanded="false" />
+            <element signature="e#1964#1965#0" expanded="false" />
+            <element signature="e#2002#2003#0" expanded="false" />
+            <element signature="e#2042#2043#0" expanded="false" />
+            <element signature="e#2076#2077#0" expanded="false" />
+            <element signature="e#2116#2117#0" expanded="false" />
+            <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#2285#2286#0" expanded="false" />
+            <element signature="e#2331#2332#0" expanded="false" />
+            <element signature="e#2370#2371#0" expanded="false" />
+            <element signature="e#2412#2413#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2490#2491#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="false" />
+            <element signature="e#2566#2567#0" expanded="false" />
+            <element signature="method#deleteRole#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#deleteDist#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="false" />
+            <element signature="e#3592#3593#0" expanded="false" />
+            <element signature="e#3634#3635#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
+            <element signature="method#fillRole#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#saveRole#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#4255#4256#0" expanded="false" />
+            <element signature="e#4295#4296#0" expanded="false" />
+            <element signature="e#4329#4330#0" expanded="false" />
+            <element signature="e#4372#4373#0" expanded="false" />
+            <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#5083#5084#0" expanded="false" />
+            <element signature="e#5130#5131#0" expanded="false" />
+            <element signature="e#5175#5176#0" expanded="false" />
+            <element signature="e#5241#5242#0" expanded="false" />
+            <element signature="e#5273#5274#0" expanded="false" />
+            <element signature="e#5317#5318#0" expanded="false" />
+            <element signature="e#5362#5363#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5463#5464#0" expanded="false" />
+            <element signature="e#5536#5537#0" expanded="false" />
+            <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#5736#5737#0" expanded="false" />
+            <element signature="e#5784#5785#0" expanded="false" />
+            <element signature="e#5822#5823#0" expanded="false" />
+            <element signature="e#5869#5870#0" expanded="false" />
+            <element signature="method#fillNewPassUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#saveNewPassUser#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#6215#6216#0" expanded="false" />
+            <element signature="e#6258#6259#0" expanded="false" />
+            <element signature="method#fillNewColumnDist#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#6571#6572#0" expanded="false" />
+            <element signature="e#6620#6621#0" expanded="false" />
+            <element signature="method#fillNewDist#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#6942#6943#0" expanded="false" />
+            <element signature="e#6990#6991#0" expanded="false" />
+            <element signature="e#7037#7038#0" expanded="false" />
+            <element signature="e#7106#7107#0" expanded="false" />
+            <element signature="e#7138#7139#0" expanded="false" />
+            <element signature="e#7182#7183#0" expanded="false" />
+            <element signature="e#7217#7218#0" expanded="false" />
+            <element signature="e#7264#7265#0" expanded="false" />
+            <element signature="e#7307#7308#0" expanded="false" />
+            <element signature="e#7356#7357#0" expanded="false" />
+            <element signature="method#fillNewMaleString#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#7628#7629#0" expanded="false" />
+            <element signature="e#7685#7686#0" expanded="false" />
+            <element signature="e#7733#7734#0" expanded="false" />
+            <element signature="e#7802#7803#0" expanded="false" />
+            <element signature="e#7840#7841#0" expanded="false" />
+            <element signature="e#7890#7891#0" expanded="false" />
+            <element signature="method#fillMaleString#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#8147#8148#0" expanded="false" />
+            <element signature="e#8201#8202#0" expanded="false" />
+            <element signature="method#deleteStringDist#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#exitMaleDist#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#8568#8569#0" expanded="false" />
+            <element signature="e#8612#8613#0" expanded="false" />
+            <element signature="e#8661#8662#0" expanded="false" />
+            <element signature="e#8716#8717#0" expanded="false" />
+            <element signature="e#8755#8756#0" expanded="false" />
+            <element signature="e#8802#8803#0" expanded="false" />
+            <element signature="e#8831#8832#0" expanded="false" />
+            <element signature="e#8871#8872#0" expanded="false" />
+            <element signature="method#fillLoadParamBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#10338#10339#0" expanded="false" />
+            <element signature="e#10391#10392#0" expanded="false" />
+            <element signature="e#10426#10427#0" expanded="false" />
+            <element signature="e#10474#10475#0" expanded="false" />
+            <element signature="e#10509#10510#0" expanded="false" />
+            <element signature="e#10557#10558#0" expanded="false" />
+            <element signature="e#10610#10611#0" expanded="false" />
+            <element signature="e#10678#10679#0" expanded="false" />
+            <element signature="e#10710#10711#0" expanded="false" />
+            <element signature="e#10751#10752#0" expanded="false" />
+            <element signature="e#10797#10798#0" expanded="false" />
+            <element signature="e#10845#10846#0" expanded="false" />
+            <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#11016#11017#0" expanded="false" />
+            <element signature="e#11060#11061#0" expanded="false" />
+            <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#11371#11372#0" expanded="false" />
+            <element signature="e#11417#11418#0" expanded="false" />
+            <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#12321#12322#0" expanded="false" />
+            <element signature="e#12367#12368#0" expanded="false" />
+            <element signature="e#12417#12418#0" expanded="false" />
+            <element signature="e#12482#12483#0" expanded="false" />
+            <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#12807#12808#0" expanded="false" />
+            <element signature="e#12855#12856#0" expanded="false" />
+            <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#13018#13019#0" expanded="false" />
+            <element signature="e#13068#13069#0" expanded="false" />
+            <element signature="e#13114#13115#0" expanded="false" />
+            <element signature="e#13199#13200#0" expanded="false" />
+            <element signature="e#13237#13238#0" expanded="false" />
+            <element signature="e#13283#13284#0" expanded="false" />
+            <element signature="e#13322#13323#0" expanded="false" />
+            <element signature="e#13376#13377#0" expanded="false" />
+            <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#13679#13680#0" expanded="false" />
+            <element signature="e#13745#13746#0" expanded="false" />
+            <element signature="e#13793#13794#0" expanded="false" />
+            <element signature="e#13849#13850#0" expanded="false" />
+            <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#14426#14427#0" expanded="false" />
+            <element signature="e#14476#14477#0" expanded="false" />
+            <element signature="method#selectAgsForCorrection#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#14651#14652#0" expanded="false" />
+            <element signature="e#14700#14701#0" expanded="false" />
+            <element signature="e#14757#14758#0" expanded="false" />
+            <element signature="e#14818#14819#0" expanded="false" />
+            <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#15008#15009#0" expanded="false" />
+            <element signature="e#15064#15065#0" expanded="false" />
+            <element signature="e#15110#15111#0" expanded="false" />
+            <element signature="e#15165#15166#0" expanded="false" />
+            <element signature="e#15204#15205#0" expanded="false" />
+            <element signature="e#15255#15256#0" expanded="false" />
+            <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
+            <element signature="method#needSignDigDocBtn#0;class#PmiHelper#0" expanded="false" />
+            <element signature="e#15505#15506#0" expanded="false" />
+            <element signature="e#15579#15580#0" expanded="false" />
+            <element signature="e#15615#15616#0" expanded="false" />
+            <element signature="e#15663#15664#0" expanded="false" />
+            <element signature="e#15705#15706#0" expanded="false" />
+            <element signature="e#15751#15752#0" expanded="false" />
+            <element signature="e#15794#15795#0" expanded="false" />
+            <element signature="e#15841#15842#0" expanded="false" />
+            <element signature="e#15884#15885#0" expanded="false" />
+            <element signature="e#15932#15933#0" expanded="false" />
+            <element signature="e#15973#15974#0" expanded="false" />
+            <element signature="e#16023#16024#0" expanded="false" />
+            <element signature="e#16061#16062#0" expanded="false" />
+            <element signature="e#16107#16108#0" expanded="false" />
+            <element signature="method#searchUserStats#0;class#PmiHelper#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.2/fe9c3d37a49238fac9d4d6c4f5bbd8c334da787a/xalan-2.7.2-sources.jar!/org/apache/xalan/lib/ExsltDatetime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="162" column="25" lean-forward="false" selection-start-line="162" selection-start-column="25" selection-end-line="162" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        <state relative-caret-position="-34">
+          <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding>
             <element signature="method#ApplicationManager#0;class#ApplicationManager#0" expanded="false" />
             <element signature="method#initDb#0;class#ApplicationManager#0" expanded="false" />
@@ -1871,94 +2017,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/appmanager/PmiHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3484">
-          <caret line="535" column="5" lean-forward="true" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#PmiHelper#0" expanded="false" />
-            <element signature="method#gotoInputPageOper#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#deleteRole#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#deleteUser#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#deleteDist#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillRole#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillRulesRole#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#saveRole#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillNewUser#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#saveNewUser#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#saveEditUser#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillNewPassUser#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#saveNewPassUser#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillNewColumnDist#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillNewDist#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillNewMaleString#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillMaleString#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#deleteStringDist#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#exitMaleDist#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillLoadParamBook#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#startLoadBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#waitLoadBookResult#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#saveExitInfoBookBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillOperator#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#exitSetOperatorBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#unloginBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#confUnloginBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#login#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#gotoInputAdmin#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#selectBookOnInputPage#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#addSpecMarcDeathAgs#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#fillHasInputHystory#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#leaveInputBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#returnToInputBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#openEditDocFormBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#finishInputBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#changeFaseBook#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#waitVerificationJob#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#selectBookOnCorrectionPage#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#selectAgsForCorrection#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#saveCloseCorrectionAgsBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#waitResultOutputBook#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#needSignDigDocBtn#0;class#PmiHelper#0" expanded="false" />
-            <element signature="method#searchUserStats#0;class#PmiHelper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa/pww/tests/PmiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="438">
+          <caret line="444" column="30" lean-forward="false" selection-start-line="444" selection-start-column="30" selection-end-line="444" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createRole#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#changeRulesForRole#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#createUser#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#editUser#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#changeUserRole#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#changePassUser#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#createDistonary#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#editAttrDistonary#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#fillContentDistonary#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#editContentDistinary#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#deleteContentDistinary#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#loadContentDistinaryFromFile#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#loadNewBook#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#filterListBook#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#changeBookInfo#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#assignBook#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#inputMainFieldsDoc#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#reviewDoc#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#editDoc#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#endFirstInput#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#secondInput#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#moveBookToVerification#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#correctionBookFase#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#outputBook#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#reviewDigitalDoc#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#reviewInfoDigitalDoc#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#signDigitalDoc#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#statsLocation#0;class#PmiTest#0" expanded="false" />
-            <element signature="method#statsUser#0;class#PmiTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
